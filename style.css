@@ -1,0 +1,21 @@
+.content {
+  background-image: url("./images/top.png");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+  position: relative;
+  height: 800px;
+}
+
+.form {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  position: absolute;
+  top: 100px;
+  right: 0;
+  bottom: 100px;
+  left: 0;
+  margin: auto;
+  width: 80%;
+  height: 660px;
+}
