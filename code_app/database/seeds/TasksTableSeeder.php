@@ -13,6 +13,7 @@ class TasksTableSeeder extends Seeder {
 			'input_code' => 'N',
 			'output' => '「Fizz」、「Buzz」、「FizzBuzz」、「数値」のいずれかを改行区切りで出力してください。',
 			'output_code' => NULL,
+			'difficulty' => 1,
 			'created_at' => date('Y-m-d H:i:s'),
 			'updated_at' => date('Y-m-d H:i:s'),
 		], [
@@ -22,6 +23,7 @@ class TasksTableSeeder extends Seeder {
 			'input_code' => 'N',
 			'output' => '指定された個数のフィボナッチ数列を改行区切りで出力してください。',
 			'output_code' => NULL,
+			'difficulty' => 1,
 			'created_at' => date('Y-m-d H:i:s'),
 			'updated_at' => date('Y-m-d H:i:s'),
 		]]);
