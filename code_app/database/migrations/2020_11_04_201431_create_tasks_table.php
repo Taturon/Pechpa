@@ -14,7 +14,7 @@ class CreateTasksTable extends Migration {
 			$table->string('input', 500);
 			$table->string('input_code', 500);
 			$table->string('output', 500);
-			$table->string('output_code', 500);
+			$table->string('output_code', 500)->nullable($value = true);
 			$table->timestamps();
 			$table->softDeletes();
 		});
