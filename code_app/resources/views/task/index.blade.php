@@ -20,8 +20,12 @@
 			<tbody>
 				@foreach ($tasks as $task)
 					<tr>
-						<td style="color:{{ config('tasks.colors')[$task->difficulty] }};">{{ config('tasks.stars')[$task->difficulty] }}</td>
-						<td>{{ $task->title }}</td>
+						<td style="color:{{ config('tasks.colors')[$task->difficulty] }};">
+							{{ config('tasks.stars')[$task->difficulty] }}
+						</td>
+						<td>
+							<a href="{{ route('tasks.show', ['task' => $task->id]) }}">{{ $task->title }}</a>
+						</td>
 					</tr>
 				@endforeach
 			</tbody>
