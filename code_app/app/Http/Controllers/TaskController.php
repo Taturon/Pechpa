@@ -19,6 +19,12 @@ class TaskController extends Controller {
 	}
 
 	public function show($id) {
+		$task = Task::find($id);
+		if ($task) {
+			return view('task.show', compact('task'));
+		} else {
+			return redirect()->route('tasks.index');
+		}
 	}
 
 	public function edit($id) {
