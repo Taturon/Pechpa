@@ -11,8 +11,10 @@
 |
  */
 
-Route::get('/', 'TaskController@index')->name('tasks.index');
-
+/**
+ * ユーザー非認証状態でアクセス可
+ */
 Auth::routes();
-
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', 'TaskController@index')->name('tasks.index');
+Route::resource('tasks', 'TaskController', ['only' => ['show']]);
