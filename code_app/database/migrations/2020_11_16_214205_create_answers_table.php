@@ -13,6 +13,7 @@ class CreateAnswersTable extends Migration {
 			$table->unsignedInteger('user_id');
 			$table->string('answer_code', 500);
 			$table->string('judge', 50);
+			$table->unsignedInteger('mismatches')->default(0);
 			$table->timestamps();
 		});
 	}
