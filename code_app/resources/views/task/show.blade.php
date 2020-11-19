@@ -27,8 +27,8 @@
 				<pre>{{ $task->output_code }}</pre>
 			@endisset
 			<h2>@lang('title.task_answer')</h2>
-			{{ Form::open() }}
-				{{ Form::textarea('notes', "&lt;?php\n", ['rows' => 10, 'style' => 'width:100%;']) }}
+			{{ Form::open(['route' => ['answers.check', $task->id]]) }}
+				{{ Form::textarea('source', "&lt;?php\n", ['rows' => 10, 'style' => 'width:100%;']) }}
 				<hr>
 				{{ Form::submit(__('button.submission'), ['name' => 'submission', 'class' => 'btn btn-block btn-primary', 'onfocus' => 'this.blur();']) }}
 			{{ Form::close() }}

@@ -18,3 +18,10 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/', 'TaskController@index')->name('tasks.index');
 Route::resource('tasks', 'TaskController', ['only' => ['show']]);
+
+/**
+ * ユーザー認証状態でアクセス可
+ */
+Route::group(['middleware' => ['auth']], function() {
+	Route::post('tasks/{task}/answer', 'AnswerController@check')->name('answers.check');
+});
