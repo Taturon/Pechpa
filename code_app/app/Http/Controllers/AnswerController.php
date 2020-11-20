@@ -12,6 +12,11 @@ use Symfony\Component\Process\Exception\ProcessFailedException;
 
 class AnswerController extends Controller {
 
+	public function index() {
+		$answers = Answer::all();
+		return view('answer.index', compact('answers'));
+	}
+
 	public function check(Request $request, $id) {
 		$path = config('app.path') . '/storage/app/public/answer/';
 		if (!File::exists($path)) {
