@@ -7,4 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 class Testing extends Model {
 
 	protected $guarded = ['id'];
+
+	public function test() {
+		return $this->belongsTo('App\Models\Test');
+	}
+
+	public function answer() {
+		return $this->belongsTo('App\Models\Answer');
+	}
 }

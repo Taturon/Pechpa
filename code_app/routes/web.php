@@ -23,5 +23,6 @@ Route::resource('tasks', 'TaskController', ['only' => ['show']]);
  * ユーザー認証状態でアクセス可
  */
 Route::group(['middleware' => ['auth']], function() {
+	Route::resource('answers', 'AnswerController', ['only' => ['index', 'show']]);
 	Route::post('tasks/{task}/answer', 'AnswerController@check')->name('answers.check');
 });

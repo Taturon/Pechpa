@@ -12,8 +12,10 @@ class CreateAnswersTable extends Migration {
 			$table->unsignedInteger('task_id');
 			$table->unsignedInteger('user_id');
 			$table->string('answer_code', 500);
-			$table->string('judge', 50);
-			$table->unsignedInteger('mismatches')->default(0);
+			$table->string('compile_message', 500);
+			$table->unsignedInteger('byte');
+			$table->string('judge', 50)->nullable()->dafault(NULL);
+			$table->unsignedInteger('mismatches')->nullable()->dafault(NULL);
 			$table->timestamps();
 		});
 	}
