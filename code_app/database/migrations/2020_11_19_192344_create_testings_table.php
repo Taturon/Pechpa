@@ -11,6 +11,7 @@ class CreateTestingsTable extends Migration {
 			$table->increments('id');
 			$table->unsignedInteger('test_id');
 			$table->unsignedInteger('user_id');
+			$table->unsignedInteger('answer_id');
 			$table->string('output', 500);
 			$table->string('judge', 50);
 			$table->timestamps();
