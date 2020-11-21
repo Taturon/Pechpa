@@ -9,10 +9,10 @@
 		<table class="table table-striped table-hover table-bordered">
 			<thead>
 				<tr>
-					<th style="width:10%;">
+					<th style="width:15%;">
 						<div class="text-center">@lang('th.submission_datetime')</div>
 					</th>
-					<th style="width:70%;">
+					<th style="width:65%;">
 						<div class="text-center">@lang('th.task_title')</div>
 					</th>
 					<th style="width:10%;">
@@ -27,7 +27,8 @@
 				@foreach ($answers as $answer)
 					<tr>
 						<td>
-							{{ $answer->created_at }}
+							<a href="{{ route('answers.show', ['answer' => $answer->id]) }}">{{ $answer->created_at }}</a>
+
 						</td>
 						<td>
 							<a href="{{ route('tasks.show', ['task' => $answer->task->id]) }}">{{ $answer->task->title }}</a>
