@@ -12,5 +12,11 @@ return [
 	'task_answer' => '回答',
 
 	'answers_list' => '回答一覧',
+	'answer_date' => '回答日時',
+	'answer_judge' => '判定',
+	'answer_byte' => 'バイト数',
+	'answer_code' => '提出コード',
+	'answer_compile' => 'コンパイルメッセージ',
+	'answer_testings' => 'テストケース',
 
 ];

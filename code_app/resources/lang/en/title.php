@@ -12,5 +12,11 @@ return [
 	'task_answer' => 'Your Answer',
 
 	'answers_list' => 'Answers',
+	'answer_date' => 'Answer Date',
+	'answer_judge' => 'Judge',
+	'answer_byte' => 'Code Size',
+	'answer_code' => 'Source Code',
+	'answer_compile' => 'Compile Messeage',
+	'answer_testings' => 'Test Cases',
 
 ];

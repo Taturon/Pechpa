@@ -6,6 +6,9 @@ return [
 	'task_rank' => 'Rank',
 
 	'submission_datetime' => 'Submission',
-	'judge' => 'Judge'
+	'judge' => 'Judge',
+
+	'test_number' => 'Test No.',
+	'test_judge' => 'Judge',
 
 ];
