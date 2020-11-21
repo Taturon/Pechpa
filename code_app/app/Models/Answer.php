@@ -11,4 +11,8 @@ class Answer extends Model {
 	public function task() {
 		return $this->belongsTo('App\Models\Task');
 	}
+
+	public function testing() {
+		return $this->hasMany('App\Models\Testing');
+	}
 }

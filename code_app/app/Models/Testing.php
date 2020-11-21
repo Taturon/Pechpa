@@ -11,4 +11,8 @@ class Testing extends Model {
 	public function test() {
 		return $this->belongsTo('App\Models\Test');
 	}
+
+	public function answer() {
+		return $this->belongsTo('App\Models\Answer');
+	}
 }
