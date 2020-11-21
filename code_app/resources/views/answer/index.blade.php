@@ -28,7 +28,6 @@
 					<tr>
 						<td>
 							<a href="{{ route('answers.show', ['answer' => $answer->id]) }}">{{ $answer->created_at }}</a>
-
 						</td>
 						<td>
 							<a href="{{ route('tasks.show', ['task' => $answer->task->id]) }}">{{ $answer->task->title }}</a>
