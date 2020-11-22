@@ -20,11 +20,11 @@
 			<p>{!! nl2br(e($task->statement)) !!}</p>
 			<h2>@lang('title.task_input')</h2>
 			<p>{{ $task->input }}</p>
-			<pre>{{ $task->input_code }}</pre>
+			<pre><code>{{ $task->input_code }}</code></pre>
 			<h2>@lang('title.task_output')</h2>
 			<p>{{ $task->output }}</p>
 			@isset($task->output_code)
-				<pre>{{ $task->output_code }}</pre>
+				<pre><code>{{ $task->output_code }}</code></pre>
 			@endisset
 			<h2>@lang('title.task_answer')</h2>
 			{{ Form::open(['route' => ['answers.check', $task->id]]) }}
