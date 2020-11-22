@@ -23,7 +23,7 @@ class AnswerController extends Controller {
 			$testings = $answer->testing;
 			return view('answer.show', compact('answer', 'testings'));
 		} else {
-			return redirect()->route('tasks.index')->with('error', __('flash.no_answer'));
+			return redirect()->route('answers.index')->with('error', __('flash.no_answer'));
 		}
 	}
 
