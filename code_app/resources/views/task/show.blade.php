@@ -1,4 +1,7 @@
 @extends('layouts.app')
+@section('header')
+<script src="{{ asset('/js/tab.js') }}"></script>
+@endsection
 @section('title', $task->title)
 @section('content')
 <div class="container">
@@ -20,15 +23,15 @@
 			<p>{!! nl2br(e($task->statement)) !!}</p>
 			<h2>@lang('title.task_input')</h2>
 			<p>{{ $task->input }}</p>
-			<pre>{{ $task->input_code }}</pre>
+			<pre><code>{{ $task->input_code }}</code></pre>
 			<h2>@lang('title.task_output')</h2>
 			<p>{{ $task->output }}</p>
 			@isset($task->output_code)
-				<pre>{{ $task->output_code }}</pre>
+				<pre><code>{{ $task->output_code }}</code></pre>
 			@endisset
 			<h2>@lang('title.task_answer')</h2>
 			{{ Form::open(['route' => ['answers.check', $task->id]]) }}
-				{{ Form::textarea('source', "&lt;?php\n", ['rows' => 10, 'style' => 'width:100%;']) }}
+				{{ Form::textarea('source', "&lt;?php\n", ['rows' => 15, 'style' => 'width:100%;', 'id' => 'tab']) }}
 				<hr>
 				{{ Form::submit(__('button.submission'), ['name' => 'submission', 'class' => 'btn btn-block btn-primary', 'onfocus' => 'this.blur();']) }}
 			{{ Form::close() }}
