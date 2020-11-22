@@ -5,6 +5,8 @@
 	<div class="page-header" style="margin-top:-30px;padding-bottom:0px;">
 		<h1><small>@lang('title.answers_list')</small></h1>
 	</div>
+	@component('components.alert')
+	@endcomponent
 	<div class="table-responsive">
 		<table class="table table-striped table-hover table-bordered">
 			<thead>

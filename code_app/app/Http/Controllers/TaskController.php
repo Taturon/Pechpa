@@ -23,7 +23,7 @@ class TaskController extends Controller {
 		if ($task) {
 			return view('task.show', compact('task'));
 		} else {
-			return redirect()->route('tasks.index');
+			return redirect()->route('tasks.index')->with('error', __('flash.no_task'));
 		}
 	}
 
