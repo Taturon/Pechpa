@@ -29,6 +29,14 @@
 			@isset($task->output_code)
 				<pre><code>{{ $task->output_code }}</code></pre>
 			@endisset
+			<hr>
+			@foreach ($task->samples as $key => $sample)
+			<h2>@lang('title.sample_input')&thinsp;{{ $key + 1 }}</h2>
+			<pre><code>{{ $sample->input_code }}</code></pre>
+			<h2>@lang('title.sample_output')&thinsp;{{ $key + 1 }}</h2>
+			<pre><code>{{ $sample->output_code }}</code></pre>
+			@endforeach
+			<hr>
 			<h2>@lang('title.task_answer')</h2>
 			{{ Form::open(['route' => ['answers.check', $task->id]]) }}
 				{{ Form::textarea('source', "&lt;?php\n", ['rows' => 15, 'style' => 'width:100%;', 'id' => 'tab']) }}
