@@ -11,6 +11,9 @@ return [
 	'task_output' => '出力',
 	'task_answer' => '回答',
 
+	'sample_input' => '入力例',
+	'sample_output' => '出力例',
+
 	'answers_list' => '回答一覧',
 	'answer_date' => '回答日時',
 	'answer_judge' => '判定',

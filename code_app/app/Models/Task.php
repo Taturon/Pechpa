@@ -15,4 +15,8 @@ class Task extends Model {
 	public function answers() {
 		return $this->hasMany('App\Models\Answer');
 	}
+
+	public function samples() {
+		return $this->hasMany('App\Models\Sample');
+	}
 }

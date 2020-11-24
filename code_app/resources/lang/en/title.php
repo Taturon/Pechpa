@@ -11,6 +11,9 @@ return [
 	'task_output' => 'Output',
 	'task_answer' => 'Your Answer',
 
+	'sample_input' => 'Sample Input',
+	'sample_output' => 'Sample Output',
+
 	'answers_list' => 'Answers',
 	'answer_date' => 'Answer Date',
 	'answer_judge' => 'Judge',
