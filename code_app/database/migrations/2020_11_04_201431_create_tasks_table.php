@@ -11,6 +11,7 @@ class CreateTasksTable extends Migration {
 			$table->increments('id');
 			$table->string('title', 50);
 			$table->string('statement', 500);
+			$table->string('constraints', 500);
 			$table->string('input', 500);
 			$table->string('input_code', 500);
 			$table->string('output', 500);

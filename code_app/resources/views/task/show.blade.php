@@ -9,35 +9,39 @@
 		<div class="col-md-12">
 			<div class="page-header" style="margin-top:-20px;padding-bottom:0px;">
 				<h1>
-					{{ $task->title }}
+					<b>{{ $task->title }}</b>
 					<br>
 					<small>
-						@lang('title.task_rank')
-						<span style="color:{{ config('tasks.colors')[$task->difficulty] }};">
-							{{ config('tasks.stars')[$task->difficulty] }}
-						</span>
+						<b>
+							@lang('title.task_rank')
+							<span style="color:{{ config('tasks.colors')[$task->difficulty] }};">
+								{{ config('tasks.stars')[$task->difficulty] }}
+							</span>
+						</b>
 					</small>
 				</h1>
 			</div>
-			<h2>@lang('title.task_statement')</h2>
+			<h2><b>@lang('title.task_statement')</b></h2>
 			<p>{!! nl2br(e($task->statement)) !!}</p>
-			<h2>@lang('title.task_input')</h2>
+			<h2><b>@lang('title.task_constraints')</b></h2>
+			<p>{{ $task->constraints }}</p>
+			<h2><b>@lang('title.task_input')</b></h2>
 			<p>{{ $task->input }}</p>
 			<pre><code>{{ $task->input_code }}</code></pre>
-			<h2>@lang('title.task_output')</h2>
+			<h2><b>@lang('title.task_output')</b></h2>
 			<p>{{ $task->output }}</p>
 			@isset($task->output_code)
 				<pre><code>{{ $task->output_code }}</code></pre>
 			@endisset
 			<hr>
 			@foreach ($task->samples as $key => $sample)
-			<h2>@lang('title.sample_input')&thinsp;{{ $key + 1 }}</h2>
-			<pre><code>{{ $sample->input_code }}</code></pre>
-			<h2>@lang('title.sample_output')&thinsp;{{ $key + 1 }}</h2>
-			<pre><code>{{ $sample->output_code }}</code></pre>
+				<h2><b>@lang('title.sample_input')&thinsp;{{ $key + 1 }}</b></h2>
+				<pre><code>{{ $sample->input_code }}</code></pre>
+				<h2><b>@lang('title.sample_output')&thinsp;{{ $key + 1 }}</b></h2>
+				<pre><code>{{ $sample->output_code }}</code></pre>
 			@endforeach
 			<hr>
-			<h2>@lang('title.task_answer')</h2>
+			<h2><b>@lang('title.task_answer')</b></h2>
 			{{ Form::open(['route' => ['answers.check', $task->id]]) }}
 				{{ Form::textarea('source', "&lt;?php\n", ['rows' => 15, 'style' => 'width:100%;', 'id' => 'tab']) }}
 				<hr>
