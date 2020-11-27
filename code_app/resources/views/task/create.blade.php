@@ -17,6 +17,9 @@
 						<div class="col-md-10 col-md-offset-1 text-center">
 							<h2>@lang('title.task_basic_configuration')</h2>
 						</div>
+						<div class="col-md-10 col-md-offset-1">
+							<hr style="border-width: 5px;">
+						</div>
 						<div class="form-group{{ $errors->has('title') ? ' has-error' : '' }}">
 							<label for="title" type="text" class="col-md-10 col-md-offset-1">
 								@lang('label.task_title')
@@ -152,6 +155,9 @@
 						<div class="col-md-10 col-md-offset-1 text-center">
 							<h2>@lang('title.task_samples')</h2>
 						</div>
+						<div class="col-md-10 col-md-offset-1">
+							<hr style="border-width: 5px;">
+						</div>
 						<div class="form-group{{ $errors->has('sample_input_code_1') ? ' has-error' : '' }}">
 							<label for="sample_input_1" class="col-md-10 col-md-offset-1">
 								@lang('label.task_sample_input') 1
@@ -188,6 +194,9 @@
 								@endif
 							</div>
 						</div>
+						<div class="col-md-10 col-md-offset-1">
+							<hr>
+						</div>
 						<div class="form-group{{ $errors->has('sample_input_2') ? ' has-error' : '' }}">
 							<label for="sample_input_2" class="col-md-10 col-md-offset-1">
 								@lang('label.task_sample_input') 2
@@ -223,6 +232,9 @@
 									</span>
 								@endif
 							</div>
+						</div>
+						<div class="col-md-10 col-md-offset-1">
+							<hr>
 						</div>
 						<div class="form-group{{ $errors->has('sample_input_3') ? ' has-error' : '' }}">
 							<label for="sample_input_3" class="col-md-10 col-md-offset-1">
@@ -266,6 +278,9 @@
 						<div class="col-md-10 col-md-offset-1 text-center">
 							<h2>@lang('title.task_tests')</h2>
 						</div>
+						<div class="col-md-10 col-md-offset-1">
+							<hr style="border-width: 5px;">
+						</div>
 						<div class="form-group{{ $errors->has('test_input_1') ? ' has-error' : '' }}">
 							<label for="test_input_1" class="col-md-10 col-md-offset-1">
 								@lang('label.task_test_input') 1
@@ -301,6 +316,9 @@
 									</span>
 								@endif
 							</div>
+						</div>
+						<div class="col-md-10 col-md-offset-1">
+							<hr>
 						</div>
 						<div class="form-group{{ $errors->has('test_input_2') ? ' has-error' : '' }}">
 							<label for="test_input_2" class="col-md-10 col-md-offset-1">
@@ -338,6 +356,9 @@
 								@endif
 							</div>
 						</div>
+						<div class="col-md-10 col-md-offset-1">
+							<hr>
+						</div>
 						<div class="form-group{{ $errors->has('test_input_3') ? ' has-error' : '' }}">
 							<label for="test_input_3" class="col-md-10 col-md-offset-1">
 								@lang('label.task_test_input') 3
@@ -373,6 +394,9 @@
 									</span>
 								@endif
 							</div>
+						</div>
+						<div class="col-md-10 col-md-offset-1">
+							<hr>
 						</div>
 						<div class="form-group{{ $errors->has('test_input_4') ? ' has-error' : '' }}">
 							<label for="test_input_4" class="col-md-10 col-md-offset-1">
