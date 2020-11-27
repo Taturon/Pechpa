@@ -3,5 +3,6 @@
 return [
 
 	'submission' => 'Submission',
+	'send' => 'Send',
 
 ];
