@@ -138,7 +138,7 @@
 								</small>
 							</label>
 							<div class="col-md-10 col-md-offset-1">
-								<textarea id="tab output_code" rows="2" class="form-control" name="output_code" required>{{ old('output_code') }}</textarea>
+								<textarea id="tab output_code" rows="2" class="form-control" name="output_code">{{ old('output_code') }}</textarea>
 								@if ($errors->has('output_code'))
 									<span class="help-block">
 										<strong>{{ $errors->first('output_code') }}</strong>
@@ -146,6 +146,9 @@
 								@endif
 							</div>
 						</div>
+
+						<!-- サンプルケース-->
+
 						<div class="col-md-10 col-md-offset-1 text-center">
 							<h2>@lang('title.task_samples')</h2>
 						</div>
@@ -195,7 +198,7 @@
 								</small>
 							</label>
 							<div class="col-md-10 col-md-offset-1">
-								<textarea id="tab sample_input_2" rows="2" class="form-control" name="sample_input_2" required>{{ old('sample_input_2') }}</textarea>
+								<textarea id="tab sample_input_2" rows="2" class="form-control" name="sample_input_2">{{ old('sample_input_2') }}</textarea>
 								@if ($errors->has('sample_input_2'))
 									<span class="help-block">
 										<strong>{{ $errors->first('sample_input_2') }}</strong>
@@ -213,7 +216,7 @@
 								</small>
 							</label>
 							<div class="col-md-10 col-md-offset-1">
-								<textarea id="tab sample_output_2" rows="2" class="form-control" name="sample_output_2" required>{{ old('sample_output_2') }}</textarea>
+								<textarea id="tab sample_output_2" rows="2" class="form-control" name="sample_output_2">{{ old('sample_output_2') }}</textarea>
 								@if ($errors->has('sample_output_2'))
 									<span class="help-block">
 										<strong>{{ $errors->first('sample_output_2') }}</strong>
@@ -231,7 +234,7 @@
 								</small>
 							</label>
 							<div class="col-md-10 col-md-offset-1">
-								<textarea id="tab sample_input_3" rows="2" class="form-control" name="sample_input_3" required>{{ old('sample_input_3') }}</textarea>
+								<textarea id="tab sample_input_3" rows="2" class="form-control" name="sample_input_3">{{ old('sample_input_3') }}</textarea>
 								@if ($errors->has('sample_input_3'))
 									<span class="help-block">
 										<strong>{{ $errors->first('sample_input_3') }}</strong>
@@ -249,7 +252,7 @@
 								</small>
 							</label>
 							<div class="col-md-10 col-md-offset-1">
-								<textarea id="tab sample_output_3" rows="2" class="form-control" name="sample_output_3" required>{{ old('sample_output_3') }}</textarea>
+								<textarea id="tab sample_output_3" rows="2" class="form-control" name="sample_output_3">{{ old('sample_output_3') }}</textarea>
 								@if ($errors->has('sample_output_3'))
 									<span class="help-block">
 										<strong>{{ $errors->first('sample_output_3') }}</strong>
@@ -257,6 +260,9 @@
 								@endif
 							</div>
 						</div>
+
+						<!-- テストケース-->
+
 						<div class="col-md-10 col-md-offset-1 text-center">
 							<h2>@lang('title.task_tests')</h2>
 						</div>
