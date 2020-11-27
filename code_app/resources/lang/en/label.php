@@ -2,6 +2,12 @@
 
 return [
 
+	'mail' => 'E-mail Address',
+	'password' => 'Password',
+	'login' => 'Login',
+	'remember' => 'Remember me',
+	'forgot' => 'Forgot password ?'
+
 	'task_title' => 'Title',
 	'task_statement' => 'Statement',
 	'task_constraints' => 'Constraints',
