@@ -21,6 +21,7 @@ class StoreTask extends FormRequest {
 			'input_code' => 'required|max:500',
 			'output' => 'required|max:500',
 			'output_code' => 'nullable|max:500',
+			'difficulty' => 'required|integer|min:1|max:' . config('tasks.max_difficulty'),
 
 			// Samples
 			'sample_input_1' => 'required|max:500',
