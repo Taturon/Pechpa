@@ -51,17 +51,17 @@ return [
 	'ipv6'                 => ':attributeには、有効なIPv6アドレスを指定してください。',
 	'json'                 => ':attributeには、有効なJSON文字列を指定してください。',
 	'max'                  => [
-		'numeric' => ':attributeには、:max以下の数字を指定してください。',
-		'file'    => ':attributeには、:max kB以下のファイルを指定してください。',
-		'string'  => ':attributeは、:max文字以下で指定してください。',
+		'numeric' => ':attributeには:max以下の数字を指定してください。',
+		'file'    => ':attributeには:max kB以下のファイルを指定してください。',
+		'string'  => ':attributeは:max文字以下で指定してください。',
 		'array'   => ':attributeは:max個以下指定してください。',
 	],
 	'mimes'                => ':attributeには:valuesタイプのファイルを指定してください。',
 	'mimetypes'            => ':attributeには:valuesタイプのファイルを指定してください。',
 	'min'                  => [
-		'numeric' => ':attributeには、:min以上の数字を指定してください。',
-		'file'    => ':attributeには、:min kB以上のファイルを指定してください。',
-		'string'  => ':attributeは、:min文字以上で指定してください。',
+		'numeric' => ':attributeには:min以上の数字を指定してください。',
+		'file'    => ':attributeには:min kB以上のファイルを指定してください。',
+		'string'  => ':attributeは:min文字以上で指定してください。',
 		'array'   => ':attributeは:min個以上指定してください。',
 	],
 	'not_in'               => '選択された:attributeは正しくありません。',
@@ -116,6 +116,32 @@ return [
 	|
 	 */
 
-	'attributes' => [],
+	'attributes' => [
+
+		'title' => 'タイトル',
+		'statement' => '問題文',
+		'constraints' => '制約',
+		'input' => '入力の説明',
+		'input_code' => '入力',
+		'output' => '出力の説明',
+		'output_code' => '出力',
+
+		'sample_input_1' => '入力例 1',
+		'sample_output_1' => '出力例 1',
+		'sample_input_2' => '入力例 2',
+		'sample_output_2' => '出力例 2',
+		'sample_input_3' => '入力例 3',
+		'sample_output_3' => '出力例 3',
+
+		'test_input_1' => 'テスト入力 1',
+		'test_output_1' => 'テスト出力 1',
+		'test_input_2' => 'テスト入力 2',
+		'test_output_2' => 'テスト出力 2',
+		'test_input_3' => 'テスト入力 3',
+		'test_output_3' => 'テスト出力 3',
+		'test_input_4' => 'テスト入力 4',
+		'test_output_4' => 'テスト出力 4',
+
+	],
 
 ];
