@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Task;
+use App\Http\Requests\StoreTask;
 use Illuminate\Http\Request;
 
 class TaskController extends Controller {
@@ -16,7 +17,7 @@ class TaskController extends Controller {
 		return view('task.create');
 	}
 
-	public function store(Request $request) {
+	public function store(StoreTask $request) {
 	}
 
 	public function show($id) {
