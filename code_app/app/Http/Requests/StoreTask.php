@@ -20,7 +20,7 @@ class StoreTask extends FormRequest {
 			'input' => 'required|max:500',
 			'input_code' => 'required|max:500',
 			'output' => 'required|max:500',
-			'output_code' => 'required|max:500',
+			'output_code' => 'nullable|max:500',
 
 			// Samples
 			'sample_input_1' => 'required|max:500',
