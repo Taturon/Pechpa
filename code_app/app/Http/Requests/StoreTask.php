@@ -25,10 +25,10 @@ class StoreTask extends FormRequest {
 			// Samples
 			'sample_input_1' => 'required|max:500',
 			'sample_output_1' => 'required|max:500',
-			'sample_input_2' => 'nullable|max:500',
-			'sample_output_2' => 'nullable|max:500',
-			'sample_input_3' => 'nullable|max:500',
-			'sample_output_3' => 'nullable|max:500',
+			'sample_input_2' => 'required_with:sample_input_2,sample_output_2|max:500',
+			'sample_output_2' => 'required_with:sample_input_2,sample_output_2|max:500',
+			'sample_input_3' => 'required_with:sample_input_3,sample_output_3|max:500',
+			'sample_output_3' => 'required_with:sample_input_3,sample_output_3|max:500',
 
 			// Tests
 			'test_input_1' => 'required|max:500',
