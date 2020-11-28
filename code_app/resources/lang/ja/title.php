@@ -11,6 +11,10 @@ return [
 	'task_input' => '入力',
 	'task_output' => '出力',
 	'task_answer' => '回答',
+	'task_create' => '問題作成',
+	'task_basic_configuration' => '基本設定',
+	'task_samples' => '入出力例',
+	'task_tests' => 'テストケース',
 
 	'sample_input' => '入力例',
 	'sample_output' => '出力例',

@@ -11,6 +11,10 @@ return [
 	'task_input' => 'Input',
 	'task_output' => 'Output',
 	'task_answer' => 'Your Answer',
+	'task_create' => 'Task Creation',
+	'task_basic_configuration' => 'Basic Configuration',
+	'task_samples' => 'Sample Cases',
+	'task_tests' => 'Test Cases',
 
 	'sample_input' => 'Sample Input',
 	'sample_output' => 'Sample Output',

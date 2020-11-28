@@ -17,7 +17,7 @@
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/', 'TaskController@index')->name('tasks.index');
-Route::resource('tasks', 'TaskController', ['only' => ['show']]);
+Route::resource('tasks', 'TaskController', ['only' => ['show', 'create', 'store']]);
 
 /**
  * ユーザー認証状態でアクセス可

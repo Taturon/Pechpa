@@ -24,6 +24,8 @@ class RouteServiceProvider extends ServiceProvider
     public function boot()
     {
         //
+        Route::pattern('task', '[0-9]+');
+        Route::pattern('answer', '[0-9]+');
 
         parent::boot();
     }

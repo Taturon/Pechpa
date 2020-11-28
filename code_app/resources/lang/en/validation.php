@@ -116,6 +116,32 @@ return [
 	|
 	 */
 
-	'attributes' => [],
+	'attributes' => [
+
+		'title' => 'Title',
+		'statement' => 'Statement',
+		'constraints' => 'Constraints',
+		'input' => 'Input Description',
+		'input_code' => 'Input',
+		'output' => 'Output Description',
+		'output_code' => 'Output',
+
+		'sample_input_1' => 'Sample Input 1',
+		'sample_output_1' => 'Sample Output 1',
+		'sample_input_2' => 'Sample Input 2',
+		'sample_output_2' => 'Sample Output 2',
+		'sample_input_3' => 'Sample Input 3',
+		'sample_output_3' => 'Sample Output 3',
+
+		'test_input_1' => 'Test Input 1',
+		'test_output_1' => 'Test Output 1',
+		'test_input_2' => 'Test Input2',
+		'test_output_2' => 'Test Output2',
+		'test_input_3' => 'Test Input3',
+		'test_output_3' => 'Test Output3',
+		'test_input_4' => 'Test Input4',
+		'test_output_4' => 'Test Output4',
+
+	],
 
 ];

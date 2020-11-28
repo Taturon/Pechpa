@@ -21,4 +21,5 @@ return [
 		7 => 'darkorange',
 		8 => 'red',
 	],
+	'max_difficulty' => '8',
 ];
