@@ -149,6 +149,23 @@
 								@endif
 							</div>
 						</div>
+						<div class="form-group{{ $errors->has('difficulty') ? ' has-error' : '' }}">
+							<label for="difficulty" class="col-md-10 col-md-offset-1">
+								@lang('label.task_difficulty')
+								<small>
+									<span class="label label-danger">@lang('notice.required')</span>
+								</small>
+							</label>
+							<div class="col-md-10 col-md-offset-1">
+								<span style="text-align:center;"><output id="output1">{{ old('difficulty', 4) }}</output></span>
+								<input id="difficulty" type="range" name="difficulty" value="{{ old('difficulty', 4) }}" min="1" max="{{ config('tasks.max_difficulty') }}" step="1" oninput="document.getElementById('output1').value=this.value">
+								@if ($errors->has('difficulty'))
+									<span class="help-block">
+										<strong>{{ $errors->first('difficulty') }}</strong>
+									</span>
+								@endif
+							</div>
+						</div>
 
 						<!-- サンプルケース-->
 
