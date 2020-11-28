@@ -12,7 +12,7 @@
 			<div class="panel panel-default">
 				<div class="panel-heading text-center"><h1>@lang('title.task_create')</h1></div>
 				<div class="panel-body">
-					<form class="form-horizontal" method="POST" action="{{ route('tasks.index') }}">
+					<form class="form-horizontal" method="POST" action="{{ route('tasks.store') }}">
 						{{ csrf_field() }}
 						<div class="col-md-10 col-md-offset-1 text-center">
 							<h2>@lang('title.task_basic_configuration')</h2>
@@ -158,7 +158,7 @@
 						<div class="col-md-10 col-md-offset-1">
 							<hr style="border-width: 5px;">
 						</div>
-						<div class="form-group{{ $errors->has('sample_input_code_1') ? ' has-error' : '' }}">
+						<div class="form-group{{ $errors->has('sample_input_1') ? ' has-error' : '' }}">
 							<label for="sample_input_1" class="col-md-10 col-md-offset-1">
 								@lang('label.task_sample_input') 1
 								<small>
