@@ -45,7 +45,9 @@
 			{{ Form::open(['route' => ['answers.check', $task->id]]) }}
 				{{ Form::textarea('source', "&lt;?php\n", ['rows' => 15, 'style' => 'width:100%;', 'id' => 'tab']) }}
 				<hr>
-				{{ Form::submit(__('button.submission'), ['name' => 'submission', 'class' => 'btn btn-block btn-primary', 'onfocus' => 'this.blur();']) }}
+				<button class="btn btn-block btn-primary" name="submission" type="submit" onclick="return confirm('@lang('button.submission_confirm')');">
+					@lang('button.submission')
+				</button>
 			{{ Form::close() }}
 			<hr>
 			<ol class="breadcrumb">
