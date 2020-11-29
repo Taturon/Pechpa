@@ -6,43 +6,51 @@
 		<div class="col-md-12">
 			<div class="page-header" style="margin-top:-20px;padding-bottom:0px;">
 				<h1>
-					{{ $answer->task->title }}
+					<b>{{ $answer->task->title }}</b>
 					<br>
 					<small>
-						@lang('title.task_rank')
-						<span style="color:{{ config('tasks.colors')[$answer->task->difficulty] }};">
-							{{ config('tasks.stars')[$answer->task->difficulty] }}
-						</span>
+						<b>
+							@lang('title.task_rank')
+							<span style="color:{{ config('tasks.colors')[$answer->task->difficulty] }};">
+								{{ config('tasks.stars')[$answer->task->difficulty] }}
+							</span>
+						</b>
 					</small>
 				</h1>
 			</div>
 			<div class="row">
 				<div class="col-md-4">
 					<h2>
-						@lang('title.answer_date')
-						<small>{{ $answer->created_at }}</small>
+						<b>
+							@lang('title.answer_date')
+							<small>{{ $answer->created_at }}</small>
+						</b>
 					</h2>
 				</div>
 				<div class="col-md-4">
 					<h2>
-						@lang('title.answer_judge')
-						<small>
-							<span class="label label-{{ $answer->judge === 'AC' ? 'success' : 'warning' }}">{{ $answer->judge }}</span>
-						</small>
+						<b>
+							@lang('title.answer_judge')
+							<small>
+								<span class="label label-{{ $answer->judge === 'AC' ? 'success' : 'warning' }}">{{ $answer->judge }}</span>
+							</small>
+						</b>
 					</h2>
 				</div>
 				<div class="col-md-4">
 					<h2>
-						@lang('title.answer_byte')
-						<small>{{ $answer->byte }}&thinsp;Byte</small>
+						<b>
+							@lang('title.answer_byte')
+							<small>{{ $answer->byte }}&thinsp;Byte</small>
+						</b>
 					</h2>
 				</div>
 			</div>
-			<h2>@lang('title.answer_code')</h2>
+			<h2><b>@lang('title.answer_code')</b></h2>
 			<pre><code>{{ $answer->answer_code }}</code></pre>
-			<h2>@lang('title.answer_compile')</h2>
+			<h2><b>@lang('title.answer_compile')</b></h2>
 			<pre><code>{{ $answer->compile_message }}</code></pre>
-			<h2>@lang('title.answer_testings')</h2>
+			<h2><b>@lang('title.answer_testings')</b></h2>
 			<div class="table-responsive">
 				<table class="table table-striped table-hover table-bordered">
 					<thead>
