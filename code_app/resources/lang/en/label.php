@@ -15,6 +15,7 @@ return [
 	'task_input_code' => 'Input',
 	'task_output' => 'Output Description',
 	'task_output_code' => 'Output',
+	'task_difficulty' => 'Difficulty',
 	'task_sample_input' => 'Sample Input',
 	'task_sample_output' => 'Sample Output',
 	'task_test_input' => 'Test Input',

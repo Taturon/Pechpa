@@ -15,6 +15,7 @@ return [
 	'task_input_code' => '入力',
 	'task_output' => '出力の説明',
 	'task_output_code' => '出力',
+	'task_difficulty' => '難易度',
 	'task_sample_input' => '入力例',
 	'task_sample_output' => '出力例',
 	'task_test_input' => 'テスト入力',
