@@ -35,17 +35,19 @@
 			@endisset
 			<hr>
 			@foreach ($task->samples as $key => $sample)
-				<h2><b>@lang('title.sample_input')&thinsp;{{ $key + 1 }}</b></h2>
+				<h3><b>@lang('title.sample_input')&thinsp;{{ $key + 1 }}</b></h3>
 				<pre><code>{{ $sample->input_code }}</code></pre>
-				<h2><b>@lang('title.sample_output')&thinsp;{{ $key + 1 }}</b></h2>
+				<h3><b>@lang('title.sample_output')&thinsp;{{ $key + 1 }}</b></h3>
 				<pre><code>{{ $sample->output_code }}</code></pre>
+				<hr>
 			@endforeach
-			<hr>
 			<h2><b>@lang('title.task_answer')</b></h2>
 			{{ Form::open(['route' => ['answers.check', $task->id]]) }}
 				{{ Form::textarea('source', "&lt;?php\n", ['rows' => 15, 'style' => 'width:100%;', 'id' => 'tab']) }}
 				<hr>
-				{{ Form::submit(__('button.submission'), ['name' => 'submission', 'class' => 'btn btn-block btn-primary', 'onfocus' => 'this.blur();']) }}
+				<button class="btn btn-block btn-primary" name="submission" type="submit" onclick="return confirm('@lang('button.submission_confirm')');">
+					@lang('button.submission')
+				</button>
 			{{ Form::close() }}
 			<hr>
 			<ol class="breadcrumb">
