@@ -46,10 +46,13 @@
 					</h2>
 				</div>
 			</div>
+			<hr>
 			<h2><b>@lang('title.answer_code')</b></h2>
 			<pre><code>{{ $answer->answer_code }}</code></pre>
+			<hr>
 			<h2><b>@lang('title.answer_compile')</b></h2>
 			<pre><code>{{ $answer->compile_message }}</code></pre>
+			<hr>
 			<h2><b>@lang('title.answer_testings')</b></h2>
 			<div class="table-responsive">
 				<table class="table table-striped table-hover table-bordered">
