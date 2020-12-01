@@ -27,7 +27,7 @@ class LoginController extends Controller {
 	 *
 	 * @var string
 	 */
-	protected $redirectTo = 'admin/home';
+	protected $redirectTo = '/';
 
 	/**
 	 * Create a new controller instance.
@@ -39,13 +39,15 @@ class LoginController extends Controller {
 	}
 
 	public function showLoginForm() {
-		return view('auth.login');
+		return view('admin.login');
 	}
+
 	protected function guard() {
 		return Auth::guard('admin');
 	}
+
 	public function logout(Request $request) {
 		Auth::guard('admin')->logout();
-		return redirect('admin/login');
+		return redirect()->route('tasks.index');
 	}
 }
