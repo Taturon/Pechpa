@@ -14,6 +14,13 @@ class AppServiceProvider extends ServiceProvider {
 	 */
 	public function boot() {
 		Schema::defaultStringLength(191);
+		$uri = isset($_SERVER['REQUEST_URI']) ? $_SERVER['REQUEST_URI'] : '';
+		if (strpos($uri, '/admin/') === false || $uri === '/admin') {
+			config([
+				'session.cookie' => config('admin_session.cookie'),
+				'session.table' => config('admin_session.table'),
+			]);
+		}
 	}
 
 	/**

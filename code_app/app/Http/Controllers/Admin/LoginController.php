@@ -1,8 +1,9 @@
 <?php
 
-namespace App\Http\Controllers\Auth;
+namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\AdminAuthentication;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -27,7 +28,7 @@ class LoginController extends Controller {
 	 *
 	 * @var string
 	 */
-	protected $redirectTo = '/';
+	protected $redirectTo = '/admin/tasks';
 
 	/**
 	 * Create a new controller instance.
@@ -35,15 +36,26 @@ class LoginController extends Controller {
 	 * @return void
 	 */
 	public function __construct() {
-		$this->middleware('guest:user')->except('logout');
+		$this->middleware('guest:admin')->except('logout');
 	}
 
 	protected function guard() {
-		return Auth::guard('user');
+		return Auth::guard('admin');
+	}
+
+	public function showLoginForm() {
+		return view('admin.login');
+	}
+
+	public function login(AdminAuthentication $request) {
+		if (Auth::guard('admin')->attempt(['email' => $request->email, 'password' => $request->password], $request->remember)) {
+			return redirect()->intended(route('admin.tasks.index'));
+		}
+		return redirect()->back()->withInput($request->only('email', 'remenber'));
 	}
 
 	public function logout(Request $request) {
-		Auth::guard('user')->logout();
+		Auth::guard('admin')->logout();
 		return redirect()->route('tasks.index');
 	}
 }
