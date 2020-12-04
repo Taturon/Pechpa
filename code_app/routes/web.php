@@ -12,12 +12,19 @@
  */
 
 /**
- * ユーザー非認証状態でアクセス可
+ * いかなる状態でもアクセス可
  */
-Auth::routes();
-Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/', 'TaskController@index')->name('tasks.index');
 Route::resource('tasks', 'TaskController', ['only' => ['show', 'create', 'store']]);
+
+/**
+ * ユーザー非認証状態でアクセス可
+ */
+Route::group(['middleware' => 'guest:user'], function() {
+	Auth::routes();
+	Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
+	Route::post('login', 'Auth\LoginController@login')->name('login');
+});
 
 /**
  * ユーザー認証状態でアクセス可
@@ -30,7 +37,7 @@ Route::group(['middleware' => ['auth']], function() {
 /**
  * 管理者非認証状態でアクセス可
  */
-Route::group(['prefix' => 'admin'], function() {
+Route::group(['prefix' => 'admin', 'middleware' => 'guest:admin'], function() {
 	Route::get('login', 'Admin\LoginController@showLoginForm')->name('admin.login');
 	Route::post('login', 'Admin\LoginController@login');
 });
@@ -40,5 +47,4 @@ Route::group(['prefix' => 'admin'], function() {
  */
 Route::group(['prefix' => 'admin', 'middleware' => 'auth:admin'], function() {
 	Route::post('logout', 'Admin\LoginController@logout')->name('admin.logout');
-	Route::get('home', 'HomeController@index')->name('admin.home');
 });
