@@ -32,8 +32,8 @@
 					</button>
 
 					<!-- Branding Image -->
-					<a class="navbar-brand" href="{{ url('/') }}">
-						{{ config('app.name', 'Pechpa') }}
+					<a class="navbar-brand" href="{{ Auth::guard('admin')->check() ? route('admin.tasks.index') : route('tasks.index') }}">
+						{{ config('app.name', 'Pechpa!') }}
 					</a>
 				</div>
 
@@ -46,30 +46,30 @@
 					<!-- Right Side Of Navbar -->
 					<ul class="nav navbar-nav navbar-right">
 						<!-- Authentication Links -->
-						@guest
+						@if (!Auth::guard('admin')->check() && !Auth::guard('user')->check() && strpos(url()->current(), '/admin') === false)
 							<li><a href="{{ route('login') }}">Login</a></li>
 							<li><a href="{{ route('register') }}">Register</a></li>
-						@else
+						@elseif (Auth::guard('admin')->check() || Auth::guard('user')->check())
 							<li class="dropdown">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" v-pre>
-									{{ Auth::user()->name }} <span class="caret"></span>
+									{{ Auth::guard('admin')->check() ? Auth::guard('admin')->user()->name : Auth::user()->name }} <span class="caret"></span>
 								</a>
 
 								<ul class="dropdown-menu">
 									<li>
-										<a href="{{ route('logout') }}"
+										<a href="{{ Auth::guard('admin')->check() ? route('admin.logout') : route('logout') }}"
 											onclick="event.preventDefault();
 													 document.getElementById('logout-form').submit();">
 											Logout
 										</a>
 
-										<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+										<form id="logout-form" action="{{ Auth::guard('admin')->check() ? route('admin.logout') : route('logout') }}" method="POST" style="display: none;">
 											{{ csrf_field() }}
 										</form>
 									</li>
 								</ul>
 							</li>
-						@endguest
+						@endif
 					</ul>
 				</div>
 			</div>
