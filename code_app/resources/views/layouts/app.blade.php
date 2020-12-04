@@ -47,8 +47,8 @@
 					<ul class="nav navbar-nav navbar-right">
 						<!-- Authentication Links -->
 						@if (!Auth::guard('admin')->check() && !Auth::guard('user')->check() && strpos(url()->current(), '/admin') === false)
-							<li><a href="{{ route('login') }}">Login</a></li>
-							<li><a href="{{ route('register') }}">Register</a></li>
+							<li><a href="{{ route('login') }}">@lang('link.login')</a></li>
+							<li><a href="{{ route('register') }}">@lang('link.register')</a></li>
 						@elseif (Auth::guard('admin')->check() || Auth::guard('user')->check())
 							<li class="dropdown">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" v-pre>
@@ -60,7 +60,7 @@
 										<a href="{{ Auth::guard('admin')->check() ? route('admin.logout') : route('logout') }}"
 											onclick="event.preventDefault();
 													 document.getElementById('logout-form').submit();">
-											Logout
+											@lang('link.logout')
 										</a>
 
 										<form id="logout-form" action="{{ Auth::guard('admin')->check() ? route('admin.logout') : route('logout') }}" method="POST" style="display: none;">
