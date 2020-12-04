@@ -39,7 +39,7 @@ Route::group(['middleware' => ['auth']], function() {
  */
 Route::group(['prefix' => 'admin', 'middleware' => 'guest:admin'], function() {
 	Route::get('login', 'Admin\LoginController@showLoginForm')->name('admin.login');
-	Route::post('login', 'Admin\LoginController@login');
+	Route::post('login', 'Admin\LoginController@login')->name('admin.login');
 });
 
 /**
