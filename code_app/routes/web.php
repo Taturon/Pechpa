@@ -29,7 +29,8 @@ Route::group(['middleware' => 'guest:user'], function() {
 /**
  * ユーザー認証状態でアクセス可
  */
-Route::group(['middleware' => ['auth']], function() {
+Route::group(['middleware' => 'auth:user'], function() {
+	Route::post('logout', 'Auth\LoginController@logout')->name('logout');
 	Route::resource('answers', 'AnswerController', ['only' => ['index', 'show']]);
 	Route::post('tasks/{task}/answer', 'AnswerController@check')->name('answers.check');
 });
