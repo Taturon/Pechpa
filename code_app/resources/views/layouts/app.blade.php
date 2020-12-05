@@ -18,7 +18,7 @@
 	<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 	<style>
 		@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,600;1,700&family=Kosugi+Maru&display=swap');
-		body {font-family:'Chakra Petch','Kosugi Maru',sans-serif;font-weight:600;}
+		body {font-family:'Chakra Petch','Kosugi Maru',sans-serif;font-weight:600;background-color:aliceblue;}
 	</style>
 
 	@yield('header')
@@ -85,7 +85,9 @@
 			</div>
 		</nav>
 
-		@yield('content')
+		<div class="container" style="padding-top:15px;background-color:white;">
+			@yield('content')
+		</div>
 	</div>
 
 	<!-- Scripts -->
