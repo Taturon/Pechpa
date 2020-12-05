@@ -4,9 +4,12 @@ namespace App\Http\Controllers;
 
 use Carbon\Carbon;
 use App\Models\Task;
+use App\Mail\TaskCreated;
 use App\Http\Requests\StoreTask;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Auth;
 
 class TaskController extends Controller {
 
@@ -89,6 +92,8 @@ class TaskController extends Controller {
 			],
 		];
 		DB::table('tests')->insert($tests);
+
+		Mail::send(new TaskCreated($request->title, Auth::user()->name));
 	}
 
 	public function show($id) {
