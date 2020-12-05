@@ -12,6 +12,7 @@
 
 	<!-- Styles -->
 	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link rel="shortcut icon" href="{{ asset('/favicons/favicon.ico') }}">
 	<link href="{{ asset('css/app.css') }}" rel="stylesheet">
 	<link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,600;1,700&family=Kosugi+Maru&display=swap" rel="stylesheet">
