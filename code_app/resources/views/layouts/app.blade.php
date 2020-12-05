@@ -11,9 +11,15 @@
 	<title>{{ config('app.name', 'PHP Coder') . ' | ' }}@yield('title')</title>
 
 	<!-- Styles -->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="{{ asset('css/app.css') }}" rel="stylesheet">
 	<link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,600;1,700&family=Kosugi+Maru&display=swap" rel="stylesheet">
 	<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,600;1,700&family=Kosugi+Maru&display=swap');
+		body {font-family:'Chakra Petch','Kosugi Maru',sans-serif;font-weight:600;}
+	</style>
 
 	@yield('header')
 </head>
@@ -59,7 +65,8 @@
 									<li>
 										<a href="{{ Auth::guard('admin')->check() ? route('admin.logout') : route('logout') }}"
 											onclick="event.preventDefault();
-													 document.getElementById('logout-form').submit();">
+											document.getElementById('logout-form').submit();"
+										>
 											@lang('link.logout')
 										</a>
 
