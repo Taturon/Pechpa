@@ -45,7 +45,7 @@ class TaskController extends Controller {
 			]
 		];
 		if (!is_null($request->sample_input_2) && !is_null($request->sample_output_2)) {
-			$sample[] = [
+			$samples[] = [
 				'task_id' => $task->id,
 				'input_code' => $request->sample_input_2,
 				'output_code' => $request->sample_output_2,
@@ -54,7 +54,7 @@ class TaskController extends Controller {
 			];
 		}
 		if (!is_null($request->sample_input_3) && !is_null($request->sample_output_3)) {
-			$sample[] = [
+			$samples[] = [
 				'task_id' => $task->id,
 				'input_code' => $request->sample_input_3,
 				'output_code' => $request->sample_output_3,
