@@ -29,5 +29,9 @@ class AppServiceProvider extends ServiceProvider {
 	 * @return void
 	 */
 	public function register() {
+		$this->app->bind(
+			\App\Repositories\Answer\AnswerRepositoryInterface::class,
+			\App\Repositories\Answer\AnswerRepository::class
+		);
 	}
 }
