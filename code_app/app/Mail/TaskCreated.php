@@ -12,18 +12,18 @@ class TaskCreated extends Mailable {
 
 	use Queueable, SerializesModels;
 
-	protected $title;
+	public $request;
 
-	protected $user_name;
+	public $user;
 
 	/**
 	 * Create a new message instance.
 	 *
 	 * @return void
 	 */
-	public function __construct($title, $user_name) {
-		$this->title = $title;
-		$this->user_name = $user_name;
+	public function __construct($request, $user) {
+		$this->request = $request;
+		$this->user = $user;
 	}
 
 	/**
@@ -36,6 +36,6 @@ class TaskCreated extends Mailable {
 		return $this->to($to)
 			->subject(__('mail.subject_task_created'))
 			->markdown('mail.task_created')
-			->with(['title' => $this->title, 'user_name' => $this->user_name]);
+			->with(['request' => $this->request, 'user' => $this->user]);
 	}
 }
