@@ -455,7 +455,7 @@
 					</div>
 					<div class="form-group">
 						<div class="col-md-10 col-md-offset-1">
-							<button type="submit" class="btn btn-block btn-primary">
+							<button type="submit" class="btn btn-block btn-primary" onclick="return confirm('@lang('button.send_confirm')');">
 								@lang('button.send')
 							</button>
 						</div>
