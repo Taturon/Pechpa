@@ -94,6 +94,8 @@ class TaskController extends Controller {
 		DB::table('tests')->insert($tests);
 
 		Mail::send(new TaskCreated($request->title, Auth::user()->name));
+
+		return redirect()->route('tasks.index');
 	}
 
 	public function show($id) {
