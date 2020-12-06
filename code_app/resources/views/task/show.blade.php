@@ -12,7 +12,7 @@
 				<br>
 				<small>
 					<b>
-						@lang('title.task_rank')
+						@lang('title.task_difficulty')
 						<span style="color:{{ config('tasks.colors')[$task->difficulty] }};">
 							{{ config('tasks.stars')[$task->difficulty] }}
 						</span>

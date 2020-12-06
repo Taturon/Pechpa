@@ -4,9 +4,12 @@ namespace App\Http\Controllers;
 
 use Carbon\Carbon;
 use App\Models\Task;
+use App\Mail\TaskCreated;
 use App\Http\Requests\StoreTask;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Auth;
 
 class TaskController extends Controller {
 
@@ -42,7 +45,7 @@ class TaskController extends Controller {
 			]
 		];
 		if (!is_null($request->sample_input_2) && !is_null($request->sample_output_2)) {
-			$sample[] = [
+			$samples[] = [
 				'task_id' => $task->id,
 				'input_code' => $request->sample_input_2,
 				'output_code' => $request->sample_output_2,
@@ -51,7 +54,7 @@ class TaskController extends Controller {
 			];
 		}
 		if (!is_null($request->sample_input_3) && !is_null($request->sample_output_3)) {
-			$sample[] = [
+			$samples[] = [
 				'task_id' => $task->id,
 				'input_code' => $request->sample_input_3,
 				'output_code' => $request->sample_output_3,
@@ -89,6 +92,10 @@ class TaskController extends Controller {
 			],
 		];
 		DB::table('tests')->insert($tests);
+
+		Mail::send(new TaskCreated($request, Auth::user()));
+
+		return redirect()->route('tasks.index');
 	}
 
 	public function show($id) {
