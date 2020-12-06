@@ -93,7 +93,7 @@ class TaskController extends Controller {
 		];
 		DB::table('tests')->insert($tests);
 
-		Mail::send(new TaskCreated($request->title, Auth::user()->name));
+		Mail::send(new TaskCreated($request, Auth::user()));
 
 		return redirect()->route('tasks.index');
 	}
