@@ -28,7 +28,9 @@
 <p>
 	<b>@lang('mail.task_difficulty')</b>
 	<br>
-	{{ $request->difficulty }}
+	<span style="color:{{ config('tasks.colors')[$request->difficulty] }};">
+		{{ config('tasks.stars')[$request->difficulty] }}
+	</span>
 </p>
 
 <hr>
