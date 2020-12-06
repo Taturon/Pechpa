@@ -5,7 +5,7 @@ return [
 	'login' => 'Login',
 
 	'tasks_list' => 'Tasks',
-	'task_rank' => 'Rank',
+	'task_difficulty' => 'Difficulty',
 	'task_statement' => 'Statement',
 	'task_constraints' => 'Constraints',
 	'task_input' => 'Input',

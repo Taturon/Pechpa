@@ -5,7 +5,7 @@ return [
 	'login' => 'ログイン',
 
 	'tasks_list' => '問題一覧',
-	'task_rank' => 'ランク',
+	'task_difficulty' => '難易度',
 	'task_statement' => '問題文',
 	'task_constraints' => '制約',
 	'task_input' => '入力',
