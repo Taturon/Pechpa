@@ -33,5 +33,9 @@ class AppServiceProvider extends ServiceProvider {
 			\App\Repositories\Answer\AnswerRepositoryInterface::class,
 			\App\Repositories\Answer\AnswerRepository::class
 		);
+		$this->app->bind(
+			\App\Repositories\Task\TaskRepositoryInterface::class,
+			\App\Repositories\Task\TaskRepository::class
+		);
 	}
 }
