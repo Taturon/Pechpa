@@ -2,19 +2,25 @@
 
 namespace App\Http\Controllers;
 
-use Carbon\Carbon;
-use App\Models\Task;
-use App\Mail\TaskCreated;
-use App\Http\Requests\StoreTask;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Auth;
+use App\Services\SendMail;
+use App\Http\Requests\StoreTask;
+use App\Repositories\Task\TaskRepositoryInterface AS Task;
 
 class TaskController extends Controller {
 
+	protected $task;
+
+	protected $sand_mail;
+
+	public function __construct(Task $task, SendMail $send_mail) {
+		$this->task = $task;
+		$this->send_mail = $send_mail;
+	}
+
 	public function index() {
-		$tasks = Task::all();
+		$tasks = $this->task->all();
 		return view('task.index', compact('tasks'));
 	}
 
@@ -23,83 +29,16 @@ class TaskController extends Controller {
 	}
 
 	public function store(StoreTask $request) {
-		$task = new Task;
-		$task->title = $request->title;
-		$task->statement = $request->statement;
-		$task->constraints = $request->constraints;
-		$task->input = $request->input;
-		$task->input_code = $request->input_code;
-		$task->output = $request->output;
-		$task->output_code = $request->output_code;
-		$task->difficulty = $request->difficulty;
-		$task->save();
-
-		$datetime = Carbon::now();
-		$samples = [
-			[
-				'task_id' => $task->id,
-				'input_code' => $request->sample_input_1,
-				'output_code' => $request->sample_output_1,
-				'created_at' => $datetime,
-				'updated_at' => $datetime,
-			]
-		];
-		if (!is_null($request->sample_input_2) && !is_null($request->sample_output_2)) {
-			$samples[] = [
-				'task_id' => $task->id,
-				'input_code' => $request->sample_input_2,
-				'output_code' => $request->sample_output_2,
-				'created_at' => $datetime,
-				'updated_at' => $datetime,
-			];
-		}
-		if (!is_null($request->sample_input_3) && !is_null($request->sample_output_3)) {
-			$samples[] = [
-				'task_id' => $task->id,
-				'input_code' => $request->sample_input_3,
-				'output_code' => $request->sample_output_3,
-				'created_at' => $datetime,
-				'updated_at' => $datetime,
-			];
-		}
-		DB::table('samples')->insert($samples);
-
-		$tests = [
-			[
-				'task_id' => $task->id,
-				'input' => $request->test_input_1,
-				'output' => $request->test_output_1,
-				'created_at' => $datetime,
-				'updated_at' => $datetime,
-			], [
-				'task_id' => $task->id,
-				'input' => $request->test_input_2,
-				'output' => $request->test_output_2,
-				'created_at' => $datetime,
-				'updated_at' => $datetime,
-			], [
-				'task_id' => $task->id,
-				'input' => $request->test_input_3,
-				'output' => $request->test_output_3,
-				'created_at' => $datetime,
-				'updated_at' => $datetime,
-			], [
-				'task_id' => $task->id,
-				'input' => $request->test_input_4,
-				'output' => $request->test_output_4,
-				'created_at' => $datetime,
-				'updated_at' => $datetime,
-			],
-		];
-		DB::table('tests')->insert($tests);
-
-		Mail::send(new TaskCreated($request, Auth::user()));
-
+		$task = $this->task->storeTask($request);
+		$task_id = $task->id;
+		$this->task->storeSampleCases($task_id, $request);
+		$this->task->storeTestCases($task_id, $request);
+		$this->send_mail->sendTaskCreationNotification(Auth::user(), $request);
 		return redirect()->route('tasks.index');
 	}
 
 	public function show($id) {
-		$task = Task::find($id);
+		$task = $this->task->findById($id);
 		if ($task) {
 			return view('task.show', compact('task'));
 		} else {
