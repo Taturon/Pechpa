@@ -38,7 +38,7 @@ class TaskController extends Controller {
 	}
 
 	public function show($id) {
-		$task = $this->task->findById($id);
+		$task = $this->task->findReviewedTask($id);
 		if ($task) {
 			return view('task.show', compact('task'));
 		} else {
