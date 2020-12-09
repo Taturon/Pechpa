@@ -25,7 +25,7 @@
 						{{ config('tasks.stars')[$task->difficulty] }}
 					</td>
 					<td>
-						<a href="{{ route('tasks.show', ['task' => $task->id]) }}">{{ $task->title }}</a>
+						<a href="{{ route('admin.tasks.edit', ['id' => $task->id]) }}">{{ $task->title }}</a>
 					</td>
 				</tr>
 			@endforeach
