@@ -20,7 +20,7 @@ class TaskController extends Controller {
 	}
 
 	public function index() {
-		$tasks = $this->task->all();
+		$tasks = $this->task->allReviewedTasks();
 		return view('task.index', compact('tasks'));
 	}
 
