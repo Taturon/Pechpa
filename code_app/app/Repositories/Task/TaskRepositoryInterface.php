@@ -6,6 +6,8 @@ interface TaskRepositoryInterface {
 
 	public function all();
 
+	public function allReviewedTasks();
+
 	public function findById($id);
 
 	public function storeTask($request);
