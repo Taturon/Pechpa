@@ -27,7 +27,7 @@ class TaskRepository implements TaskRepositoryInterface {
 	}
 
 	public function findById($id) {
-		return $this->task::find($id);
+		return $this->task->whereNotNull('reviewed_at')->find($id);
 	}
 
 	public function storeTask($request) {
