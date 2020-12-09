@@ -8,4 +8,6 @@ return [
 	'wrong_answer' => 'Incorrect answer...',
 	'correct_answer' => 'Correct answer !',
 
+	'task_created' => 'We have received a your suggestion ! Please wait for the review.',
+
 ];
