@@ -34,7 +34,7 @@ class TaskController extends Controller {
 		$this->task->storeSampleCases($task_id, $request);
 		$this->task->storeTestCases($task_id, $request);
 		$this->send_mail->sendTaskCreationNotification(Auth::user(), $request);
-		return redirect()->route('tasks.index');
+		return redirect()->route('tasks.index')->with('success', __('flash.task_created'));
 	}
 
 	public function show($id) {
