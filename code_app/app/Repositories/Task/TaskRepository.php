@@ -15,15 +15,15 @@ class TaskRepository implements TaskRepositoryInterface {
 	}
 
 	public function all() {
-		return $this->task::all();
+		return $this->task->all();
 	}
 
 	public function allReviewedTasks() {
-		return $this->task::whereNotNull('reviewed_at')->get();
+		return $this->task->whereNotNull('reviewed_at')->get();
 	}
 
 	public function allUnreviewedTasks() {
-		return $this->task::whereNull('reviewed_at')->get();
+		return $this->task->whereNull('reviewed_at')->get();
 	}
 
 	public function findById($id) {
