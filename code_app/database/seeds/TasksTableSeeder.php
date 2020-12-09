@@ -15,6 +15,7 @@ class TasksTableSeeder extends Seeder {
 			'output' => 'Nを出力して下さい。',
 			'output_code' => 'N',
 			'difficulty' => 1,
+			'reviewed_at' => '2020-11-01 00:00:00',
 			'created_at' => '2020-11-01 00:00:00',
 			'updated_at' => '2020-11-01 00:00:00',
 		], [
@@ -26,6 +27,7 @@ class TasksTableSeeder extends Seeder {
 			'output' => '\( C_i \)を改行区切りで出力して下さい。',
 			'output_code' => "C_1\nC_i\nC_N\n",
 			'difficulty' => 1,
+			'reviewed_at' => '2020-11-01 00:00:01',
 			'created_at' => '2020-11-01 00:00:01',
 			'updated_at' => '2020-11-01 00:00:01',
 		], [
@@ -37,6 +39,7 @@ class TasksTableSeeder extends Seeder {
 			'output' => '1からNまでの数字（文字列）を改行区切りで出力して下さい。',
 			'output_code' => NULL,
 			'difficulty' => 1,
+			'reviewed_at' => '2020-11-01 00:00:02',
 			'created_at' => '2020-11-01 00:00:02',
 			'updated_at' => '2020-11-01 00:00:02',
 		], [
@@ -48,6 +51,7 @@ class TasksTableSeeder extends Seeder {
 			'output' => '文字列「Yes」または「No」を出力して下さい。',
 			'output_code' => NULL,
 			'difficulty' => 1,
+			'reviewed_at' => '2020-11-01 00:00:03',
 			'created_at' => '2020-11-01 00:00:03',
 			'updated_at' => '2020-11-01 00:00:03',
 		], [
@@ -59,6 +63,7 @@ class TasksTableSeeder extends Seeder {
 			'output' => '面積Sを出力して下さい。',
 			'output_code' => 'S',
 			'difficulty' => 1,
+			'reviewed_at' => '2020-11-01 00:00:04',
 			'created_at' => '2020-11-01 00:00:04',
 			'updated_at' => '2020-11-01 00:00:04',
 		], [
@@ -70,6 +75,7 @@ class TasksTableSeeder extends Seeder {
 			'output' => '文字を全て結合した文字列Sを出力して下さい。',
 			'output_code' => 'S',
 			'difficulty' => 1,
+			'reviewed_at' => '2020-11-01 00:00:05',
 			'created_at' => '2020-11-01 00:00:05',
 			'updated_at' => '2020-11-01 00:00:05',
 		], [
@@ -81,6 +87,7 @@ class TasksTableSeeder extends Seeder {
 			'output' => '「Fizz」、「Buzz」、「FizzBuzz」、「数値」のいずれかを改行区切りで出力してください。',
 			'output_code' => NULL,
 			'difficulty' => 2,
+			'reviewed_at' => '2020-11-01 00:00:06',
 			'created_at' => '2020-11-01 00:00:06',
 			'updated_at' => '2020-11-01 00:00:06',
 		], [
@@ -92,6 +99,7 @@ class TasksTableSeeder extends Seeder {
 			'output' => '指定された個数のフィボナッチ数列を改行区切りで出力してください。',
 			'output_code' => NULL,
 			'difficulty' => 2,
+			'reviewed_at' => '2020-11-01 00:00:07',
 			'created_at' => '2020-11-01 00:00:07',
 			'updated_at' => '2020-11-01 00:00:07',
 		]]);
