@@ -10,7 +10,9 @@ interface TaskRepositoryInterface {
 
 	public function allUnreviewedTasks();
 
-	public function findById($id);
+	public function findReviewedTask($id);
+
+	public function findUnreviewedTask($id);
 
 	public function storeTask($request);
 
