@@ -18,4 +18,9 @@ class TaskController extends Controller {
 		$tasks = $this->task->allUnreviewedTasks();
 		return view('admin.task.index', compact('tasks'));
 	}
+
+	public function edit($id) {
+		$task = $this->task->findUnreviewedTask($id);
+		return view('admin.task.edit', compact('task'));
+	}
 }
