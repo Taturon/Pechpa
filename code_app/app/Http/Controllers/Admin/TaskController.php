@@ -2,14 +2,20 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Models\Task;
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use App\Repositories\Task\TaskRepositoryInterface AS Task;
 
 class TaskController extends Controller {
 
+	protected $task;
+
+	public function __construct(Task $task) {
+		$this->task = $task;
+	}
+
 	public function index() {
-		$tasks = Task::all();
+		$tasks = $this->task->allUnreviewedTasks();
 		return view('admin.task.index', compact('tasks'));
 	}
 }
