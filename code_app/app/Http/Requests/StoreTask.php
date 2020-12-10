@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
 class StoreTask extends FormRequest {
 
@@ -14,7 +15,11 @@ class StoreTask extends FormRequest {
 		return [
 
 			// Basic
-			'title' => 'required|unique:tasks|max:50',
+			'title' => [
+				'required',
+				Rule::unique('tasks')->ignore($this->task),
+				'max:50',
+			],
 			'statement' => 'required|max:500',
 			'constraints' => 'required|max:500',
 			'input' => 'required|max:500',
