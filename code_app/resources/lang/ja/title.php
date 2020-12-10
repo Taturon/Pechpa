@@ -6,6 +6,7 @@ return [
 
 	'tasks_list' => '問題一覧',
 	'tasks_unreviewed_list' => 'レビュー待ち問題一覧',
+	'task_review' => '提出された問題のレビュー',
 	'task_difficulty' => '難易度',
 	'task_statement' => '問題文',
 	'task_constraints' => '制約',
