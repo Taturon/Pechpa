@@ -51,6 +51,6 @@ Route::group(['prefix' => 'admin', 'middleware' => 'guest:admin'], function() {
 Route::group(['prefix' => 'admin', 'middleware' => 'auth:admin'], function() {
 	Route::name('admin.')->group( function() {
 		Route::post('logout', 'Admin\LoginController@logout')->name('logout');
-		Route::resource('tasks', 'Admin\TaskController', ['only' => ['index', 'edit', 'update']]);
+		Route::resource('tasks', 'Admin\TaskController', ['except' => ['show', 'create', 'destroy']]);
 	});
 });
