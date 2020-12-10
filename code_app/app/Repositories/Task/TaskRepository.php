@@ -47,6 +47,33 @@ class TaskRepository implements TaskRepositoryInterface {
 		]);
 	}
 
+	public function updateTaskWithApproval($task_id, $request) {
+		$this->task->where('id', $task_id)->update([
+			'title' => $request->title,
+			'statement' => $request->statement,
+			'constraints' => $request->constraints,
+			'input' => $request->input,
+			'input_code' => $request->input_code,
+			'output' => $request->output,
+			'output_code' => $request->output_code,
+			'difficulty' => $request->difficulty,
+			'reviewed_at' => Carbon::now()
+		]);
+	}
+
+	public function updateTaskWithoutApproval($task_id, $request) {
+		$this->task->where('id', $task_id)->update([
+			'title' => $request->title,
+			'statement' => $request->statement,
+			'constraints' => $request->constraints,
+			'input' => $request->input,
+			'input_code' => $request->input_code,
+			'output' => $request->output,
+			'output_code' => $request->output_code,
+			'difficulty' => $request->difficulty
+		]);
+	}
+
 	public function storeSampleCases($task_id, $request) {
 		$datetime = Carbon::now();
 		$samples = [
@@ -77,6 +104,12 @@ class TaskRepository implements TaskRepositoryInterface {
 			];
 		}
 		DB::table('samples')->insert($samples);
+	}
+
+	public function destroySampleCases($task_id) {
+		foreach ($this->task->find($task_id)->samples as $sample) {
+			$sample->delete();
+		}
 	}
 
 	public function storeTestCases($task_id, $request) {
@@ -111,4 +144,9 @@ class TaskRepository implements TaskRepositoryInterface {
 		DB::table('tests')->insert($tests);
 	}
 
+	public function destroyTestCases($task_id) {
+		foreach ($this->task->find($task_id)->tests as $test) {
+			$test->delete();
+		}
+	}
 }
