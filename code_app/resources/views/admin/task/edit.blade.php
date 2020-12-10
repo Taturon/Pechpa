@@ -11,8 +11,9 @@
 		<div class="panel panel-default">
 			<div class="panel-heading text-center"><h1>@lang('title.task_review')</h1></div>
 			<div class="panel-body">
-				<form class="form-horizontal" method="POST" action="">
+				<form class="form-horizontal" method="POST" action="{{ route('admin.tasks.update', ['task_id' => $task->id]) }}">
 					{{ csrf_field() }}
+					{{ method_field('PATCH') }}
 					<div class="col-md-10 col-md-offset-1 text-center">
 						<h2>@lang('title.task_basic_configuration')</h2>
 					</div>
@@ -455,11 +456,11 @@
 					</div>
 					<div class="form-group">
 						<div class="col-md-10 col-md-offset-1">
-							<button type="submit" class="btn btn-block btn-primary" onclick="return confirm('@lang('button.approval_confirm')');">
+							<button name="approval" type="submit" class="btn btn-block btn-primary" onclick="return confirm('@lang('button.approval_confirm')');">
 								@lang('button.approval')
 							</button>
 							<br>
-							<button type="submit" class="btn btn-block btn-primary" onclick="return confirm('@lang('button.update_only_confirm')');">
+							<button name="update" type="submit" class="btn btn-block btn-primary" onclick="return confirm('@lang('button.update_only_confirm')');">
 								@lang('button.update_only')
 							</button>
 						</div>
