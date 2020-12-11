@@ -16,7 +16,7 @@ class TaskController extends Controller {
 	}
 
 	public function index() {
-		$tasks = $this->task->allUnreviewedTasks();
+		$tasks = $this->task->allUnreviewedTasks(config('pagings.admin_unapproved_tasks'));
 		return view('admin.task.index', compact('tasks'));
 	}
 
