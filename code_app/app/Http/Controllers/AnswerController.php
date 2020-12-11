@@ -41,7 +41,7 @@ class AnswerController extends Controller {
 		$syntax_check_result = $this->answer_service->syntaxCheck($path);
 		$user_id = $request->user()->id;
 		$answer = $this->answer->storeSyntaxCheckResult($request->source, $syntax_check_result, $user_id, $task_id);
-		$tests = $this->task->findById($task_id)->tests;
+		$tests = $this->task->findReviewedTask($task_id)->tests;
 		$test_results = $this->answer_service->tryTestCases($path, $tests, $answer->id, $user_id);
 		$this->answer->storeTestingResults($test_results);
 		$mismatches = $this->answer_service->countMismatches($test_results);
