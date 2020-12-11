@@ -17,7 +17,7 @@
 					<div class="text-center">@lang('th.task_title')</div>
 				</th>
 				<th style="width:10%;">
-					<div class="text-center">@lang('th.task_rank')</div>
+					<div class="text-center">@lang('th.task_difficulty')</div>
 				</th>
 				<th style="width:10%;">
 					<div class="text-center">@lang('th.judge')</div>
