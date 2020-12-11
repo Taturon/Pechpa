@@ -22,7 +22,7 @@ class AnswerController extends Controller {
 	}
 
 	public function index() {
-		$answers = $this->answer->all();
+		$answers = $this->answer->all(config('pagings.user_answers'));
 		return view('answer.index', compact('answers'));
 	}
 
