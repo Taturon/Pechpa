@@ -31,6 +31,9 @@
 			@endforeach
 		</tbody>
 	</table>
+	<div class="text-center">
+		{{ $tasks->links() }}
+	</div>
 </div>
 <hr>
 @endsection
