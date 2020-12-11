@@ -45,6 +45,9 @@
 			@endforeach
 		</tbody>
 	</table>
+	<div class="text-center">
+		{{ $answers->links() }}
+	</div>
 </div>
 <hr>
 @endsection
