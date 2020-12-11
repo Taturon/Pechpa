@@ -79,6 +79,18 @@ class TasksTableSeeder extends Seeder {
 			'created_at' => '2020-11-01 00:00:05',
 			'updated_at' => '2020-11-01 00:00:05',
 		], [
+			'title' => '倍数',
+			'statement' => '入力Nが与えられるので倍数Dを出力して下さい。',
+			'constraints' => 'Nは整数かつ\( 1 \leqq N \leqq 100 \)',
+			'input' => '入力は以下の形式で標準入力から与えられます。',
+			'input_code' => 'N',
+			'output' => '入力Nの倍数Dを出力して下さい。',
+			'output_code' => 'D',
+			'difficulty' => 1,
+			'reviewed_at' => '2020-11-01 00:00:06',
+			'created_at' => '2020-11-01 00:00:06',
+			'updated_at' => '2020-11-01 00:00:06',
+		], [
 			'title' => 'FizzBuzz',
 			'statement' => "入力Nが与えられるので、1からNの範囲でNが\n3の倍数の時は「Fizz」\n5の倍数の時は「Buzz」\n15の倍数の時は「FizzBuzz」\nこれら以外の場合は数字\nをそれぞれ改行区切りで出力して下さい。",
 			'constraints' => 'Nは整数かつ\( 1 \leqq N \leqq 100 \)',
@@ -87,9 +99,9 @@ class TasksTableSeeder extends Seeder {
 			'output' => '「Fizz」、「Buzz」、「FizzBuzz」、「数値」のいずれかを改行区切りで出力してください。',
 			'output_code' => NULL,
 			'difficulty' => 2,
-			'reviewed_at' => '2020-11-01 00:00:06',
-			'created_at' => '2020-11-01 00:00:06',
-			'updated_at' => '2020-11-01 00:00:06',
+			'reviewed_at' => '2020-11-01 00:00:07',
+			'created_at' => '2020-11-01 00:00:07',
+			'updated_at' => '2020-11-01 00:00:07',
 		], [
 			'title' => 'フィボナッチ数列',
 			'statement' => 'フィボナッチ数列を入力Nまで出力して下さい。',
@@ -99,9 +111,9 @@ class TasksTableSeeder extends Seeder {
 			'output' => '指定された個数のフィボナッチ数列を改行区切りで出力してください。',
 			'output_code' => NULL,
 			'difficulty' => 2,
-			'reviewed_at' => '2020-11-01 00:00:07',
-			'created_at' => '2020-11-01 00:00:07',
-			'updated_at' => '2020-11-01 00:00:07',
+			'reviewed_at' => '2020-11-01 00:00:08',
+			'created_at' => '2020-11-01 00:00:08',
+			'updated_at' => '2020-11-01 00:00:08',
 		]]);
 	}
 }

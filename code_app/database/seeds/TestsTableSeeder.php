@@ -152,25 +152,25 @@ class TestsTableSeeder extends Seeder {
 		], [
 			'task_id' => 7,
 			'input' => '1',
-			'output' => "1\n",
+			'output' => '2',
 			'created_at' => '2020-11-01 00:00:06',
 			'updated_at' => '2020-11-01 00:00:06',
 		], [
 			'task_id' => 7,
 			'input' => '15',
-			'output' => "1\n2\nFizz\n4\nBuzz\nFizz\n7\n8\nFizz\nBuzz\n11\nFizz\n13\n14\nFizzBuzz\n",
+			'output' => '30',
 			'created_at' => '2020-11-01 00:00:06',
 			'updated_at' => '2020-11-01 00:00:06',
 		], [
 			'task_id' => 7,
 			'input' => '50',
-			'output' => "1\n2\nFizz\n4\nBuzz\nFizz\n7\n8\nFizz\nBuzz\n11\nFizz\n13\n14\nFizzBuzz\n16\n17\nFizz\n19\nBuzz\nFizz\n22\n23\nFizz\nBuzz\n26\nFizz\n28\n29\nFizzBuzz\n31\n32\nFizz\n34\nBuzz\nFizz\n37\n38\nFizz\nBuzz\n41\nFizz\n43\n44\nFizzBuzz\n46\n47\nFizz\n49\nBuzz\n",
+			'output' => '100',
 			'created_at' => '2020-11-01 00:00:06',
 			'updated_at' => '2020-11-01 00:00:06',
 		], [
 			'task_id' => 7,
 			'input' => '100',
-			'output' => "1\n2\nFizz\n4\nBuzz\nFizz\n7\n8\nFizz\nBuzz\n11\nFizz\n13\n14\nFizzBuzz\n16\n17\nFizz\n19\nBuzz\nFizz\n22\n23\nFizz\nBuzz\n26\nFizz\n28\n29\nFizzBuzz\n31\n32\nFizz\n34\nBuzz\nFizz\n37\n38\nFizz\nBuzz\n41\nFizz\n43\n44\nFizzBuzz\n46\n47\nFizz\n49\nBuzz\nFizz\n52\n53\nFizz\nBuzz\n56\nFizz\n58\n59\nFizzBuzz\n61\n62\nFizz\n64\nBuzz\nFizz\n67\n68\nFizz\nBuzz\n71\nFizz\n73\n74\nFizzBuzz\n76\n77\nFizz\n79\nBuzz\nFizz\n82\n83\nFizz\nBuzz\n86\nFizz\n88\n89\nFizzBuzz\n91\n92\nFizz\n94\nBuzz\nFizz\n97\n98\nFizz\nBuzz\n",
+			'output' => '200',
 			'created_at' => '2020-11-01 00:00:06',
 			'updated_at' => '2020-11-01 00:00:06',
 		], [
@@ -182,21 +182,45 @@ class TestsTableSeeder extends Seeder {
 		], [
 			'task_id' => 8,
 			'input' => '15',
-			'output' => "1\n1\n2\n3\n5\n8\n13\n21\n34\n55\n89\n144\n233\n377\n610\n",
-			'created_at' => '2020-11-01 00:00:07',
-			'updated_at' => '2020-11-01 00:00:07',
-		], [
-			'task_id' => 8,
-			'input' => '25',
-			'output' => "1\n1\n2\n3\n5\n8\n13\n21\n34\n55\n89\n144\n233\n377\n610\n987\n1597\n2584\n4181\n6765\n10946\n17711\n28657\n46368\n75025\n",
+			'output' => "1\n2\nFizz\n4\nBuzz\nFizz\n7\n8\nFizz\nBuzz\n11\nFizz\n13\n14\nFizzBuzz\n",
 			'created_at' => '2020-11-01 00:00:07',
 			'updated_at' => '2020-11-01 00:00:07',
 		], [
 			'task_id' => 8,
 			'input' => '50',
-			'output' => "1\n1\n2\n3\n5\n8\n13\n21\n34\n55\n89\n144\n233\n377\n610\n987\n1597\n2584\n4181\n6765\n10946\n17711\n28657\n46368\n75025\n121393\n196418\n317811\n514229\n832040\n1346269\n2178309\n3524578\n5702887\n9227465\n14930352\n24157817\n39088169\n63245986\n102334155\n165580141\n267914296\n433494437\n701408733\n1134903170\n1836311903\n2971215073\n4807526976\n7778742049\n12586269025\n",
+			'output' => "1\n2\nFizz\n4\nBuzz\nFizz\n7\n8\nFizz\nBuzz\n11\nFizz\n13\n14\nFizzBuzz\n16\n17\nFizz\n19\nBuzz\nFizz\n22\n23\nFizz\nBuzz\n26\nFizz\n28\n29\nFizzBuzz\n31\n32\nFizz\n34\nBuzz\nFizz\n37\n38\nFizz\nBuzz\n41\nFizz\n43\n44\nFizzBuzz\n46\n47\nFizz\n49\nBuzz\n",
 			'created_at' => '2020-11-01 00:00:07',
 			'updated_at' => '2020-11-01 00:00:07',
+		], [
+			'task_id' => 8,
+			'input' => '100',
+			'output' => "1\n2\nFizz\n4\nBuzz\nFizz\n7\n8\nFizz\nBuzz\n11\nFizz\n13\n14\nFizzBuzz\n16\n17\nFizz\n19\nBuzz\nFizz\n22\n23\nFizz\nBuzz\n26\nFizz\n28\n29\nFizzBuzz\n31\n32\nFizz\n34\nBuzz\nFizz\n37\n38\nFizz\nBuzz\n41\nFizz\n43\n44\nFizzBuzz\n46\n47\nFizz\n49\nBuzz\nFizz\n52\n53\nFizz\nBuzz\n56\nFizz\n58\n59\nFizzBuzz\n61\n62\nFizz\n64\nBuzz\nFizz\n67\n68\nFizz\nBuzz\n71\nFizz\n73\n74\nFizzBuzz\n76\n77\nFizz\n79\nBuzz\nFizz\n82\n83\nFizz\nBuzz\n86\nFizz\n88\n89\nFizzBuzz\n91\n92\nFizz\n94\nBuzz\nFizz\n97\n98\nFizz\nBuzz\n",
+			'created_at' => '2020-11-01 00:00:07',
+			'updated_at' => '2020-11-01 00:00:07',
+		], [
+			'task_id' => 9,
+			'input' => '1',
+			'output' => "1\n",
+			'created_at' => '2020-11-01 00:00:08',
+			'updated_at' => '2020-11-01 00:00:08',
+		], [
+			'task_id' => 9,
+			'input' => '15',
+			'output' => "1\n1\n2\n3\n5\n8\n13\n21\n34\n55\n89\n144\n233\n377\n610\n",
+			'created_at' => '2020-11-01 00:00:08',
+			'updated_at' => '2020-11-01 00:00:08',
+		], [
+			'task_id' => 9,
+			'input' => '25',
+			'output' => "1\n1\n2\n3\n5\n8\n13\n21\n34\n55\n89\n144\n233\n377\n610\n987\n1597\n2584\n4181\n6765\n10946\n17711\n28657\n46368\n75025\n",
+			'created_at' => '2020-11-01 00:00:08',
+			'updated_at' => '2020-11-01 00:00:08',
+		], [
+			'task_id' => 9,
+			'input' => '50',
+			'output' => "1\n1\n2\n3\n5\n8\n13\n21\n34\n55\n89\n144\n233\n377\n610\n987\n1597\n2584\n4181\n6765\n10946\n17711\n28657\n46368\n75025\n121393\n196418\n317811\n514229\n832040\n1346269\n2178309\n3524578\n5702887\n9227465\n14930352\n24157817\n39088169\n63245986\n102334155\n165580141\n267914296\n433494437\n701408733\n1134903170\n1836311903\n2971215073\n4807526976\n7778742049\n12586269025\n",
+			'created_at' => '2020-11-01 00:00:08',
+			'updated_at' => '2020-11-01 00:00:08',
 		]]);
     }
 }
