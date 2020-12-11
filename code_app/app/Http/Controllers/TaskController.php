@@ -20,7 +20,7 @@ class TaskController extends Controller {
 	}
 
 	public function index() {
-		$tasks = $this->task->all();
+		$tasks = $this->task->allReviewedTasks();
 		return view('task.index', compact('tasks'));
 	}
 
@@ -34,11 +34,11 @@ class TaskController extends Controller {
 		$this->task->storeSampleCases($task_id, $request);
 		$this->task->storeTestCases($task_id, $request);
 		$this->send_mail->sendTaskCreationNotification(Auth::user(), $request);
-		return redirect()->route('tasks.index');
+		return redirect()->route('tasks.index')->with('success', __('flash.task_created'));
 	}
 
 	public function show($id) {
-		$task = $this->task->findById($id);
+		$task = $this->task->findReviewedTask($id);
 		if ($task) {
 			return view('task.show', compact('task'));
 		} else {

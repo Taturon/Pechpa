@@ -8,4 +8,6 @@ return [
 	'wrong_answer' => '不正解です...',
 	'correct_answer' => '正解です!',
 
+	'task_created' => '問題を提案をお受けしました！ 運営のレビューをお待ち下さい',
+
 ];

@@ -15,15 +15,54 @@ class TaskRepository implements TaskRepositoryInterface {
 	}
 
 	public function all() {
-		return $this->task::all();
+		return $this->task->all();
 	}
 
-	public function findById($id) {
-		return $this->task::find($id);
+	public function allReviewedTasks() {
+		return $this->task->whereNotNull('reviewed_at')->get();
+	}
+
+	public function allUnreviewedTasks() {
+		return $this->task->whereNull('reviewed_at')->get();
+	}
+
+	public function findReviewedTask($id) {
+		return $this->task->whereNotNull('reviewed_at')->find($id);
+	}
+
+	public function findUnreviewedTask($id) {
+		return $this->task->whereNull('reviewed_at')->find($id);
 	}
 
 	public function storeTask($request) {
 		return $this->task->create([
+			'title' => $request->title,
+			'statement' => $request->statement,
+			'constraints' => $request->constraints,
+			'input' => $request->input,
+			'input_code' => $request->input_code,
+			'output' => $request->output,
+			'output_code' => $request->output_code,
+			'difficulty' => $request->difficulty
+		]);
+	}
+
+	public function updateTaskWithApproval($task_id, $request) {
+		$this->task->where('id', $task_id)->update([
+			'title' => $request->title,
+			'statement' => $request->statement,
+			'constraints' => $request->constraints,
+			'input' => $request->input,
+			'input_code' => $request->input_code,
+			'output' => $request->output,
+			'output_code' => $request->output_code,
+			'difficulty' => $request->difficulty,
+			'reviewed_at' => Carbon::now()
+		]);
+	}
+
+	public function updateTaskWithoutApproval($task_id, $request) {
+		$this->task->where('id', $task_id)->update([
 			'title' => $request->title,
 			'statement' => $request->statement,
 			'constraints' => $request->constraints,
@@ -67,6 +106,12 @@ class TaskRepository implements TaskRepositoryInterface {
 		DB::table('samples')->insert($samples);
 	}
 
+	public function destroySampleCases($task_id) {
+		foreach ($this->task->find($task_id)->samples as $sample) {
+			$sample->delete();
+		}
+	}
+
 	public function storeTestCases($task_id, $request) {
 		$datetime = Carbon::now();
 		$tests = [
@@ -99,4 +144,9 @@ class TaskRepository implements TaskRepositoryInterface {
 		DB::table('tests')->insert($tests);
 	}
 
+	public function destroyTestCases($task_id) {
+		foreach ($this->task->find($task_id)->tests as $test) {
+			$test->delete();
+		}
+	}
 }

@@ -39,14 +39,18 @@ Route::group(['middleware' => 'auth:user'], function() {
  * 管理者非認証状態でアクセス可
  */
 Route::group(['prefix' => 'admin', 'middleware' => 'guest:admin'], function() {
-	Route::get('login', 'Admin\LoginController@showLoginForm')->name('admin.login');
-	Route::post('login', 'Admin\LoginController@login')->name('admin.login');
+	Route::name('admin.')->group( function() {
+		Route::get('login', 'Admin\LoginController@showLoginForm')->name('login');
+		Route::post('login', 'Admin\LoginController@login')->name('login');
+	});
 });
 
 /**
  * 管理者認証状態でアクセス可
  */
 Route::group(['prefix' => 'admin', 'middleware' => 'auth:admin'], function() {
-	Route::post('logout', 'Admin\LoginController@logout')->name('admin.logout');
-	Route::get('tasks', 'Admin\TaskController@index')->name('admin.tasks.index');
+	Route::name('admin.')->group( function() {
+		Route::post('logout', 'Admin\LoginController@logout')->name('logout');
+		Route::resource('tasks', 'Admin\TaskController', ['except' => ['show', 'create', 'destroy']]);
+	});
 });

@@ -5,6 +5,8 @@ return [
 	'login' => 'Login',
 
 	'tasks_list' => 'Tasks',
+	'tasks_unreviewed_list' => 'Unreviewed Tasks',
+	'task_review' => 'Task Review',
 	'task_difficulty' => 'Difficulty',
 	'task_statement' => 'Statement',
 	'task_constraints' => 'Constraints',

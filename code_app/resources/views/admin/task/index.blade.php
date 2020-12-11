@@ -2,7 +2,7 @@
 @section('title', __('title.tasks_list'))
 @section('content')
 <div class="page-header" style="margin-top:-30px;padding-bottom:0px;">
-	<h1><small>@lang('title.tasks_list')</small></h1>
+	<h1><small>@lang('title.tasks_unreviewed_list')</small></h1>
 </div>
 @component('components.alert')
 @endcomponent
@@ -11,7 +11,7 @@
 		<thead>
 			<tr>
 				<th style="width:10%;">
-					<div class="text-center">@lang('th.task_rank')</div>
+					<div class="text-center">@lang('th.task_difficulty')</div>
 				</th>
 				<th style="width:90%;">
 					<div class="text-center">@lang('th.task_title')</div>
@@ -25,7 +25,7 @@
 						{{ config('tasks.stars')[$task->difficulty] }}
 					</td>
 					<td>
-						<a href="{{ route('tasks.show', ['task' => $task->id]) }}">{{ $task->title }}</a>
+						<a href="{{ route('admin.tasks.edit', ['id' => $task->id]) }}">{{ $task->title }}</a>
 					</td>
 				</tr>
 			@endforeach
