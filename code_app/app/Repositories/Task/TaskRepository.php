@@ -18,12 +18,12 @@ class TaskRepository implements TaskRepositoryInterface {
 		return $this->task->all();
 	}
 
-	public function allReviewedTasks() {
-		return $this->task->whereNotNull('reviewed_at')->get();
+	public function allReviewedTasks($paging) {
+		return $this->task->whereNotNull('reviewed_at')->paginate($paging);
 	}
 
-	public function allUnreviewedTasks() {
-		return $this->task->whereNull('reviewed_at')->get();
+	public function allUnreviewedTasks($paging) {
+		return $this->task->whereNull('reviewed_at')->paginate($paging);
 	}
 
 	public function findReviewedTask($id) {
