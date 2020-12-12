@@ -15,7 +15,6 @@
  * いかなる状態でもアクセス可
  */
 Route::get('/', 'TaskController@index')->name('tasks.index');
-Route::resource('tasks', 'TaskController', ['only' => ['show', 'create', 'store']]);
 
 /**
  * ユーザー非認証状態でアクセス可
@@ -31,6 +30,7 @@ Route::group(['middleware' => 'guest:user'], function() {
  */
 Route::group(['middleware' => 'auth:user'], function() {
 	Route::post('logout', 'Auth\LoginController@logout')->name('logout');
+	Route::resource('tasks', 'TaskController', ['only' => ['show', 'create', 'store']]);
 	Route::resource('answers', 'AnswerController', ['only' => ['index', 'show']]);
 	Route::post('tasks/{task}/answer', 'AnswerController@check')->name('answers.check');
 });
