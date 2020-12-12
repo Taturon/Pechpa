@@ -70,7 +70,7 @@
 						{{ $task->reviewed_at }}
 					</td>
 					<td>
-						<a href="{{ route('admin.tasks.edit', ['id' => $task->id]) }}">{{ $task->title }}</a>
+						<a href="{{ route('admin.tasks.show', ['id' => $task->id]) }}">{{ $task->title }}</a>
 					</td>
 					<td style="color:{{ config('tasks.colors')[$task->difficulty] }};">
 						{{ config('tasks.stars')[$task->difficulty] }}
