@@ -61,6 +61,15 @@
 						</div>
 					</div>
 				</form>
+				<hr>
+				<p class="text-center">
+					<span>@lang('button.or')</span>
+				</p>
+				<div class="col-md-12">
+					<button class="btn btn-block btn-primary" type="button" onclick="location.href='{{ route('guest_login') }}'">
+						@lang('button.guest_login')
+					</button>
+				</div>
 			</div>
 		</div>
 	</div>
