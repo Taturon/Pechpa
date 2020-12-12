@@ -1,8 +1,8 @@
 @extends('layouts.app')
-@section('title', __('title.tasks_list'))
+@section('title', __('title.tasks_unapproved_list'))
 @section('content')
 <div class="page-header" style="margin-top:-30px;padding-bottom:0px;">
-	<h1><small>@lang('title.tasks_unreviewed_list')</small></h1>
+	<h1><small>@lang('title.tasks_unapproved_list')</small></h1>
 </div>
 @component('components.alert')
 @endcomponent
