@@ -56,6 +56,7 @@
 					<ul class="nav navbar-nav navbar-right">
 						<!-- Authentication Links -->
 						@if (!Auth::guard('admin')->check() && !Auth::guard('user')->check() && strpos(url()->current(), '/admin') === false)
+							<li><a href="{{ route('guest_login') }}">@lang('link.guest_login')</a></li>
 							<li><a href="{{ route('login') }}">@lang('link.login')</a></li>
 							<li><a href="{{ route('register') }}">@lang('link.register')</a></li>
 						@elseif (Auth::guard('admin')->check() || Auth::guard('user')->check())
