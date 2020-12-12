@@ -28,7 +28,7 @@ class LoginController extends Controller {
 	 *
 	 * @var string
 	 */
-	protected $redirectTo = '/admin/tasks';
+	protected $redirectTo = '/admin/dashboard';
 
 	/**
 	 * Create a new controller instance.
@@ -49,7 +49,7 @@ class LoginController extends Controller {
 
 	public function login(AdminAuthentication $request) {
 		if (Auth::guard('admin')->attempt(['email' => $request->email, 'password' => $request->password], $request->remember)) {
-			return redirect()->intended(route('admin.tasks.index'));
+			return redirect()->intended(route('admin.dashboard'));
 		}
 		return redirect()->back()->withInput($request->only('email', 'remenber'));
 	}
