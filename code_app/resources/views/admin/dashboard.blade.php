@@ -11,22 +11,28 @@
 		<table class="table table-striped table-hover table-bordered">
 			<thead>
 				<tr>
+					<th style="width:15%;">
+						<div class="text-center">@lang('th.task_created_date')</div>
+					</th>
+					<th style="width:75%;">
+						<div class="text-center">@lang('th.task_title')</div>
+					</th>
 					<th style="width:10%;">
 						<div class="text-center">@lang('th.task_difficulty')</div>
-					</th>
-					<th style="width:90%;">
-						<div class="text-center">@lang('th.task_title')</div>
 					</th>
 				</tr>
 			</thead>
 			<tbody>
 				@foreach ($tasks['unapproved'] as $task)
 					<tr>
-						<td style="color:{{ config('tasks.colors')[$task->difficulty] }};">
-							{{ config('tasks.stars')[$task->difficulty] }}
+						<td>
+							{{ $task->created_at }}
 						</td>
 						<td>
 							<a href="{{ route('admin.tasks.edit', ['id' => $task->id]) }}">{{ $task->title }}</a>
+						</td>
+						<td style="color:{{ config('tasks.colors')[$task->difficulty] }};">
+							{{ config('tasks.stars')[$task->difficulty] }}
 						</td>
 					</tr>
 				@endforeach
@@ -46,22 +52,28 @@
 	<table class="table table-striped table-hover table-bordered">
 		<thead>
 			<tr>
+				<th style="width:15%;">
+					<div class="text-center">@lang('th.task_published_date')</div>
+				</th>
+				<th style="width:75%;">
+					<div class="text-center">@lang('th.task_title')</div>
+				</th>
 				<th style="width:10%;">
 					<div class="text-center">@lang('th.task_difficulty')</div>
-				</th>
-				<th style="width:90%;">
-					<div class="text-center">@lang('th.task_title')</div>
 				</th>
 			</tr>
 		</thead>
 		<tbody>
 			@foreach ($tasks['approved'] as $task)
 				<tr>
-					<td style="color:{{ config('tasks.colors')[$task->difficulty] }};">
-						{{ config('tasks.stars')[$task->difficulty] }}
+					<td>
+						{{ $task->reviewed_at }}
 					</td>
 					<td>
 						<a href="{{ route('admin.tasks.edit', ['id' => $task->id]) }}">{{ $task->title }}</a>
+					</td>
+					<td style="color:{{ config('tasks.colors')[$task->difficulty] }};">
+						{{ config('tasks.stars')[$task->difficulty] }}
 					</td>
 				</tr>
 			@endforeach

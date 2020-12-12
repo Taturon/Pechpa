@@ -2,6 +2,8 @@
 
 return [
 
+	'task_created_date' => '作成日時',
+	'task_published_date' => '公開日時',
 	'task_title' => '問題名',
 	'task_difficulty' => '難易度',
 
