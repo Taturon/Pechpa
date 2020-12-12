@@ -56,9 +56,21 @@
 					<ul class="nav navbar-nav navbar-right">
 						<!-- Authentication Links -->
 						@if (!Auth::guard('admin')->check() && !Auth::guard('user')->check() && strpos(url()->current(), '/admin') === false)
-							<li><a href="{{ route('guest_login') }}">@lang('link.guest_login')</a></li>
-							<li><a href="{{ route('login') }}">@lang('link.login')</a></li>
-							<li><a href="{{ route('register') }}">@lang('link.register')</a></li>
+							<li>
+								<a href="{{ route('guest_login') }}">
+									<i class="fas fa-sign-in-alt"></i>&thinsp;@lang('link.guest_login')
+								</a>
+							</li>
+							<li>
+								<a href="{{ route('login') }}">
+									<i class="fas fa-sign-in-alt"></i>&thinsp;@lang('link.login')
+								</a>
+							</li>
+							<li>
+								<a href="{{ route('register') }}">
+									<i class="fas fa-user-plus"></i>&thinsp;@lang('link.register')
+								</a>
+							</li>
 						@elseif (Auth::guard('admin')->check() || Auth::guard('user')->check())
 							<li class="dropdown">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" v-pre>
