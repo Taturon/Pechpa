@@ -2,6 +2,8 @@
 
 return [
 
+	'guest_login' => 'Guest Login',
+	'or' => 'OR',
 	'submission' => 'Submission',
 	'submission_confirm' => 'Do you want to submit it ?',
 	'send' => 'Send',
