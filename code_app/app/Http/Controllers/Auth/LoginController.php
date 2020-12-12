@@ -44,7 +44,7 @@ class LoginController extends Controller {
 
 	public function guestLogin() {
 		Auth::loginUsingId(1);
-		return redirect()->back();
+		return redirect()->back()->with('success', __('flash.guest_logged_in'));
 	}
 
 	public function logout(Request $request) {
