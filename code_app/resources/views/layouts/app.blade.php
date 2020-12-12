@@ -40,7 +40,7 @@
 
 					<!-- Branding Image -->
 					<a class="navbar-brand"
-						href="{{ Auth::guard('admin')->check() ? route('admin.tasks.index') : route('tasks.index') }}"
+						href="{{ Auth::guard('admin')->check() ? route('admin.dashboard') : route('tasks.index') }}"
 						style="font-family:'Chakra Petch',sans-serif;font-weight:700;font-size:25px;font-style:italic;"
 					>
 						{{ config('app.name', 'Pechpa!') }}

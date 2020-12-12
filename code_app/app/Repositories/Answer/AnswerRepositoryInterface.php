@@ -4,7 +4,7 @@ namespace App\Repositories\Answer;
 
 interface AnswerRepositoryInterface {
 
-	public function all();
+	public function all($paging);
 
 	public function findById($id);
 

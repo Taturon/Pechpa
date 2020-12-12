@@ -6,9 +6,13 @@ interface TaskRepositoryInterface {
 
 	public function all();
 
-	public function allReviewedTasks();
+	public function allReviewedTasks($paging);
 
-	public function allUnreviewedTasks();
+	public function recentApprovedTasks($count);
+
+	public function allUnreviewedTasks($paging);
+
+	public function recentUnapprovedTasks($count);
 
 	public function findReviewedTask($id);
 

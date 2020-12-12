@@ -15,12 +15,12 @@ class AnswerRepository implements AnswerRepositoryInterface {
 		$this->testing = $testing;
 	}
 
-	public function all() {
-		return $this->answer::all();
+	public function all($paging) {
+		return $this->answer->paginate($paging);
 	}
 
 	public function findById($id) {
-		return $this->answer::find($id);
+		return $this->answer->find($id);
 	}
 
 	public function storeSyntaxCheckResult($source, Array $result, $user_id, $task_id) {

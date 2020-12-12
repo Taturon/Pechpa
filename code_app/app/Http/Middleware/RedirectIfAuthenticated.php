@@ -22,7 +22,7 @@ class RedirectIfAuthenticated {
 					return redirect()->route('tasks.index');
 					break;
 				case 'admin':
-					return redirect()->route('admin.tasks.index');
+					return redirect()->route('admin.dashboard');
 					break;
 			}
 		}

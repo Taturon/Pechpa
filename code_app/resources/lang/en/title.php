@@ -4,9 +4,15 @@ return [
 
 	'login' => 'Login',
 
+	'admin_dashboard' => 'Admin Dashboard',
+
 	'tasks_list' => 'Tasks',
-	'tasks_unreviewed_list' => 'Unreviewed Tasks',
+	'tasks_unapproved_list' => 'Unapproved Tasks',
 	'task_review' => 'Task Review',
+	'tasks_recent_unapproved_list' => 'Recent Unapproved Tasks',
+	'tasks_no_unapproved_list' => 'There is no unapproved tasks.',
+	'tasks_recent_approved_list' => 'Recent Approved Tasks',
+	'tasks_no_approved_list' => 'There is no approved tasks.',
 	'task_difficulty' => 'Difficulty',
 	'task_statement' => 'Statement',
 	'task_constraints' => 'Constraints',
@@ -18,8 +24,11 @@ return [
 	'task_samples' => 'Sample Cases',
 	'task_tests' => 'Test Cases',
 
+	'sample_cases' => 'Smple Cases',
 	'sample_input' => 'Sample Input',
 	'sample_output' => 'Sample Output',
+
+	'test_cases' => 'Test Cases',
 
 	'answers_list' => 'Answers',
 	'answer_date' => 'Answer Date',
