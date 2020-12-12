@@ -42,6 +42,11 @@ class LoginController extends Controller {
 		return Auth::guard('user');
 	}
 
+	public function guestLogin() {
+		Auth::loginUsingId(1);
+		return redirect()->back()->with('success', __('flash.guest_logged_in'));
+	}
+
 	public function logout(Request $request) {
 		Auth::guard('user')->logout();
 		return redirect()->route('tasks.index');

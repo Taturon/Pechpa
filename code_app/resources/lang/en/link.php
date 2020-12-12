@@ -3,6 +3,7 @@
 return [
 
 	'login' => 'Login',
+	'guest_login' => 'Guest Login',
 	'register' => 'Register',
 	'logout' => 'Logout',
 

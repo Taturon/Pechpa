@@ -3,6 +3,7 @@
 return [
 
 	'login' => 'ログイン',
+	'guest_login' => '簡単ログイン',
 	'register' => '新規登録',
 	'logout' => 'ログアウト',
 

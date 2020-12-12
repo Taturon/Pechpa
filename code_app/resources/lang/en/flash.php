@@ -2,6 +2,8 @@
 
 return [
 
+	'guest_logged_in' => 'Guest Logged In !',
+
 	'no_task' => 'Invalid Task No.',
 	'no_answer' => 'Invalid Answer No.',
 

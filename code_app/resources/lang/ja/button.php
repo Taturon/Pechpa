@@ -2,6 +2,8 @@
 
 return [
 
+	'guest_login' => '簡単ログイン',
+	'or' => 'または',
 	'submission' => '提出',
 	'submission_confirm' => '提出しますか?',
 	'send' => '送信',
