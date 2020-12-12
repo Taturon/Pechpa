@@ -20,6 +20,11 @@ class TaskController extends Controller {
 		return view('admin.task.index', compact('tasks'));
 	}
 
+	public function show($id) {
+		$task = $this->task->findReviewedTask($id);
+		return view('admin.task.show', compact('task'));
+	}
+
 	public function edit($id) {
 		$task = $this->task->findUnreviewedTask($id);
 		return view('admin.task.edit', compact('task'));
