@@ -9,6 +9,7 @@ class CreateTasksTable extends Migration {
 	public function up() {
 		Schema::create('tasks', function (Blueprint $table) {
 			$table->increments('id');
+			$table->unsignedInteger('user_id')->default(2);
 			$table->string('title', 50);
 			$table->string('statement', 500);
 			$table->string('constraints', 500);
@@ -17,6 +18,8 @@ class CreateTasksTable extends Migration {
 			$table->string('output', 500);
 			$table->string('output_code', 500)->nullable($value = true);
 			$table->unsignedTinyInteger('difficulty');
+			$table->unsignedInteger('solved')->default(0);
+			$table->unsignedInteger('examinees')->default(0);
 			$table->dateTime('reviewed_at')->nullable($value = true);
 			$table->timestamps();
 			$table->softDeletes();
