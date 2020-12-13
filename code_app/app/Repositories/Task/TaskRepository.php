@@ -42,6 +42,46 @@ class TaskRepository implements TaskRepositoryInterface {
 		return $this->task->whereNull('reviewed_at')->find($id);
 	}
 
+	public function makeQuery() {
+		return $this->task->query();
+	}
+
+	public function narrowDownWithTitle($query, $request) {
+		return $query->where('title', 'like', '%\\' . $request->title . '%');
+	}
+
+	public function narrowDownWithDifficulty($query, $request) {
+		return $query->where('difficulty', $request->difficulty);
+	}
+
+	public function narrowDownWithLowerValidity($query, $request) {
+		return $query->whereRaw('solved / examinees * 100 >= ?', [config('tasks.lower_validity')[$request->lower_validity]]);
+	}
+
+	public function narrowDownWithLowerValidityWithNoExaminees($query, $request) {
+		return $query->where(function ($sub_query) use ($request) {
+			$sub_query->whereRaw('solved / examinees * 100 >= ?', [config('tasks.lower_validity')[$request->lower_validity]])->orWhere('examinees', 0);
+		});
+	}
+
+	public function narrowDownWithUpperValidity($query, $request) {
+		return $query->whereRaw('solved / examinees * 100 <= ?', [config('tasks.upper_validity')[$request->upper_validity]]);
+	}
+
+	public function narrowDownWithUpperValidityWithNoExaminees($query, $request) {
+		return $query->where(function ($sub_query) use ($request) {
+			$sub_query->whereRaw('solved / examinees * 100 <= ?', [config('tasks.upper_validity')[$request->upper_validity]])->orWhere('examinees', 0);
+		});
+	}
+
+	public function withNoExaminees($query) {
+		return $query->orWhere('examinees','=', '0');
+	}
+
+	public function withoutNoExaminees($query) {
+		return $query->Where('examinees','>', '0');
+	}
+
 	public function storeTask($request) {
 		return $this->task->create([
 			'title' => $request->title,
