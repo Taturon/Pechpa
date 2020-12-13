@@ -11,6 +11,7 @@ return [
 		'title_search_placeholder' => 'Search by task title...',
 		'difficulty' => 'Difficulty',
 		'creator' => 'Creator',
+		'no_select' => 'No Select',
 		'no_examinees' => 'No Examinees',
 		'include_no_examinees' => 'Include "No Examinees"',
 		'lower_validity' => 'Validity Lower Limit',
