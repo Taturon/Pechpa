@@ -118,7 +118,10 @@ return [
 
 	'attributes' => [
 
-		'title' => 'タイトル',
+		'title' => '問題名',
+		'difficulty' => '難易度',
+		'lower_validity' => '正答率下限',
+		'upper_validity' => '正答率上限',
 		'statement' => '問題文',
 		'constraints' => '制約',
 		'input' => '入力の説明',

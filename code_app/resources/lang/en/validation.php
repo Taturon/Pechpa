@@ -119,6 +119,9 @@ return [
 	'attributes' => [
 
 		'title' => 'Title',
+		'difficulty' => 'Difficulty',
+		'lower_validity' => 'Lower Validity',
+		'upper_validity' => 'Upper Validity',
 		'statement' => 'Statement',
 		'constraints' => 'Constraints',
 		'input' => 'Input Description',
