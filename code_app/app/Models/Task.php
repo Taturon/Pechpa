@@ -8,6 +8,10 @@ class Task extends Model {
 
 	protected $guarded = ['id'];
 
+	public function user() {
+		return $this->belongsTo('App\Models\User');
+	}
+
 	public function tests() {
 		return $this->hasMany('App\Models\Test');
 	}
