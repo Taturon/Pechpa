@@ -6,6 +6,8 @@
 </div>
 @component('components.alert')
 @endcomponent
+@component('components.errors_alert')
+@endcomponent
 @component('components.tasks_search_form')
 @endcomponent
 <hr>
