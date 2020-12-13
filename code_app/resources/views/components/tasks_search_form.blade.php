@@ -2,7 +2,7 @@
 	{{ Form::open(['route' => 'tasks.search', 'method' => 'post']) }}
 		{{ csrf_field() }}
 		<div class="col-md-4">
-			<div class="form-group">
+			<div class="form-group{{ $errors->has('title') ? ' has-error' : '' }}">
 				<div class="text-center">
 					{{ Form::label('title', __('words.tasks.title')) }}
 					{{ Form::text('title', '', ['class' => 'form-control', 'placeholder' => __('words.tasks.title_search_placeholder')]) }}
@@ -10,7 +10,7 @@
 			</div>
 		</div>
 		<div class="col-md-2">
-			<div class="form-group">
+			<div class="form-group{{ $errors->has('difficulty') ? ' has-error' : '' }}">
 				<div class="text-center">
 					{{ Form::label('difficulty', __('words.tasks.difficulty')) }}
 					<select id="difficulty" name="difficulty" class="form-control">
@@ -23,7 +23,7 @@
 			</div>
 		</div>
 		<div class="col-md-2">
-			<div class="form-group">
+			<div class="form-group{{ $errors->has('lower_validity') ? ' has-error' : '' }}">
 				<div class="text-center">
 					{{ Form::label('lower_validity', __('words.tasks.lower_validity')) }}
 					<select id="lower_validity" name="lower_validity" class="form-control">
@@ -36,7 +36,7 @@
 			</div>
 		</div>
 		<div class="col-md-2">
-			<div class="form-group">
+			<div class="form-group{{ $errors->has('upper_validity') ? ' has-error' : '' }}">
 				<div class="text-center">
 					{{ Form::label('upper_validity', __('words.tasks.upper_validity')) }}
 					<select id="upper_validity" name="upper_validity" class="form-control">
