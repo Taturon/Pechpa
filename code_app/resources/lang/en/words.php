@@ -18,18 +18,8 @@ return [
 		'upper_validity' => 'Validity Upper Limit',
 		'validity' => [
 			'validity' => 'Validity',
-			'lower' => [
-				'0' => '0% or more',
-				'25' => '25% or more',
-				'50' => '50% or more',
-				'75' => '75% or more',
-			],
-			'upper' => [
-				'25' => '25% or less',
-				'50' => '50% or less',
-				'75' => '75% or less',
-				'100' => '100% or less',
-			],
+			'lower' => ':n% or more',
+			'upper' => ':n% or less',
 		],
 	],
 
