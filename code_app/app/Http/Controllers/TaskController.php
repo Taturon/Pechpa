@@ -33,17 +33,17 @@ class TaskController extends Controller {
 		if (!is_null($request->title)) {
 			$query = $this->task->narrowDownWithTitle($query, $request);
 		}
-		if (!is_null($request->difficulty)) {
+		if (!is_null($request->difficulty) && $request->difficulty !== '0') {
 			$query = $this->task->narrowDownWithDifficulty($query, $request);
 		}
-		if (!is_null($request->lower_validity)) {
+		if (!is_null($request->lower_validity) && $request->lower_validity !== '0') {
 			if ($request->has('include_no_examinees')) {
 				$query = $this->task->narrowDownWithLowerValidityWithNoExaminees($query, $request);
 			} else {
 				$query = $this->task->narrowDownWithLowerValidity($query, $request);
 			}
 		}
-		if (!is_null($request->upper_validity)) {
+		if (!is_null($request->upper_validity) && $request->upper_validity !== '0') {
 			if ($request->has('include_no_examinees')) {
 				$query = $this->task->narrowDownWithUpperValidityWithNoExaminees($query, $request);
 			} else {
