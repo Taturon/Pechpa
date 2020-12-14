@@ -42,7 +42,7 @@
 						{{ $task->user->name }}
 					</td>
 					<td class="text-center">
-						{{ $task->examinees == 0 ? __('words.tasks.no_examinees') : $task->solved / $task->examinees }}
+						{{ $task->examinees == 0 ? __('words.tasks.no_examinees') : sprintf('%03.1f', $task->solved / $task->examinees * 100) . '%' }}
 					</td>
 				</tr>
 			@endforeach
