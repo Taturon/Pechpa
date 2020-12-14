@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Services\SendMail;
 use App\Http\Requests\StoreTask;
+use App\Http\Requests\TasksSearchRequest;
 use App\Repositories\Task\TaskRepositoryInterface AS Task;
 
 class TaskController extends Controller {
@@ -21,6 +22,35 @@ class TaskController extends Controller {
 
 	public function index() {
 		$tasks = $this->task->allReviewedTasks(config('pagings.user_tasks'));
+		return view('task.index', compact('tasks'));
+	}
+
+	public function search(TasksSearchRequest $request) {
+		$query = $this->task->makeQuery();
+		if (!$request->has('include_no_examinees')) {
+			$query = $this->task->withoutNoExaminees($query);
+		}
+		if (!is_null($request->title)) {
+			$query = $this->task->narrowDownWithTitle($query, $request);
+		}
+		if (!is_null($request->difficulty) && $request->difficulty !== '0') {
+			$query = $this->task->narrowDownWithDifficulty($query, $request);
+		}
+		if (!is_null($request->lower_validity) && $request->lower_validity !== '0') {
+			if ($request->has('include_no_examinees')) {
+				$query = $this->task->narrowDownWithLowerValidityWithNoExaminees($query, $request);
+			} else {
+				$query = $this->task->narrowDownWithLowerValidity($query, $request);
+			}
+		}
+		if (!is_null($request->upper_validity) && $request->upper_validity !== '0') {
+			if ($request->has('include_no_examinees')) {
+				$query = $this->task->narrowDownWithUpperValidityWithNoExaminees($query, $request);
+			} else {
+				$query = $this->task->narrowDownWithUpperValidity($query, $request);
+			}
+		}
+		$tasks = $query->paginate(config('pagings.user_tasks'));
 		return view('task.index', compact('tasks'));
 	}
 

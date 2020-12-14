@@ -18,6 +18,24 @@ interface TaskRepositoryInterface {
 
 	public function findUnreviewedTask($id);
 
+	public function makeQuery();
+
+	public function narrowDownWithTitle($query, $request);
+
+	public function narrowDownWithDifficulty($query, $request);
+
+	public function narrowDownWithLowerValidity($query, $request);
+
+	public function narrowDownWithLowerValidityWithNoExaminees($query, $request);
+
+	public function narrowDownWithUpperValidity($query, $request);
+
+	public function narrowDownWithUpperValidityWithNoExaminees($query, $request);
+
+	public function withNoExaminees($query);
+
+	public function withoutNoExaminees($query);
+
 	public function storeTask($request);
 
 	public function updateTaskWithApproval($task_id, $request);

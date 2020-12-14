@@ -21,5 +21,19 @@ return [
 		7 => 'darkorange',
 		8 => 'red',
 	],
+	'lower_validity' => [
+		0 => NULL,
+		1 => '0',
+		2 => '25',
+		3 => '50',
+		4 => '75',
+	],
+	'upper_validity' => [
+		0 => NULL,
+		1 => '25',
+		2 => '50',
+		3 => '75',
+		4 => '100',
+	],
 	'max_difficulty' => '8',
 ];
