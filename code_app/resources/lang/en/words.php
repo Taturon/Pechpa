@@ -9,6 +9,12 @@ return [
 	'tasks' => [
 		'title' => 'Title',
 		'title_search_placeholder' => 'Search by task title...',
+		'statement' => 'Statement',
+		'constraints' => 'Constraints',
+		'input' => 'Input',
+		'output' => 'Output',
+		'sample_input' => 'Sample Input',
+		'sample_output' => 'Sample Output',
 		'difficulty' => 'Difficulty',
 		'creator' => 'Creator',
 		'no_select' => 'No Select',
@@ -21,6 +27,10 @@ return [
 			'lower' => ':n% or more',
 			'upper' => ':n% or less',
 		],
+	],
+
+	'answers' => [
+		'answer' => 'Answer',
 	],
 
 	'buttons' => [
