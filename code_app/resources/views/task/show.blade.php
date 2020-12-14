@@ -47,13 +47,19 @@
 			<hr>
 		@endforeach
 		<h2><b>@lang('words.answers.answer')</b></h2>
-		{{ Form::open(['route' => ['answers.check', $task->id]]) }}
-			{{ Form::textarea('source', "&lt;?php\n", ['rows' => 15, 'style' => 'width:100%;', 'id' => 'tab']) }}
-			<hr>
-			<button class="btn btn-block btn-primary" name="submission" type="submit" onclick="return confirm('@lang('words.buttons.submission_confirm')');">
-				@lang('words.buttons.submission')
-			</button>
-		{{ Form::close() }}
+		@if (Auth::user()->id !== $task->user_id)
+			{{ Form::open(['route' => ['answers.check', $task->id]]) }}
+				{{ Form::textarea('source', "&lt;?php\n", ['rows' => 15, 'style' => 'width:100%;', 'id' => 'tab']) }}
+				<hr>
+				<button class="btn btn-block btn-primary" name="submission" type="submit" onclick="return confirm('@lang('words.buttons.submission_confirm')');">
+					@lang('words.buttons.submission')
+				</button>
+			{{ Form::close() }}
+		@else
+			<div class="row text-center">
+				<h1 style="color:lightgray;">@lang('words.notices.can_not_answer')</h1>
+			</div>
+		@endif
 		<hr>
 		<ol class="breadcrumb">
 			<li><a href="{{ route('tasks.index') }}">@lang('words.titles.tasks_list')</a></li>
