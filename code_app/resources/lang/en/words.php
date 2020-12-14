@@ -6,6 +6,10 @@ return [
 		'tasks_list' => 'Tasks List',
 	],
 
+	'notices' => [
+		'can_not_answer' => 'You can not answer the your created tasks.',
+	],
+
 	'tasks' => [
 		'title' => 'Title',
 		'title_search_placeholder' => 'Search by task title...',

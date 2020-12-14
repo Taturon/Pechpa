@@ -6,6 +6,10 @@ return [
 		'tasks_list' => '問題一覧',
 	],
 
+	'notices' => [
+		'can_not_answer' => '作成した問題には回答できません',
+	],
+
 	'tasks' => [
 		'title' => '問題名',
 		'title_search_placeholder' => '問題名で検索',
