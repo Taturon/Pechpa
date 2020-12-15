@@ -71,7 +71,25 @@
 									<i class="fas fa-user-plus"></i>&thinsp;@lang('link.register')
 								</a>
 							</li>
-						@elseif (Auth::guard('admin')->check() || Auth::guard('user')->check())
+						@endif
+						@if (Auth::guard('user')->check())
+							<li>
+								<a href="{{ route('tasks.index') }}">
+									<i class="fas fa-code"></i>&thinsp;@lang('words.titles.tasks_list')
+								</a>
+							</li>
+							<li>
+								<a href="{{ route('tasks.create') }}">
+									<i class="fas fa-code"></i>&thinsp;@lang('words.titles.task_create')
+								</a>
+							</li>
+							<li>
+								<a href="{{ route('answers.index') }}">
+									<i class="fas fa-tasks"></i>&thinsp;@lang('words.titles.answers_list')
+								</a>
+							</li>
+						@endif
+						@if (Auth::guard('admin')->check() || Auth::guard('user')->check())
 							<li class="dropdown">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" v-pre>
 									{{ Auth::guard('admin')->check() ? Auth::guard('admin')->user()->name : Auth::user()->name }} <span class="caret"></span>
