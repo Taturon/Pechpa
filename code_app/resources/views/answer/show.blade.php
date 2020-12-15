@@ -6,16 +6,46 @@
 		<div class="page-header" style="margin-top:-20px;padding-bottom:0px;">
 			<h1>
 				<b>{{ $answer->task->title }}</b>
-				<br>
-				<small>
-					<b>
-						@lang('title.task_difficulty')
-						<span style="color:{{ config('tasks.colors')[$answer->task->difficulty] }};">
-							{{ config('tasks.stars')[$answer->task->difficulty] }}
-						</span>
-					</b>
-				</small>
 			</h1>
+			<div class="row">
+				<div class="col-md-3" style="margin-top:-25px;padding-bottom:0px;">
+					<h2>
+						<b>
+							<small>@lang('words.tasks.difficulty')&#65306;
+							<span style="color:{{ config('tasks.colors')[$answer->task->difficulty] }};">
+								{{ config('tasks.stars')[$answer->task->difficulty] }}
+							</span>
+							</small>
+						</b>
+					</h2>
+				</div>
+				<div class="col-md-3" style="margin-top:-25px;padding-bottom:0px;">
+					<h2>
+						<b>
+							<small>@lang('words.tasks.solved')&#65306;</small>
+							<span>{{ $answer->task->solved }}</span>
+						</b>
+					</h2>
+				</div>
+				<div class="col-md-3" style="margin-top:-25px;padding-bottom:0px;">
+					<h2>
+						<b>
+							<small>@lang('words.tasks.examinees')&#65306;</small>
+							<span>{{ $answer->task->examinees }}</span>
+						</b>
+					</h2>
+				</div>
+				<div class="col-md-3" style="margin-top:-25px;padding-bottom:0px;">
+					<h2>
+						<b>
+							<small>@lang('words.tasks.validity.validity')&#65306;</small>
+							<span>
+								{{ $answer->task->examinees == 0 ? __('words.tasks.no_examinees') : sprintf('%03.1f', $answer->task->solved / $answer->task->examinees * 100) . '%' }}
+							</span>
+						</b>
+					</h2>
+				</div>
+			</div>
 		</div>
 		@component('components.alert')
 		@endcomponent
