@@ -1,8 +1,8 @@
 @extends('layouts.app')
 @section('title', __('title.answers_list'))
 @section('content')
-<div class="page-header" style="margin-top:-30px;padding-bottom:0px;">
-	<h1><small>@lang('title.answers_list')</small></h1>
+<div class="page-header" style="margin-top:-20px;padding-bottom:0px;">
+	<h1>@lang('title.answers_list')</h1>
 </div>
 @component('components.alert')
 @endcomponent
