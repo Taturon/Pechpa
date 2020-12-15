@@ -37,9 +37,12 @@ class AnswerController extends Controller {
 	}
 
 	public function check(Request $request, $task_id) {
+		$user_id = $request->user()->id;
+		if ($this->answer->isNotAnswered($task_id, $user_id)) {
+			$this->task->inincrementExaminees($task_id);
+		}
 		$path = $this->answer_service->makeAnswerFile($request);
 		$syntax_check_result = $this->answer_service->syntaxCheck($path);
-		$user_id = $request->user()->id;
 		$answer = $this->answer->storeSyntaxCheckResult($request->source, $syntax_check_result, $user_id, $task_id);
 		$tests = $this->task->findReviewedTask($task_id)->tests;
 		$test_results = $this->answer_service->tryTestCases($path, $tests, $answer->id, $user_id);
@@ -47,6 +50,9 @@ class AnswerController extends Controller {
 		$mismatches = $this->answer_service->countMismatches($test_results);
 		if ($mismatches === 0) {
 			$judge = 'AC';
+			if ($this->answer->isNotSolved($task_id, $user_id)) {
+				$this->task->inincrementSolved($task_id);
+			}
 		} else {
 			$judge = 'WA';
 		}

@@ -82,6 +82,14 @@ class TaskRepository implements TaskRepositoryInterface {
 		return $query->Where('examinees','>', '0');
 	}
 
+	public function inincrementExaminees($task_id) {
+		$this->task->find($task_id)->increment('examinees');
+	}
+
+	public function inincrementSolved($task_id) {
+		$this->task->find($task_id)->increment('solved');
+	}
+
 	public function storeTask($request) {
 		return $this->task->create([
 			'title' => $request->title,
