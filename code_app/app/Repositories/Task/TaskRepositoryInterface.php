@@ -36,6 +36,10 @@ interface TaskRepositoryInterface {
 
 	public function withoutNoExaminees($query);
 
+	public function inincrementExaminees($task_id);
+
+	public function inincrementSolved($task_id);
+
 	public function storeTask($request);
 
 	public function updateTaskWithApproval($task_id, $request);
