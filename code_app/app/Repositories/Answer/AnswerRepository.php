@@ -23,6 +23,20 @@ class AnswerRepository implements AnswerRepositoryInterface {
 		return $this->answer->find($id);
 	}
 
+	public function isNotAnswered($task_id, $user_id) {
+		if ($this->answer->where('task_id', $task_id)->where('user_id', $user_id)->first()) {
+			return false;
+		}
+		return true;
+	}
+
+	public function isNotSolved($task_id, $user_id) {
+		if ($this->answer->where('task_id', $task_id)->where('user_id', $user_id)->where('judge', 'AC')->first()) {
+			return false;
+		}
+		return true;
+	}
+
 	public function storeSyntaxCheckResult($source, Array $result, $user_id, $task_id) {
 		return $this->answer->create([
 			'task_id' => $task_id,
