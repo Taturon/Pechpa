@@ -54,6 +54,10 @@
 	<div class="row text-center">
 		<h1 style="color:lightgray;">@lang('words.notices.no_answers')</h1>
 	</div>
+	<hr>
 @endif
-<hr>
+<ol class="breadcrumb">
+	<li><a href="{{ route('tasks.index') }}">@lang('words.titles.tasks_list')</a></li>
+	<li class="active">@lang('words.titles.answers_list')</li>
+</ol>
 @endsection
