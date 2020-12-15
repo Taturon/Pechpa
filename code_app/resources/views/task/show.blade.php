@@ -9,22 +9,46 @@
 		<div class="page-header" style="margin-top:-20px;padding-bottom:0px;">
 			<h1>
 				<b>{{ $task->title }}</b>
-				<br>
-				<small>
-					<small>@lang('words.tasks.difficulty')</small>
-					<span style="color:{{ config('tasks.colors')[$task->difficulty] }};">
-						{{ config('tasks.stars')[$task->difficulty] }}
-					</span>
-					<small>&ensp;@lang('words.tasks.solved')&#65306;</small>
-					<span>{{ $task->solved }}</span>
-					<small>&ensp;@lang('words.tasks.examinees')&#65306;</small>
-					<span>{{ $task->examinees }}</span>
-					<small>&ensp;@lang('words.tasks.validity.validity')&#65306;</small>
-					<span>
-						{{ $task->examinees == 0 ? __('words.tasks.no_examinees') : sprintf('%03.1f', $task->solved / $task->examinees * 100) . '%' }}
-					</span>
-				</small>
 			</h1>
+			<div class="row">
+				<div class="col-md-3" style="margin-top:-25px;padding-bottom:0px;">
+					<h2>
+						<b>
+							<small>@lang('words.tasks.difficulty')&#65306;
+							<span style="color:{{ config('tasks.colors')[$task->difficulty] }};">
+								{{ config('tasks.stars')[$task->difficulty] }}
+							</span>
+							</small>
+						</b>
+					</h2>
+				</div>
+				<div class="col-md-3" style="margin-top:-25px;padding-bottom:0px;">
+					<h2>
+						<b>
+							<small>@lang('words.tasks.solved')&#65306;</small>
+							<span>{{ $task->solved }}</span>
+						</b>
+					</h2>
+				</div>
+				<div class="col-md-3" style="margin-top:-25px;padding-bottom:0px;">
+					<h2>
+						<b>
+							<small>@lang('words.tasks.examinees')&#65306;</small>
+							<span>{{ $task->examinees }}</span>
+						</b>
+					</h2>
+				</div>
+				<div class="col-md-3" style="margin-top:-25px;padding-bottom:0px;">
+					<h2>
+						<b>
+							<small>@lang('words.tasks.validity.validity')&#65306;</small>
+							<span>
+								{{ $task->examinees == 0 ? __('words.tasks.no_examinees') : sprintf('%03.1f', $task->solved / $task->examinees * 100) . '%' }}
+							</span>
+						</b>
+					</h2>
+				</div>
+			</div>
 		</div>
 		<h2><b>@lang('words.tasks.statement')</b></h2>
 		<p>{!! nl2br(e($task->statement)) !!}</p>
