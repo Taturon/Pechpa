@@ -4,9 +4,12 @@ return [
 
 	'titles' => [
 		'tasks_list' => '問題一覧',
+		'answers_list' => '回答一覧',
 	],
 
 	'notices' => [
+		'no_tasks' => '検索条件に該当する問題がありません',
+		'no_answers' => "まだ回答がありません<br>問題一覧ページから回答してみましょう！",
 		'can_not_answer' => '作成した問題には回答できません',
 	],
 
@@ -37,6 +40,13 @@ return [
 
 	'answers' => [
 		'answer' => '回答',
+		'answer_date' => '回答日時',
+		'judge' => '判定',
+		'byte' => 'バイト数',
+		'code' => '提出コード',
+		'compile' => 'コンパイルメッセージ',
+		'testings' => 'テストケース',
+		'test_number' => 'テスト番号',
 	],
 
 	'buttons' => [

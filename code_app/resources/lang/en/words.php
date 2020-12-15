@@ -4,9 +4,12 @@ return [
 
 	'titles' => [
 		'tasks_list' => 'Tasks List',
+		'answers_list' => 'Answers List',
 	],
 
 	'notices' => [
+		'no_tasks' => 'There are no tasks that match the search conditions.',
+		'no_answers' => "There are no answers. <br>Let's solve !",
 		'can_not_answer' => 'You can not answer the your created tasks.',
 	],
 
@@ -37,6 +40,13 @@ return [
 
 	'answers' => [
 		'answer' => 'Answer',
+		'answer_date' => 'Answer Date',
+		'judge' => 'Judge',
+		'byte' => 'Code Size',
+		'code' => 'Source Code',
+		'compile' => 'Compile Messeage',
+		'testings' => 'Test Cases',
+		'test_number' => 'Test No.',
 	],
 
 	'buttons' => [
