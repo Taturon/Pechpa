@@ -63,6 +63,7 @@
 		<hr>
 		<ol class="breadcrumb">
 			<li><a href="{{ route('tasks.index') }}">@lang('words.titles.tasks_list')</a></li>
+			<li><a href="{{ route('answers.index') }}">@lang('words.titles.answers_list')</a></li>
 			<li class="active">{{ $task->title }}</li>
 		</ol>
 	</div>
