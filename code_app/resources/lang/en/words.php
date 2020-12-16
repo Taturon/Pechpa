@@ -4,6 +4,7 @@ return [
 
 	'titles' => [
 		'tasks_list' => 'Tasks List',
+		'task_create' => 'Task Create',
 		'answers_list' => 'Answers List',
 	],
 
@@ -50,9 +51,12 @@ return [
 	],
 
 	'buttons' => [
-		'search' => 'Search',
+		'register' => 'Register',
+		'login' => 'Login',
+		'logout' => 'Logout',
 		'guest_login' => 'Guest Login',
 		'or' => 'OR',
+		'search' => 'Search',
 		'submission' => 'Submission',
 		'submission_confirm' => 'Do you want to submit it ?',
 		'send' => 'Send',

@@ -58,20 +58,38 @@
 						@if (!Auth::guard('admin')->check() && !Auth::guard('user')->check() && strpos(url()->current(), '/admin') === false)
 							<li>
 								<a href="{{ route('guest_login') }}">
-									<i class="fas fa-sign-in-alt"></i>&thinsp;@lang('link.guest_login')
+									<i class="fas fa-sign-in-alt"></i>&thinsp;@lang('words.buttons.guest_login')
 								</a>
 							</li>
 							<li>
 								<a href="{{ route('login') }}">
-									<i class="fas fa-sign-in-alt"></i>&thinsp;@lang('link.login')
+									<i class="fas fa-sign-in-alt"></i>&thinsp;@lang('words.buttons.login')
 								</a>
 							</li>
 							<li>
 								<a href="{{ route('register') }}">
-									<i class="fas fa-user-plus"></i>&thinsp;@lang('link.register')
+									<i class="fas fa-user-plus"></i>&thinsp;@lang('words.buttons.register')
 								</a>
 							</li>
-						@elseif (Auth::guard('admin')->check() || Auth::guard('user')->check())
+						@endif
+						@if (Auth::guard('user')->check())
+							<li>
+								<a href="{{ route('tasks.index') }}">
+									<i class="fas fa-code"></i>&thinsp;@lang('words.titles.tasks_list')
+								</a>
+							</li>
+							<li>
+								<a href="{{ route('tasks.create') }}">
+									<i class="fas fa-code"></i>&thinsp;@lang('words.titles.task_create')
+								</a>
+							</li>
+							<li>
+								<a href="{{ route('answers.index') }}">
+									<i class="fas fa-tasks"></i>&thinsp;@lang('words.titles.answers_list')
+								</a>
+							</li>
+						@endif
+						@if (Auth::guard('admin')->check() || Auth::guard('user')->check())
 							<li class="dropdown">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" v-pre>
 									{{ Auth::guard('admin')->check() ? Auth::guard('admin')->user()->name : Auth::user()->name }} <span class="caret"></span>
@@ -83,7 +101,7 @@
 											onclick="event.preventDefault();
 											document.getElementById('logout-form').submit();"
 										>
-											@lang('link.logout')
+											@lang('words.buttons.logout')
 										</a>
 
 										<form id="logout-form" action="{{ Auth::guard('admin')->check() ? route('admin.logout') : route('logout') }}" method="POST" style="display: none;">

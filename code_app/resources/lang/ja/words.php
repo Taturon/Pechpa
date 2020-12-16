@@ -4,6 +4,7 @@ return [
 
 	'titles' => [
 		'tasks_list' => '問題一覧',
+		'task_create' => '問題作成',
 		'answers_list' => '回答一覧',
 	],
 
@@ -50,9 +51,12 @@ return [
 	],
 
 	'buttons' => [
-		'search' => '検索',
+		'register' => '新規登録',
+		'login' => 'ログイン',
+		'logout' => 'ログアウト',
 		'guest_login' => '簡単ログイン',
 		'or' => 'または',
+		'search' => '検索',
 		'submission' => '提出',
 		'submission_confirm' => '提出しますか?',
 		'send' => '送信',
