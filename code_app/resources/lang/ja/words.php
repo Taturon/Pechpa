@@ -3,6 +3,7 @@
 return [
 
 	'titles' => [
+		'login' => 'ログイン',
 		'tasks_list' => '問題一覧',
 		'task_create' => '問題作成',
 		'answers_list' => '回答一覧',
@@ -21,6 +22,12 @@ return [
 		'wrong_answer' => '不正解です...',
 		'correct_answer' => '正解です!',
 		'task_created' => '問題を提案をお受けしました！ 運営のレビューをお待ち下さい',
+	],
+
+	'login' => [
+		'mail' => 'メールアドレス',
+		'password' => 'パスワード',
+		'remember' => 'ログイン情報の保存',
 	],
 
 	'tasks' => [
@@ -65,6 +72,7 @@ return [
 		'logout' => 'ログアウト',
 		'guest_login' => '簡単ログイン',
 		'or' => 'または',
+		'forgot' => 'パスワードを忘れた方はこちら',
 		'search' => '検索',
 		'submission' => '提出',
 		'submission_confirm' => '提出しますか?',

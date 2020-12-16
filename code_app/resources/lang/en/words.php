@@ -3,6 +3,7 @@
 return [
 
 	'titles' => [
+		'login' => 'Login',
 		'tasks_list' => 'Tasks List',
 		'task_create' => 'Task Create',
 		'answers_list' => 'Answers List',
@@ -21,6 +22,12 @@ return [
 		'wrong_answer' => 'Incorrect answer...',
 		'correct_answer' => 'Correct answer !',
 		'task_created' => 'We have received a your suggestion ! Please wait for the review.',
+	],
+
+	'login' => [
+		'mail' => 'E-mail Address',
+		'password' => 'Password',
+		'remember' => 'Remember me',
 	],
 
 	'tasks' => [
@@ -65,6 +72,7 @@ return [
 		'logout' => 'Logout',
 		'guest_login' => 'Guest Login',
 		'or' => 'OR',
+		'forgot' => 'Forgot password ?',
 		'search' => 'Search',
 		'submission' => 'Submission',
 		'submission_confirm' => 'Do you want to submit it ?',
