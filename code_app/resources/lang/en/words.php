@@ -3,6 +3,7 @@
 return [
 
 	'titles' => [
+		'register' => 'Register',
 		'login' => 'Login',
 		'tasks_list' => 'Tasks List',
 		'task_create' => 'Task Create',
@@ -24,9 +25,11 @@ return [
 		'task_created' => 'We have received a your suggestion ! Please wait for the review.',
 	],
 
-	'login' => [
+	'authentication' => [
+		'name' => 'Name',
 		'mail' => 'E-mail Address',
 		'password' => 'Password',
+		'password_confirm' => 'Password Confirm',
 		'remember' => 'Remember me',
 	],
 

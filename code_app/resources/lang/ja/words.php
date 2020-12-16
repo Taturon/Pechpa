@@ -3,6 +3,7 @@
 return [
 
 	'titles' => [
+		'register' => '新規登録',
 		'login' => 'ログイン',
 		'tasks_list' => '問題一覧',
 		'task_create' => '問題作成',
@@ -24,9 +25,11 @@ return [
 		'task_created' => '問題を提案をお受けしました！ 運営のレビューをお待ち下さい',
 	],
 
-	'login' => [
+	'authentication' => [
+		'name' => '名前',
 		'mail' => 'メールアドレス',
 		'password' => 'パスワード',
+		'password_confirm' => 'パスワード(確認)',
 		'remember' => 'ログイン情報の保存',
 	],
 
