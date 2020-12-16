@@ -58,17 +58,17 @@
 						@if (!Auth::guard('admin')->check() && !Auth::guard('user')->check() && strpos(url()->current(), '/admin') === false)
 							<li>
 								<a href="{{ route('guest_login') }}">
-									<i class="fas fa-sign-in-alt"></i>&thinsp;@lang('link.guest_login')
+									<i class="fas fa-sign-in-alt"></i>&thinsp;@lang('words.buttons.guest_login')
 								</a>
 							</li>
 							<li>
 								<a href="{{ route('login') }}">
-									<i class="fas fa-sign-in-alt"></i>&thinsp;@lang('link.login')
+									<i class="fas fa-sign-in-alt"></i>&thinsp;@lang('words.buttons.login')
 								</a>
 							</li>
 							<li>
 								<a href="{{ route('register') }}">
-									<i class="fas fa-user-plus"></i>&thinsp;@lang('link.register')
+									<i class="fas fa-user-plus"></i>&thinsp;@lang('words.buttons.register')
 								</a>
 							</li>
 						@endif
@@ -101,7 +101,7 @@
 											onclick="event.preventDefault();
 											document.getElementById('logout-form').submit();"
 										>
-											@lang('link.logout')
+											@lang('words.buttons.logout')
 										</a>
 
 										<form id="logout-form" action="{{ Auth::guard('admin')->check() ? route('admin.logout') : route('logout') }}" method="POST" style="display: none;">
