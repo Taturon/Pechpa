@@ -14,6 +14,15 @@ return [
 		'can_not_answer' => '作成した問題には回答できません',
 	],
 
+	'flashes' => [
+		'guest_logged_in' => '簡単ログインしました！',
+		'no_task' => '存在しない問題です',
+		'no_answer' => '存在しない回答です',
+		'wrong_answer' => '不正解です...',
+		'correct_answer' => '正解です!',
+		'task_created' => '問題を提案をお受けしました！ 運営のレビューをお待ち下さい',
+	],
+
 	'tasks' => [
 		'title' => '問題名',
 		'title_search_placeholder' => '問題名で検索',
