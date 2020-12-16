@@ -16,6 +16,9 @@ return [
 	],
 
 	'notices' => [
+		'required' => 'Required',
+		'optional' => 'Optional',
+		'max_characters' => 'Up to :count characters',
 		'no_tasks' => 'There are no tasks that match the search conditions.',
 		'no_answers' => "There are no answers. <br>Let's solve !",
 		'can_not_answer' => 'You can not answer the your created tasks.',

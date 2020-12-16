@@ -16,6 +16,9 @@ return [
 	],
 
 	'notices' => [
+		'required' => '必須',
+		'optional' => '任意',
+		'max_characters' => '最大:count文字',
 		'no_tasks' => '検索条件に該当する問題がありません',
 		'no_answers' => "まだ回答がありません<br>問題一覧ページから回答してみましょう！",
 		'can_not_answer' => '作成した問題には回答できません',
