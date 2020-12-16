@@ -8,12 +8,19 @@ return [
 		'tasks_list' => 'Tasks List',
 		'task_create' => 'Task Create',
 		'answers_list' => 'Answers List',
+		'admin_dashboard' => 'Admin Dashboard',
+		'unapproved_tasks_list' => 'Unapproved Tasks',
+		'tasks_recent_unapproved_list' => 'Recent Unapproved Tasks',
+		'tasks_recent_approved_list' => 'Recent Approved Tasks',
+		'approved_task' => 'Approved Task',
 	],
 
 	'notices' => [
 		'no_tasks' => 'There are no tasks that match the search conditions.',
 		'no_answers' => "There are no answers. <br>Let's solve !",
 		'can_not_answer' => 'You can not answer the your created tasks.',
+		'tasks_no_unapproved_list' => 'There is no unapproved tasks.',
+		'tasks_no_approved_list' => 'There is no approved tasks.',
 	],
 
 	'flashes' => [
@@ -46,6 +53,8 @@ return [
 		'creator' => 'Creator',
 		'solved' => 'Solved',
 		'examinees' => 'Examinees',
+		'created_date' => 'Created Date',
+		'published_date' => 'Published Date',
 		'no_select' => 'No Select',
 		'no_examinees' => 'No Examinees',
 		'include_no_examinees' => 'Include "No Examinees"',
