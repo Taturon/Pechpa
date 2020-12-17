@@ -107,4 +107,9 @@ return [
 		'update_only_confirm' => '更新しますか？',
 	],
 
+	'mails' => [
+		'subject_task_created' => '問題作成通知',
+		'header_task_created' => '問題が作成されました',
+	],
+
 ];

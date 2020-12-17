@@ -107,4 +107,9 @@ return [
 		'update_only_confirm' => 'Do you want to update ?',
 	],
 
+	'mails' => [
+		'subject_task_created' => 'Task Created Notification',
+		'header_task_created' => 'The following task has been created:',
+	],
+
 ];
