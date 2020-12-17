@@ -1,8 +1,8 @@
 @extends('layouts.app')
-@section('title', __('title.answers_list'))
+@section('title', __('words.titles.answers_list'))
 @section('content')
 <div class="page-header" style="margin-top:-20px;padding-bottom:0px;">
-	<h1>@lang('title.answers_list')</h1>
+	<h1>@lang('words.titles.answers_list')</h1>
 </div>
 @component('components.alert')
 @endcomponent
@@ -12,16 +12,16 @@
 			<thead>
 				<tr>
 					<th style="width:15%;">
-						<div class="text-center">@lang('th.submission_datetime')</div>
+						<div class="text-center">@lang('words.answers.answer_date')</div>
 					</th>
 					<th style="width:65%;">
-						<div class="text-center">@lang('th.task_title')</div>
+						<div class="text-center">@lang('words.tasks.title')</div>
 					</th>
 					<th style="width:10%;">
-						<div class="text-center">@lang('th.task_difficulty')</div>
+						<div class="text-center">@lang('words.tasks.difficulty')</div>
 					</th>
 					<th style="width:10%;">
-						<div class="text-center">@lang('th.judge')</div>
+						<div class="text-center">@lang('words.answers.judge')</div>
 					</th>
 				</tr>
 			</thead>
