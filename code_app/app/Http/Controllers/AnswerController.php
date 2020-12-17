@@ -32,7 +32,7 @@ class AnswerController extends Controller {
 			$testings = $answer->testing;
 			return view('answer.show', compact('answer', 'testings'));
 		} else {
-			return redirect()->route('answers.index')->with('error', __('flash.no_answer'));
+			return redirect()->route('answers.index')->with('error', __('words.flashes.no_answer'));
 		}
 	}
 
@@ -59,9 +59,9 @@ class AnswerController extends Controller {
 		$this->answer_service->deleteAnswerFile($path);
 		$this->answer->updateAnswerResults($answer->id, $judge, $mismatches);
 		if ($judge === 'AC') {
-			return redirect()->route('answers.show', ['answer' => $answer->id])->with('success', __('flash.correct_answer'));
+			return redirect()->route('answers.show', ['answer' => $answer->id])->with('success', __('words.flashes.correct_answer'));
 		} else {
-			return redirect()->route('answers.show', ['answer' => $answer->id])->with('error', __('flash.wrong_answer'));
+			return redirect()->route('answers.show', ['answer' => $answer->id])->with('error', __('words.flashes.wrong_answer'));
 		}
 	}
 }

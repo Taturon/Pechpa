@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', __('title.task_create'))
+@section('title', __('words.titles.task_approval'))
 @section('header')
 <script src="{{ asset('/js/tab.js') }}"></script>
 @endsection
@@ -9,24 +9,24 @@
 <div class="row">
 	<div class="col-md-12">
 		<div class="panel panel-default">
-			<div class="panel-heading text-center"><h1>@lang('title.task_review')</h1></div>
+			<div class="panel-heading text-center"><h1>@lang('words.titles.task_approval')</h1></div>
 			<div class="panel-body">
 				<form class="form-horizontal" method="POST" action="{{ route('admin.tasks.update', ['task_id' => $task->id]) }}">
 					{{ csrf_field() }}
 					{{ method_field('PATCH') }}
 					<div class="col-md-10 col-md-offset-1 text-center">
-						<h2>@lang('title.task_basic_configuration')</h2>
+						<h2>@lang('words.tasks.basic_configuration')</h2>
 					</div>
 					<div class="col-md-10 col-md-offset-1">
 						<hr style="border-width: 5px;">
 					</div>
 					<div class="form-group{{ $errors->has('title') ? ' has-error' : '' }}">
 						<label for="title" type="text" class="col-md-10 col-md-offset-1">
-							@lang('label.task_title')
+							@lang('words.tasks.title')
 							<small>
-								<span class="label label-danger">@lang('notice.required')</span>
+								<span class="label label-danger">@lang('words.notices.required')</span>
 								&emsp;
-								<span class="label label-warning">@lang('notice.max_characters', ['count' => '50'])</span>
+								<span class="label label-warning">@lang('words.notices.max_characters', ['count' => '50'])</span>
 							</small>
 						</label>
 						<div class="col-md-10 col-md-offset-1">
@@ -40,11 +40,11 @@
 					</div>
 					<div class="form-group{{ $errors->has('statement') ? ' has-error' : '' }}">
 						<label for="statement" class="col-md-10 col-md-offset-1">
-							@lang('label.task_statement')
+							@lang('words.tasks.statement')
 							<small>
-								<span class="label label-danger">@lang('notice.required')</span>
+								<span class="label label-danger">@lang('words.notices.required')</span>
 								&emsp;
-								<span class="label label-warning">@lang('notice.max_characters', ['count' => '500'])</span>
+								<span class="label label-warning">@lang('words.notices.max_characters', ['count' => '500'])</span>
 							</small>
 						</label>
 						<div class="col-md-10 col-md-offset-1">
@@ -58,11 +58,11 @@
 					</div>
 					<div class="form-group{{ $errors->has('constraints') ? ' has-error' : '' }}">
 						<label for="constraints" type="text" class="col-md-10 col-md-offset-1">
-							@lang('label.task_constraints')
+							@lang('words.tasks.constraints')
 							<small>
-								<span class="label label-danger">@lang('notice.required')</span>
+								<span class="label label-danger">@lang('words.notices.required')</span>
 								&emsp;
-								<span class="label label-warning">@lang('notice.max_characters', ['count' => '500'])</span>
+								<span class="label label-warning">@lang('words.notices.max_characters', ['count' => '500'])</span>
 							</small>
 						</label>
 						<div class="col-md-10 col-md-offset-1">
@@ -79,11 +79,11 @@
 					</div>
 					<div class="form-group{{ $errors->has('input') ? ' has-error' : '' }}">
 						<label for="input" type="text" class="col-md-10 col-md-offset-1">
-							@lang('label.task_input')
+							@lang('words.tasks.input_description')
 							<small>
-								<span class="label label-danger">@lang('notice.required')</span>
+								<span class="label label-danger">@lang('words.notices.required')</span>
 								&emsp;
-								<span class="label label-warning">@lang('notice.max_characters', ['count' => '500'])</span>
+								<span class="label label-warning">@lang('words.notices.max_characters', ['count' => '500'])</span>
 							</small>
 						</label>
 						<div class="col-md-10 col-md-offset-1">
@@ -97,11 +97,11 @@
 					</div>
 					<div class="form-group{{ $errors->has('input_code') ? ' has-error' : '' }}">
 						<label for="input_code" class="col-md-10 col-md-offset-1">
-							@lang('label.task_input_code')
+							@lang('words.tasks.input')
 							<small>
-								<span class="label label-danger">@lang('notice.required')</span>
+								<span class="label label-danger">@lang('words.notices.required')</span>
 								&emsp;
-								<span class="label label-warning">@lang('notice.max_characters', ['count' => '500'])</span>
+								<span class="label label-warning">@lang('words.notices.max_characters', ['count' => '500'])</span>
 							</small>
 						</label>
 						<div class="col-md-10 col-md-offset-1">
@@ -115,11 +115,11 @@
 					</div>
 					<div class="form-group{{ $errors->has('output') ? ' has-error' : '' }}">
 						<label for="output" type="text" class="col-md-10 col-md-offset-1">
-							@lang('label.task_output')
+							@lang('words.tasks.output_description')
 							<small>
-								<span class="label label-danger">@lang('notice.required')</span>
+								<span class="label label-danger">@lang('words.notices.required')</span>
 								&emsp;
-								<span class="label label-warning">@lang('notice.max_characters', ['count' => '500'])</span>
+								<span class="label label-warning">@lang('words.notices.max_characters', ['count' => '500'])</span>
 							</small>
 						</label>
 						<div class="col-md-10 col-md-offset-1">
@@ -133,11 +133,11 @@
 					</div>
 					<div class="form-group{{ $errors->has('output_code') ? ' has-error' : '' }}">
 						<label for="output_code" class="col-md-10 col-md-offset-1">
-							@lang('label.task_output_code')
+							@lang('words.tasks.output')
 							<small>
-								<span class="label label-info">@lang('notice.optional')</span>
+								<span class="label label-info">@lang('words.notices.optional')</span>
 								&emsp;
-								<span class="label label-warning">@lang('notice.max_characters', ['count' => '500'])</span>
+								<span class="label label-warning">@lang('words.notices.max_characters', ['count' => '500'])</span>
 							</small>
 						</label>
 						<div class="col-md-10 col-md-offset-1">
@@ -151,9 +151,9 @@
 					</div>
 					<div class="form-group{{ $errors->has('difficulty') ? ' has-error' : '' }}">
 						<label for="difficulty" class="col-md-10 col-md-offset-1">
-							@lang('label.task_difficulty')
+							@lang('words.tasks.difficulty')
 							<small>
-								<span class="label label-danger">@lang('notice.required')</span>
+								<span class="label label-danger">@lang('words.notices.required')</span>
 							</small>
 						</label>
 						<div class="col-md-10 col-md-offset-1">
@@ -170,18 +170,18 @@
 					<!-- サンプルケース-->
 
 					<div class="col-md-10 col-md-offset-1 text-center">
-						<h2>@lang('title.task_samples')</h2>
+						<h2>@lang('words.tasks.samples')</h2>
 					</div>
 					<div class="col-md-10 col-md-offset-1">
 						<hr style="border-width: 5px;">
 					</div>
 					<div class="form-group{{ $errors->has('sample_input_1') ? ' has-error' : '' }}">
 						<label for="sample_input_1" class="col-md-10 col-md-offset-1">
-							@lang('label.task_sample_input') 1
+							@lang('words.tasks.sample_input') 1
 							<small>
-								<span class="label label-danger">@lang('notice.required')</span>
+								<span class="label label-danger">@lang('words.notices.required')</span>
 								&emsp;
-								<span class="label label-warning">@lang('notice.max_characters', ['count' => '500'])</span>
+								<span class="label label-warning">@lang('words.notices.max_characters', ['count' => '500'])</span>
 							</small>
 						</label>
 						<div class="col-md-10 col-md-offset-1">
@@ -195,11 +195,11 @@
 					</div>
 					<div class="form-group{{ $errors->has('sample_output_1') ? ' has-error' : '' }}">
 						<label for="sample_output_1" class="col-md-10 col-md-offset-1">
-							@lang('label.task_sample_output') 1
+							@lang('words.tasks.sample_output') 1
 							<small>
-								<span class="label label-danger">@lang('notice.required')</span>
+								<span class="label label-danger">@lang('words.notices.required')</span>
 								&emsp;
-								<span class="label label-warning">@lang('notice.max_characters', ['count' => '500'])</span>
+								<span class="label label-warning">@lang('words.notices.max_characters', ['count' => '500'])</span>
 							</small>
 						</label>
 						<div class="col-md-10 col-md-offset-1">
@@ -216,11 +216,11 @@
 					</div>
 					<div class="form-group{{ $errors->has('sample_input_2') ? ' has-error' : '' }}">
 						<label for="sample_input_2" class="col-md-10 col-md-offset-1">
-							@lang('label.task_sample_input') 2
+							@lang('words.tasks.sample_input') 2
 							<small>
-								<span class="label label-info">@lang('notice.optional')</span>
+								<span class="label label-info">@lang('words.notices.optional')</span>
 								&emsp;
-								<span class="label label-warning">@lang('notice.max_characters', ['count' => '500'])</span>
+								<span class="label label-warning">@lang('words.notices.max_characters', ['count' => '500'])</span>
 							</small>
 						</label>
 						<div class="col-md-10 col-md-offset-1">
@@ -234,11 +234,11 @@
 					</div>
 					<div class="form-group{{ $errors->has('sample_output_2') ? ' has-error' : '' }}">
 						<label for="sample_output_2" class="col-md-10 col-md-offset-1">
-							@lang('label.task_sample_output') 2
+							@lang('words.tasks.sample_output') 2
 							<small>
-								<span class="label label-info">@lang('notice.optional')</span>
+								<span class="label label-info">@lang('words.notices.optional')</span>
 								&emsp;
-								<span class="label label-warning">@lang('notice.max_characters', ['count' => '500'])</span>
+								<span class="label label-warning">@lang('words.notices.max_characters', ['count' => '500'])</span>
 							</small>
 						</label>
 						<div class="col-md-10 col-md-offset-1">
@@ -255,11 +255,11 @@
 					</div>
 					<div class="form-group{{ $errors->has('sample_input_3') ? ' has-error' : '' }}">
 						<label for="sample_input_3" class="col-md-10 col-md-offset-1">
-							@lang('label.task_sample_input') 3
+							@lang('words.tasks.sample_input') 3
 							<small>
-								<span class="label label-info">@lang('notice.optional')</span>
+								<span class="label label-info">@lang('words.notices.optional')</span>
 								&emsp;
-								<span class="label label-warning">@lang('notice.max_characters', ['count' => '500'])</span>
+								<span class="label label-warning">@lang('words.notices.max_characters', ['count' => '500'])</span>
 							</small>
 						</label>
 						<div class="col-md-10 col-md-offset-1">
@@ -273,11 +273,11 @@
 					</div>
 					<div class="form-group{{ $errors->has('sample_output_3') ? ' has-error' : '' }}">
 						<label for="sample_output_3" class="col-md-10 col-md-offset-1">
-							@lang('label.task_sample_output') 3
+							@lang('words.tasks.sample_output') 3
 							<small>
-								<span class="label label-info">@lang('notice.optional')</span>
+								<span class="label label-info">@lang('words.notices.optional')</span>
 								&emsp;
-								<span class="label label-warning">@lang('notice.max_characters', ['count' => '500'])</span>
+								<span class="label label-warning">@lang('words.notices.max_characters', ['count' => '500'])</span>
 							</small>
 						</label>
 						<div class="col-md-10 col-md-offset-1">
@@ -293,18 +293,18 @@
 					<!-- テストケース-->
 
 					<div class="col-md-10 col-md-offset-1 text-center">
-						<h2>@lang('title.task_tests')</h2>
+						<h2>@lang('words.tasks.tests')</h2>
 					</div>
 					<div class="col-md-10 col-md-offset-1">
 						<hr style="border-width: 5px;">
 					</div>
 					<div class="form-group{{ $errors->has('test_input_1') ? ' has-error' : '' }}">
 						<label for="test_input_1" class="col-md-10 col-md-offset-1">
-							@lang('label.task_test_input') 1
+							@lang('words.tasks.test_input') 1
 							<small>
-								<span class="label label-danger">@lang('notice.required')</span>
+								<span class="label label-danger">@lang('words.notices.required')</span>
 								&emsp;
-								<span class="label label-warning">@lang('notice.max_characters', ['count' => '500'])</span>
+								<span class="label label-warning">@lang('words.notices.max_characters', ['count' => '500'])</span>
 							</small>
 						</label>
 						<div class="col-md-10 col-md-offset-1">
@@ -318,11 +318,11 @@
 					</div>
 					<div class="form-group{{ $errors->has('test_output_1') ? ' has-error' : '' }}">
 						<label for="test_output_1" class="col-md-10 col-md-offset-1">
-							@lang('label.task_test_output') 1
+							@lang('words.tasks.test_output') 1
 							<small>
-								<span class="label label-danger">@lang('notice.required')</span>
+								<span class="label label-danger">@lang('words.notices.required')</span>
 								&emsp;
-								<span class="label label-warning">@lang('notice.max_characters', ['count' => '500'])</span>
+								<span class="label label-warning">@lang('words.notices.max_characters', ['count' => '500'])</span>
 							</small>
 						</label>
 						<div class="col-md-10 col-md-offset-1">
@@ -339,11 +339,11 @@
 					</div>
 					<div class="form-group{{ $errors->has('test_input_2') ? ' has-error' : '' }}">
 						<label for="test_input_2" class="col-md-10 col-md-offset-1">
-							@lang('label.task_test_input') 2
+							@lang('words.tasks.test_input') 2
 							<small>
-								<span class="label label-danger">@lang('notice.required')</span>
+								<span class="label label-danger">@lang('words.notices.required')</span>
 								&emsp;
-								<span class="label label-warning">@lang('notice.max_characters', ['count' => '500'])</span>
+								<span class="label label-warning">@lang('words.notices.max_characters', ['count' => '500'])</span>
 							</small>
 						</label>
 						<div class="col-md-10 col-md-offset-1">
@@ -357,11 +357,11 @@
 					</div>
 					<div class="form-group{{ $errors->has('test_output_2') ? ' has-error' : '' }}">
 						<label for="test_output_2" class="col-md-10 col-md-offset-1">
-							@lang('label.task_test_output') 2
+							@lang('words.tasks.test_output') 2
 							<small>
-								<span class="label label-danger">@lang('notice.required')</span>
+								<span class="label label-danger">@lang('words.notices.required')</span>
 								&emsp;
-								<span class="label label-warning">@lang('notice.max_characters', ['count' => '500'])</span>
+								<span class="label label-warning">@lang('words.notices.max_characters', ['count' => '500'])</span>
 							</small>
 						</label>
 						<div class="col-md-10 col-md-offset-1">
@@ -378,11 +378,11 @@
 					</div>
 					<div class="form-group{{ $errors->has('test_input_3') ? ' has-error' : '' }}">
 						<label for="test_input_3" class="col-md-10 col-md-offset-1">
-							@lang('label.task_test_input') 3
+							@lang('words.tasks.test_input') 3
 							<small>
-								<span class="label label-danger">@lang('notice.required')</span>
+								<span class="label label-danger">@lang('words.notices.required')</span>
 								&emsp;
-								<span class="label label-warning">@lang('notice.max_characters', ['count' => '500'])</span>
+								<span class="label label-warning">@lang('words.notices.max_characters', ['count' => '500'])</span>
 							</small>
 						</label>
 						<div class="col-md-10 col-md-offset-1">
@@ -396,11 +396,11 @@
 					</div>
 					<div class="form-group{{ $errors->has('test_output_3') ? ' has-error' : '' }}">
 						<label for="test_output_3" class="col-md-10 col-md-offset-1">
-							@lang('label.task_test_output') 3
+							@lang('words.tasks.test_output') 3
 							<small>
-								<span class="label label-danger">@lang('notice.required')</span>
+								<span class="label label-danger">@lang('words.notices.required')</span>
 								&emsp;
-								<span class="label label-warning">@lang('notice.max_characters', ['count' => '500'])</span>
+								<span class="label label-warning">@lang('words.notices.max_characters', ['count' => '500'])</span>
 							</small>
 						</label>
 						<div class="col-md-10 col-md-offset-1">
@@ -417,11 +417,11 @@
 					</div>
 					<div class="form-group{{ $errors->has('test_input_4') ? ' has-error' : '' }}">
 						<label for="test_input_4" class="col-md-10 col-md-offset-1">
-							@lang('label.task_test_input') 4
+							@lang('words.tasks.test_input') 4
 							<small>
-								<span class="label label-danger">@lang('notice.required')</span>
+								<span class="label label-danger">@lang('words.notices.required')</span>
 								&emsp;
-								<span class="label label-warning">@lang('notice.max_characters', ['count' => '500'])</span>
+								<span class="label label-warning">@lang('words.notices.max_characters', ['count' => '500'])</span>
 							</small>
 						</label>
 						<div class="col-md-10 col-md-offset-1">
@@ -435,11 +435,11 @@
 					</div>
 					<div class="form-group{{ $errors->has('test_output_4') ? ' has-error' : '' }}">
 						<label for="test_output_4" class="col-md-10 col-md-offset-1">
-							@lang('label.task_test_output') 4
+							@lang('words.tasks.test_output') 4
 							<small>
-								<span class="label label-danger">@lang('notice.required')</span>
+								<span class="label label-danger">@lang('words.notices.required')</span>
 								&emsp;
-								<span class="label label-warning">@lang('notice.max_characters', ['count' => '500'])</span>
+								<span class="label label-warning">@lang('words.notices.max_characters', ['count' => '500'])</span>
 							</small>
 						</label>
 						<div class="col-md-10 col-md-offset-1">
@@ -456,12 +456,12 @@
 					</div>
 					<div class="form-group">
 						<div class="col-md-10 col-md-offset-1">
-							<button name="approval" type="submit" class="btn btn-block btn-primary" onclick="return confirm('@lang('button.approval_confirm')');">
-								@lang('button.approval')
+							<button name="approval" type="submit" class="btn btn-block btn-primary" onclick="return confirm('@lang('words.buttons.approval_confirm')');">
+								@lang('words.buttons.approval')
 							</button>
 							<br>
-							<button name="update" type="submit" class="btn btn-block btn-primary" onclick="return confirm('@lang('button.update_only_confirm')');">
-								@lang('button.update_only')
+							<button name="update" type="submit" class="btn btn-block btn-primary" onclick="return confirm('@lang('words.buttons.update_only_confirm')');">
+								@lang('words.buttons.update_only')
 							</button>
 						</div>
 					</div>

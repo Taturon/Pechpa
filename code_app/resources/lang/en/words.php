@@ -3,30 +3,69 @@
 return [
 
 	'titles' => [
+		'register' => 'Register',
+		'login' => 'Login',
 		'tasks_list' => 'Tasks List',
 		'task_create' => 'Task Create',
 		'answers_list' => 'Answers List',
+		'admin_dashboard' => 'Admin Dashboard',
+		'unapproved_tasks_list' => 'Unapproved Tasks',
+		'approved_task' => 'Approved Task',
+		'tasks_recent_unapproved_list' => 'Recent Unapproved Tasks',
+		'tasks_recent_approved_list' => 'Recent Approved Tasks',
+		'task_approval' => 'Task Approval',
 	],
 
 	'notices' => [
+		'required' => 'Required',
+		'optional' => 'Optional',
+		'max_characters' => 'Up to :count characters',
 		'no_tasks' => 'There are no tasks that match the search conditions.',
 		'no_answers' => "There are no answers. <br>Let's solve !",
 		'can_not_answer' => 'You can not answer the your created tasks.',
+		'tasks_no_unapproved_list' => 'There is no unapproved tasks.',
+		'tasks_no_approved_list' => 'There is no approved tasks.',
+	],
+
+	'flashes' => [
+		'guest_logged_in' => 'Guest Logged In !',
+		'no_task' => 'Invalid Task No.',
+		'no_answer' => 'Invalid Answer No.',
+		'wrong_answer' => 'Incorrect answer...',
+		'correct_answer' => 'Correct answer !',
+		'task_created' => 'We have received a your suggestion ! Please wait for the review.',
+	],
+
+	'authentication' => [
+		'name' => 'Name',
+		'mail' => 'E-mail Address',
+		'password' => 'Password',
+		'password_confirm' => 'Password Confirm',
+		'remember' => 'Remember me',
 	],
 
 	'tasks' => [
+		'basic_configuration' => 'Basic Configuration',
 		'title' => 'Title',
 		'title_search_placeholder' => 'Search by task title...',
 		'statement' => 'Statement',
 		'constraints' => 'Constraints',
 		'input' => 'Input',
+		'input_description' => 'Input Description',
 		'output' => 'Output',
+		'output_description' => 'Output Description',
+		'difficulty' => 'Difficulty',
+		'samples' => 'Sample Cases',
 		'sample_input' => 'Sample Input',
 		'sample_output' => 'Sample Output',
-		'difficulty' => 'Difficulty',
+		'tests' => 'Test Cases',
+		'test_input' => 'Test Input',
+		'test_output' => 'Test Output',
 		'creator' => 'Creator',
 		'solved' => 'Solved',
 		'examinees' => 'Examinees',
+		'created_date' => 'Created Date',
+		'published_date' => 'Published Date',
 		'no_select' => 'No Select',
 		'no_examinees' => 'No Examinees',
 		'include_no_examinees' => 'Include "No Examinees"',
@@ -56,6 +95,7 @@ return [
 		'logout' => 'Logout',
 		'guest_login' => 'Guest Login',
 		'or' => 'OR',
+		'forgot' => 'Forgot password ?',
 		'search' => 'Search',
 		'submission' => 'Submission',
 		'submission_confirm' => 'Do you want to submit it ?',
@@ -65,6 +105,11 @@ return [
 		'approval_confirm' => 'Do you approve of this task ?',
 		'update_only' => 'Update Only',
 		'update_only_confirm' => 'Do you want to update ?',
+	],
+
+	'mails' => [
+		'subject_task_created' => 'Task Created Notification',
+		'header_task_created' => 'The following task has been created:',
 	],
 
 ];
