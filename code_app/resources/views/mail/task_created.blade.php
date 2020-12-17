@@ -1,32 +1,32 @@
 @component('mail::message')
-# @lang('mail.header_task_created')
+# @lang('words.mails.header_task_created')
 
 <hr>
 
 <p>
-	<b>@lang('mail.task_creater')</b>
+	<b>@lang('words.tasks.creator')</b>
 	<br>
 	{{ $user->name }}
 	<br>
 	{{ $user->email }}
 </p>
 <p>
-	<b>@lang('mail.task_title')</b>
+	<b>@lang('words.tasks.title')</b>
 	<br>
 	{{ $request->title }}
 </p>
 <p>
-	<b>@lang('mail.task_statement')</b>
+	<b>@lang('words.tasks.statement')</b>
 	<br>
 	{{ $request->statement }}
 </p>
 <p>
-	<b>@lang('mail.task_constraints')</b>
+	<b>@lang('words.tasks.constraints')</b>
 	<br>
 	{{ $request->constraints }}
 </p>
 <p>
-	<b>@lang('mail.task_difficulty')</b>
+	<b>@lang('words.tasks.difficulty')</b>
 	<br>
 	<span style="color:{{ config('tasks.colors')[$request->difficulty] }};">
 		{{ config('tasks.stars')[$request->difficulty] }}

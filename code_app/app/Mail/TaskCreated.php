@@ -34,7 +34,7 @@ class TaskCreated extends Mailable {
 	public function build() {
 		$to = Admin::get(['email'])->toArray();
 		return $this->to($to)
-			->subject(__('mail.subject_task_created'))
+			->subject(__('words.mails.subject_task_created'))
 			->markdown('mail.task_created')
 			->with(['request' => $this->request, 'user' => $this->user]);
 	}
