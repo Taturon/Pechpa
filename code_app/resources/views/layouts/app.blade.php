@@ -101,7 +101,7 @@
 											onclick="event.preventDefault();
 											document.getElementById('logout-form').submit();"
 										>
-											@lang('words.buttons.logout')
+											<i class="fas fa-sign-out-alt"></i>&thinsp;@lang('words.buttons.logout')
 										</a>
 
 										<form id="logout-form" action="{{ Auth::guard('admin')->check() ? route('admin.logout') : route('logout') }}" method="POST" style="display: none;">
