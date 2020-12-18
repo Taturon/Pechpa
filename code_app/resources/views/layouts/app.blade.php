@@ -108,6 +108,11 @@
 											{{ csrf_field() }}
 										</form>
 									</li>
+									<li>
+										<a href="{{ route('profile') }}">
+											<i class="fas fa-address-card"></i>&thinsp;@lang('words.titles.user_profile')
+										</a>
+									</li>
 								</ul>
 							</li>
 						@endif
