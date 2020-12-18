@@ -5,6 +5,7 @@ return [
 	'titles' => [
 		'register' => 'Register',
 		'login' => 'Login',
+		'user_profile' => 'Profile',
 		'tasks_list' => 'Tasks List',
 		'task_create' => 'Task Create',
 		'answers_list' => 'Answers List',
@@ -42,6 +43,16 @@ return [
 		'password' => 'Password',
 		'password_confirm' => 'Password Confirm',
 		'remember' => 'Remember me',
+	],
+
+	'users' => [
+		'registered_date' => 'Registered Date',
+		'name' => 'User Name',
+		'email' => 'E-Mail Address',
+		'approved_tasks_count' => 'Approved Tasks',
+		'all_answers_count' => 'Answers',
+		'correct_answers_count' => 'Correct Answers',
+		'correct_answer_rate' => 'Correct Answer Rate',
 	],
 
 	'tasks' => [

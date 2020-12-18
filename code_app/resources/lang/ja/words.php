@@ -5,6 +5,7 @@ return [
 	'titles' => [
 		'register' => '新規登録',
 		'login' => 'ログイン',
+		'user_profile' => 'プロフィール',
 		'tasks_list' => '問題一覧',
 		'task_create' => '問題作成',
 		'answers_list' => '回答一覧',
@@ -42,6 +43,16 @@ return [
 		'password' => 'パスワード',
 		'password_confirm' => 'パスワード(確認)',
 		'remember' => 'ログイン情報の保存',
+	],
+
+	'users' => [
+		'registered_date' => '登録日時',
+		'name' => 'ユーザー名',
+		'email' => 'メールアドレス',
+		'approved_tasks_count' => '承認された問題数',
+		'all_answers_count' => '回答数',
+		'correct_answers_count' => '正解数',
+		'correct_answer_rate' => '正答率',
 	],
 
 	'tasks' => [
