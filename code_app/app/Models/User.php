@@ -30,4 +30,8 @@ class User extends Authenticatable {
 	public function task() {
 		return $this->hasOne('App\Models\Task');
 	}
+
+	public function answer() {
+		return $this->hasOne('App\Models\Answer');
+	}
 }
