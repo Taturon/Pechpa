@@ -111,7 +111,7 @@
 									@if (!Auth::guard('admin')->check())
 										<li>
 											<a href="{{ route('users.show', ['user_id' => Auth::user()->id]) }}">
-												<i class="fas fa-address-card"></i>&thinsp;@lang('words.titles.profile')
+												<i class="fas fa-address-card"></i>&thinsp;@lang('words.titles.your_profile')
 											</a>
 										</li>
 										<li>

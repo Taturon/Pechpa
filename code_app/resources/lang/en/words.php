@@ -6,6 +6,7 @@ return [
 		'register' => 'Register',
 		'login' => 'Login',
 		'profile' => ':name\'s Profile',
+		'your_profile' => 'Profile',
 		'profile_edit' => 'Profile Edit',
 		'tasks_list' => 'Tasks List',
 		'task_create' => 'Task Create',

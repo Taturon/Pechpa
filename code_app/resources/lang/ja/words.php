@@ -6,6 +6,7 @@ return [
 		'register' => '新規登録',
 		'login' => 'ログイン',
 		'profile' => ':nameさんのプロフィール',
+		'your_profile' => 'プロフィール',
 		'profile_edit' => 'プロフィール編集',
 		'tasks_list' => '問題一覧',
 		'task_create' => '問題作成',
