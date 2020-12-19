@@ -115,9 +115,9 @@
 		</div>
 		<hr>
 		<ol class="breadcrumb">
-			<li><a href="{{ route('tasks.index') }}">@lang('words.titles.tasks_list')</a></li>
-			<li><a href="{{ route('answers.index') }}">@lang('words.titles.answers_list')</a></li>
-			<li class="active">{{ $answer->task->title }}&thinsp;:&thinsp;{{ $answer->created_at }}</li>
+			<li><a href="{{ route('answers.index') }}"><i class="fas fa-tasks"></i>&thinsp;@lang('words.titles.answers_list')</a></li>
+			<li><a href="{{ route('tasks.show', ['task' => $answer->task->id]) }}">{{ $answer->task->title }}</a></li>
+			<li class="active">{{ $answer->created_at }}</li>
 		</ol>
 	</div>
 </div>
