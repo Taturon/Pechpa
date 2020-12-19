@@ -8,7 +8,7 @@
 	<!-- CSRF Token -->
 	<meta name="csrf-token" content="{{ csrf_token() }}">
 
-	<title>{{ config('app.name', 'PHP Coder') . ' | ' }}@yield('title')</title>
+	<title>{{ config('app.name', 'Pechpa!') . ' | ' }}@yield('title')</title>
 
 	<!-- Styles -->
 	<link rel="preconnect" href="https://fonts.gstatic.com">
@@ -108,11 +108,18 @@
 											{{ csrf_field() }}
 										</form>
 									</li>
-									<li>
-										<a href="{{ route('users.show', ['user_id' => Auth::user()->id]) }}">
-											<i class="fas fa-address-card"></i>&thinsp;@lang('words.titles.profile')
-										</a>
-									</li>
+									@if (!Auth::guard('admin')->check())
+										<li>
+											<a href="{{ route('users.show', ['user_id' => Auth::user()->id]) }}">
+												<i class="fas fa-address-card"></i>&thinsp;@lang('words.titles.profile')
+											</a>
+										</li>
+										<li>
+											<a href="{{ route('users.edit', ['user_id' => Auth::user()->id]) }}">
+												<i class="fas fa-user-edit"></i>&thinsp;@lang('words.titles.profile_edit')
+											</a>
+										</li>
+									@endif
 								</ul>
 							</li>
 						@endif
