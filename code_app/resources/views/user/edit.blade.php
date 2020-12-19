@@ -25,7 +25,7 @@
 							</small>
 						</label>
 						<div class="col-md-10 col-md-offset-1">
-							<input id="icon" type="file" name="icon">
+							<input id="icon" type="file" name="icon" @if (Auth::user()->id === 1) disabled @endif>
 							@if ($errors->has('icon'))
 								<span class="help-block">
 								<strong>{{ $errors->first('icon') }}</strong>
@@ -43,7 +43,7 @@
 							</small>
 						</label>
 						<div class="col-md-10 col-md-offset-1">
-							<input id="name" type="text" class="form-control" name="name" value="{{ old('name', $user->name) }}">
+							<input id="name" type="text" class="form-control" name="name" value="{{ old('name', $user->name) }}" @if (Auth::user()->id === 1) disabled @endif>
 							@if ($errors->has('name'))
 								<span class="help-block">
 									<strong>{{ $errors->first('name') }}</strong>
@@ -56,8 +56,11 @@
 					</div>
 					<div class="form-group">
 						<div class="col-md-10 col-md-offset-1">
-							<button name="approval" type="submit" class="btn btn-block btn-primary" onclick="return confirm('@lang('words.buttons.update_confirm')');">
-								@lang('words.buttons.update')
+							<button name="approval" type="submit" class="btn btn-block btn-primary"
+								onclick="return confirm('@lang('words.buttons.update_confirm')');"
+								@if (Auth::user()->id === 1) disabled @endif
+							>
+								@if (Auth::user()->id === 1) @lang('words.buttons.can_not_update') @else @lang('words.buttons.update') @endif
 							</button>
 						</div>
 					</div>

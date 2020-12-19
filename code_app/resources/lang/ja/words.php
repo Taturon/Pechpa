@@ -123,6 +123,7 @@ return [
 		'approval' => '承認',
 		'approval_confirm' => 'この問題を承認しますか？',
 		'update' => '更新',
+		'can_not_update' => 'ゲストユーザーはプロフィールを更新できません',
 		'update_confirm' => '更新しますか？',
 		'update_only' => '更新のみ',
 		'update_only_confirm' => '更新しますか？',
