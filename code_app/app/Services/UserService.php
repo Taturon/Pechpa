@@ -2,18 +2,21 @@
 
 namespace App\Services;
 
+use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 
 class UserService {
 
-	public function getUserStatistics() {
-		$statics['approved_tasks'] = isset(Auth::user()->task) ? Auth::user()->task->count() : 0;
-		$statics['all_answers'] = isset(Auth::user()->answer) ? Auth::user()->answer->count() : 0;
-		$statics['correct_answers'] = isset(Auth::user()->answer) ? Auth::user()->answer->where('judge', 'AC')->count() : 0;
-		$statics['correct_answer_rate'] = !isset(Auth::user()->answer) ? '0%' : sprintf('%03.1f', $statics['correct_answers'] / $statics['all_answers'] * 100) . '%';
-		return $statics;
+	protected $user;
+
+	public function __construct(User $user) {
+		$this->user = $user;
 	}
 
-	public function calculateLevel() {
+	public function calculateCorrectRate($all_answers, $correct_answers) {
+		if ($all_answers === 0) {
+			return '0%';
+		}
+		return sprintf('%03.1f', $correct_answers / $all_answers * 100) . '%';
 	}
 }
