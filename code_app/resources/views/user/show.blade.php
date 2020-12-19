@@ -23,12 +23,14 @@
 				<div class="col-md-6 text-left">
 					<h2>{{ $user->name }}</h2>
 				</div>
-				<div class="col-md-6 text-right">
-					<h2>@lang('words.users.email')</h2>
-				</div>
-				<div class="col-md-6 text-left">
-					<h2>{{ $user->email }}</h2>
-				</div>
+				@if ($user->id === Auth::user()->id)
+					<div class="col-md-6 text-right">
+						<h2>@lang('words.users.email')</h2>
+					</div>
+					<div class="col-md-6 text-left">
+						<h2>{{ $user->email }}</h2>
+					</div>
+				@endif
 				<div class="col-md-6 text-right">
 					<h2>@lang('words.users.approved_tasks_count')</h2>
 				</div>
@@ -54,7 +56,9 @@
 			<li><a href="{{ route('tasks.index') }}">@lang('words.titles.tasks_list')</a></li>
 			<li><a href="{{ route('answers.index') }}">@lang('words.titles.answers_list')</a></li>
 			<li class="active">@lang('words.titles.profile')</li>
-			<li><a href="{{ route('users.edit', ['id' => Auth::user()->id]) }}">@lang('words.titles.profile_edit')</a></li>
+			@if ($user->id === Auth::user()->id)
+				<li><a href="{{ route('users.edit', ['id' => Auth::user()->id]) }}">@lang('words.titles.profile_edit')</a></li>
+			@endif
 		</ol>
 	</div>
 </div>
