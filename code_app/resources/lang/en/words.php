@@ -35,6 +35,7 @@ return [
 	'flashes' => [
 		'guest_logged_in' => 'Guest Logged In !',
 		'invalid_access' => 'Invalid access',
+		'no_user' => 'Invalid User ID',
 		'no_task' => 'Invalid Task No.',
 		'no_answer' => 'Invalid Answer No.',
 		'wrong_answer' => 'Incorrect answer...',
