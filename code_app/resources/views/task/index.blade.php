@@ -59,10 +59,4 @@
 	</div>
 	<hr>
 @endif
-@if (Auth::guard('user')->check())
-<ol class="breadcrumb">
-	<li class="active">@lang('words.titles.tasks_list')</li>
-	<li><a href="{{ route('answers.index') }}">@lang('words.titles.answers_list')</a></li>
-</ol>
-@endif
 @endsection

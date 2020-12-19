@@ -54,14 +54,6 @@
 			</div>
 		</div>
 		<hr>
-		<ol class="breadcrumb">
-			<li><a href="{{ route('tasks.index') }}">@lang('words.titles.tasks_list')</a></li>
-			<li><a href="{{ route('answers.index') }}">@lang('words.titles.answers_list')</a></li>
-			<li class="active">@lang('words.titles.profile')</li>
-			@if ($user->id === Auth::user()->id)
-				<li><a href="{{ route('users.edit', ['user' => Auth::user()->id]) }}">@lang('words.titles.profile_edit')</a></li>
-			@endif
-		</ol>
 	</div>
 </div>
 @endsection
