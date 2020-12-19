@@ -21,7 +21,7 @@ class UserController extends Controller {
 		$statics['all_answers'] = $this->repository->countAllAnswers($user_id);
 		$statics['correct_answers'] = $this->repository->countCorrectAnswers($user_id);
 		$statics['correct_rate'] = $this->service->calculateCorrectRate($statics['all_answers'], $statics['correct_answers']);
-		return view('profile.show', compact(['user', 'statics']));
+		return view('user.show', compact(['user', 'statics']));
 	}
 
 	public function edit() {
