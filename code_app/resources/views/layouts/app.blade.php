@@ -109,8 +109,8 @@
 										</form>
 									</li>
 									<li>
-										<a href="{{ route('profile') }}">
-											<i class="fas fa-address-card"></i>&thinsp;@lang('words.titles.user_profile')
+										<a href="{{ route('users.show', ['user_id' => Auth::user()->id]) }}">
+											<i class="fas fa-address-card"></i>&thinsp;@lang('words.titles.profile')
 										</a>
 									</li>
 								</ul>
