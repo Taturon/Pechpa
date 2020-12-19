@@ -6,10 +6,12 @@
 		<div class="page-header" style="margin-top:-20px;padding-bottom:0px;">
 			<h1>@lang('words.titles.profile')</h1>
 		</div>
+		@component('components.alert')
+		@endcomponent
 		<div class="row">
 			<div class="text-center">
 				<div class="col-md-12 text-center">
-					<img src="{{ asset('storage/icons/' . Auth::user()->icon) }}" width="150px" height="150px">
+					<img src="{{ asset('storage/icons/' . $user->icon) }}" width="150px" height="150px">
 				</div>
 				<div class="col-md-6 text-right">
 					<h2>@lang('words.users.registered_date')</h2>
@@ -57,7 +59,7 @@
 			<li><a href="{{ route('answers.index') }}">@lang('words.titles.answers_list')</a></li>
 			<li class="active">@lang('words.titles.profile')</li>
 			@if ($user->id === Auth::user()->id)
-				<li><a href="{{ route('users.edit', ['id' => Auth::user()->id]) }}">@lang('words.titles.profile_edit')</a></li>
+				<li><a href="{{ route('users.edit', ['user' => Auth::user()->id]) }}">@lang('words.titles.profile_edit')</a></li>
 			@endif
 		</ol>
 	</div>
