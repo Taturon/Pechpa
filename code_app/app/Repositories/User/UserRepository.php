@@ -3,6 +3,7 @@
 namespace App\Repositories\User;
 
 use App\Models\User;
+use Illuminate\Support\Facades\Storage;
 
 class UserRepository implements UserRepositoryInterface {
 
@@ -26,5 +27,18 @@ class UserRepository implements UserRepositoryInterface {
 
 	public function countCorrectAnswers($user_id) {
 		return isset($this->user->find($user_id)->answer) ? $this->user->find($user_id)->answer->where('judge', 'AC')->count() : 0;
+	}
+
+	public function destroyIcon($file) {
+		 Storage::delete('public/icons/' . $file);
+	}
+
+	public function updateIcon($user_id, $file) {
+		$path = basename($file->store('public/icons'));
+		$this->user->find($user_id)->update(['icon' => $path]);
+	}
+
+	public function updateName($user_id, $name) {
+		$this->user->find($user_id)->update(['name' => $name]);
 	}
 }

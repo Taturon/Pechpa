@@ -11,4 +11,10 @@ interface UserRepositoryInterface {
 	public function countAllAnswers($user_id);
 
 	public function countCorrectAnswers($user_id);
+
+	public function destroyIcon($file);
+
+	public function updateIcon($user_id, $file);
+
+	public function updateName($user_id, $name);
 }
