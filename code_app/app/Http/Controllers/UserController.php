@@ -38,7 +38,7 @@ class UserController extends Controller {
 	}
 
 	public function update(UserProfileUpdateRequest $request, $user_id) {
-		if ($user_id != Auth::user()->id) {
+		if ($user_id != Auth::user()->id || $user_id === 1 || Auth::user()->id === 1) {
 			return redirect()->route('users.show', ['user_id' => Auth::user()->id])->with('danger', __('words.flashes.invalid_access'));
 		}
 		$user = $this->repository->findById($user_id);
