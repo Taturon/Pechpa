@@ -5,7 +5,7 @@ return [
 	'titles' => [
 		'register' => 'Register',
 		'login' => 'Login',
-		'profile' => 'Profile',
+		'profile' => ':name\'s Profile',
 		'profile_edit' => 'Profile Edit',
 		'tasks_list' => 'Tasks List',
 		'task_create' => 'Task Create',

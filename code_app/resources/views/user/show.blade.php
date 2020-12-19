@@ -1,10 +1,10 @@
 @extends('layouts.app')
-@section('title', __('words.titles.profile'))
+@section('title', __('words.titles.profile', ['name' => $user->name]))
 @section('content')
 <div class="row">
 	<div class="col-md-12">
 		<div class="page-header" style="margin-top:-20px;padding-bottom:0px;">
-			<h1>@lang('words.titles.profile')</h1>
+			<h1>@lang('words.titles.profile', ['name' => $user->name])</h1>
 		</div>
 		@component('components.alert')
 		@endcomponent
