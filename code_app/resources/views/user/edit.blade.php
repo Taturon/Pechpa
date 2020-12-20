@@ -4,7 +4,7 @@
 @component('components.alert')
 @endcomponent
 <div class="row">
-	<div class="col-md-12">
+	<div id="content" class="col-md-12 form-panel">
 		<div class="panel panel-default">
 			<div class="panel-heading text-center"><h1>@lang('words.titles.profile_edit')</h1></div>
 			<div class="panel-body">
@@ -39,7 +39,7 @@
 							<small>
 								<span class="label label-info">@lang('words.notices.optional')</span>
 								&emsp;
-								<span class="label label-warning">@lang('words.notices.max_characters', ['count' => '255'])</span>
+								<span class="label label-warning">@lang('words.notices.max_characters', ['count' => '15'])</span>
 							</small>
 						</label>
 						<div class="col-md-10 col-md-offset-1">

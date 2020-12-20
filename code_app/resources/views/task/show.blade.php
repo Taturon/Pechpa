@@ -1,17 +1,17 @@
 @extends('layouts.app')
 @section('header')
-<script src="{{ asset('/js/tab.js') }}"></script>
+	<script src="{{ asset('/js/tab.js') }}"></script>
 @endsection
 @section('title', $task->title)
 @section('content')
 <div class="row">
-	<div class="col-md-12">
-		<div class="page-header" style="margin-top:-20px;padding-bottom:0px;">
+	<div id="content" class="col-md-12">
+		<div id="page-header" class="page-header">
 			<h1>
 				<b>{{ $task->title }}</b>
 			</h1>
 			<div class="row">
-				<div class="col-md-3" style="margin-top:-25px;padding-bottom:0px;">
+				<div id="page-header-h2" class="col-md-3">
 					<h2>
 						<b>
 							<small>@lang('words.tasks.difficulty')&#65306;
@@ -22,7 +22,7 @@
 						</b>
 					</h2>
 				</div>
-				<div class="col-md-3" style="margin-top:-25px;padding-bottom:0px;">
+				<div id="page-header-h2" class="col-md-3">
 					<h2>
 						<b>
 							<small>@lang('words.tasks.solved')&#65306;</small>
@@ -30,7 +30,7 @@
 						</b>
 					</h2>
 				</div>
-				<div class="col-md-3" style="margin-top:-25px;padding-bottom:0px;">
+				<div id="page-header-h2" class="col-md-3">
 					<h2>
 						<b>
 							<small>@lang('words.tasks.examinees')&#65306;</small>
@@ -38,7 +38,7 @@
 						</b>
 					</h2>
 				</div>
-				<div class="col-md-3" style="margin-top:-25px;padding-bottom:0px;">
+				<div id="page-header-h2" class="col-md-3">
 					<h2>
 						<b>
 							<small>@lang('words.tasks.validity.validity')&#65306;</small>
@@ -81,7 +81,7 @@
 			{{ Form::close() }}
 		@else
 			<div class="row text-center">
-				<h1 style="color:lightgray;">@lang('words.notices.can_not_answer')</h1>
+				<h1 id="notice-block">@lang('words.notices.can_not_answer')</h1>
 			</div>
 		@endif
 		<hr>

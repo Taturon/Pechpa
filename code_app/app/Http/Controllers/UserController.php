@@ -10,6 +10,8 @@ use App\Repositories\User\UserRepositoryInterface AS User;
 
 class UserController extends Controller {
 
+	protected $repository;
+
 	protected $service;
 
 	public function __construct(User $repository, UserService $service) {
