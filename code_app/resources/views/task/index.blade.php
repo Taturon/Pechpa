@@ -40,7 +40,10 @@
 							<a href="{{ route('tasks.show', ['task' => $task->id]) }}">{{ $task->title }}</a>
 						</td>
 						<td class="text-center">
-							{{ $task->user->name }}
+							<a href="{{ route('users.show', ['user' => $task->user->id]) }}">
+								<img src="{{ asset('storage/icons/' . $task->user->icon) }}" width="20px" height="20px">
+								{{ $task->user->name }}
+							</a>
 						</td>
 						<td class="text-center">
 							{{ $task->examinees == 0 ? __('words.tasks.no_examinees') : sprintf('%03.1f', $task->solved / $task->examinees * 100) . '%' }}
