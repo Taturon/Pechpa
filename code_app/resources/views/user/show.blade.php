@@ -12,6 +12,13 @@
 			<div class="text-center">
 				<div class="col-md-12 text-center">
 					<img src="{{ asset('storage/icons/' . $user->icon) }}" width="150px" height="150px">
+					@if ($user->id === Auth::user()->id)
+						<p style="font-size:15px">
+							<a href="{{ route('users.edit', ['user_id' => Auth::user()->id]) }}">
+								@lang('words.buttons.edit')
+							</a>
+						</p>
+					@endif
 				</div>
 				<div class="col-md-6 text-right">
 					<h2>@lang('words.users.registered_date')</h2>
@@ -23,7 +30,16 @@
 					<h2>@lang('words.users.name')</h2>
 				</div>
 				<div class="col-md-6 text-left">
-					<h2>{{ $user->name }}</h2>
+					<h2>
+						{{ $user->name }}
+						@if ($user->id === Auth::user()->id)
+							<span style="font-size:15px">
+								<a href="{{ route('users.edit', ['user_id' => Auth::user()->id]) }}">
+									@lang('words.buttons.edit')
+								</a>
+							</span>
+						@endif
+					</h2>
 				</div>
 				@if ($user->id === Auth::user()->id)
 					<div class="col-md-6 text-right">

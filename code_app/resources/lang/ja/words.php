@@ -123,6 +123,7 @@ return [
 		'send_confirm' => '送信しますか?',
 		'approval' => '承認',
 		'approval_confirm' => 'この問題を承認しますか？',
+		'edit' => '編集',
 		'update' => '更新',
 		'can_not_update' => 'ゲストユーザーはプロフィールを更新できません',
 		'update_confirm' => '更新しますか？',

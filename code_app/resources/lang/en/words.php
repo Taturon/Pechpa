@@ -123,6 +123,7 @@ return [
 		'send_confirm' => 'Do you want to send it ?',
 		'approval' => 'Approval',
 		'approval_confirm' => 'Do you approve of this task ?',
+		'edit' => 'Edit',
 		'update' => 'Update',
 		'can_not_update' => 'Guest user cannot update  profile',
 		'update_confirm' => 'Do you want to update ?',
