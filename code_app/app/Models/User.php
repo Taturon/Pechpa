@@ -15,7 +15,7 @@ class User extends Authenticatable {
 	 * @var array
 	 */
 	protected $fillable = [
-		'name', 'email', 'password',
+		'name', 'email', 'password', 'icon',
 	];
 
 	/**
@@ -29,5 +29,9 @@ class User extends Authenticatable {
 
 	public function task() {
 		return $this->hasOne('App\Models\Task');
+	}
+
+	public function answer() {
+		return $this->hasOne('App\Models\Answer');
 	}
 }

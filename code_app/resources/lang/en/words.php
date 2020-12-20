@@ -5,6 +5,9 @@ return [
 	'titles' => [
 		'register' => 'Register',
 		'login' => 'Login',
+		'profile' => ':name\'s Profile',
+		'your_profile' => 'Profile',
+		'profile_edit' => 'Profile Edit',
 		'tasks_list' => 'Tasks List',
 		'task_create' => 'Task Create',
 		'answers_list' => 'Answers List',
@@ -20,6 +23,9 @@ return [
 		'required' => 'Required',
 		'optional' => 'Optional',
 		'max_characters' => 'Up to :count characters',
+		'max_mega_bytes' => 'Up to 5MB',
+		'icon_size' => ':min &times; :min ~ :max &times; :max px',
+		'valid_extensions' => 'Only jpg/png/bmp/gif/svg',
 		'no_tasks' => 'There are no tasks that match the search conditions.',
 		'no_answers' => "There are no answers. <br>Let's solve !",
 		'can_not_answer' => 'You can not answer the your created tasks.',
@@ -29,10 +35,13 @@ return [
 
 	'flashes' => [
 		'guest_logged_in' => 'Guest Logged In !',
+		'invalid_access' => 'Invalid access',
+		'no_user' => 'Invalid User ID',
 		'no_task' => 'Invalid Task No.',
 		'no_answer' => 'Invalid Answer No.',
 		'wrong_answer' => 'Incorrect answer...',
 		'correct_answer' => 'Correct answer !',
+		'profile_updated' => 'Your profile updated !',
 		'task_created' => 'We have received a your suggestion ! Please wait for the review.',
 	],
 
@@ -42,6 +51,17 @@ return [
 		'password' => 'Password',
 		'password_confirm' => 'Password Confirm',
 		'remember' => 'Remember me',
+	],
+
+	'users' => [
+		'registered_date' => 'Registered Date',
+		'name' => 'User Name',
+		'email' => 'E-Mail Address',
+		'icon' => 'Icon',
+		'approved_tasks_count' => 'Approved Tasks',
+		'all_answers_count' => 'Answers',
+		'correct_answers_count' => 'Correct Answers',
+		'correct_answer_rate' => 'Correct Answer Rate',
 	],
 
 	'tasks' => [
@@ -103,6 +123,10 @@ return [
 		'send_confirm' => 'Do you want to send it ?',
 		'approval' => 'Approval',
 		'approval_confirm' => 'Do you approve of this task ?',
+		'edit' => 'Edit',
+		'update' => 'Update',
+		'can_not_update' => 'Guest user cannot update  profile',
+		'update_confirm' => 'Do you want to update ?',
 		'update_only' => 'Update Only',
 		'update_only_confirm' => 'Do you want to update ?',
 	],

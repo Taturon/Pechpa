@@ -5,6 +5,9 @@ return [
 	'titles' => [
 		'register' => '新規登録',
 		'login' => 'ログイン',
+		'profile' => ':nameさんのプロフィール',
+		'your_profile' => 'プロフィール',
+		'profile_edit' => 'プロフィール編集',
 		'tasks_list' => '問題一覧',
 		'task_create' => '問題作成',
 		'answers_list' => '回答一覧',
@@ -20,6 +23,9 @@ return [
 		'required' => '必須',
 		'optional' => '任意',
 		'max_characters' => '最大:count文字',
+		'max_mega_bytes' => '最大5MB',
+		'icon_size' => ':min &times; :min ~ :max &times; :max px',
+		'valid_extensions' => 'jpg/png/bmp/gif/svgのみ',
 		'no_tasks' => '検索条件に該当する問題がありません',
 		'no_answers' => "まだ回答がありません<br>問題一覧ページから回答してみましょう！",
 		'can_not_answer' => '作成した問題には回答できません',
@@ -29,10 +35,13 @@ return [
 
 	'flashes' => [
 		'guest_logged_in' => '簡単ログインしました！',
+		'invalid_access' => '不正なアクセスです',
+		'no_user' => '存在しないユーザーです',
 		'no_task' => '存在しない問題です',
 		'no_answer' => '存在しない回答です',
 		'wrong_answer' => '不正解です...',
-		'correct_answer' => '正解です!',
+		'correct_answer' => '正解です！',
+		'profile_updated' => 'プロフィールを更新しました！',
 		'task_created' => '問題を提案をお受けしました！ 運営のレビューをお待ち下さい',
 	],
 
@@ -42,6 +51,17 @@ return [
 		'password' => 'パスワード',
 		'password_confirm' => 'パスワード(確認)',
 		'remember' => 'ログイン情報の保存',
+	],
+
+	'users' => [
+		'registered_date' => '登録日時',
+		'name' => 'ユーザー名',
+		'email' => 'メールアドレス',
+		'icon' => 'アイコン',
+		'approved_tasks_count' => '承認された問題数',
+		'all_answers_count' => '回答数',
+		'correct_answers_count' => '正解数',
+		'correct_answer_rate' => '正答率',
 	],
 
 	'tasks' => [
@@ -103,6 +123,10 @@ return [
 		'send_confirm' => '送信しますか?',
 		'approval' => '承認',
 		'approval_confirm' => 'この問題を承認しますか？',
+		'edit' => '編集',
+		'update' => '更新',
+		'can_not_update' => 'ゲストユーザーはプロフィールを更新できません',
+		'update_confirm' => '更新しますか？',
 		'update_only' => '更新のみ',
 		'update_only_confirm' => '更新しますか？',
 	],
