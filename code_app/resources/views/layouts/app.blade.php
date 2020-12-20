@@ -14,6 +14,7 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link rel="shortcut icon" href="{{ asset('/favicons/favicon.ico') }}">
 	<link href="{{ asset('css/app.css') }}" rel="stylesheet">
+	<link href="{{ asset('css/additional.css') }}" rel="stylesheet">
 	<link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,600;1,700&family=Kosugi+Maru&display=swap" rel="stylesheet">
 	<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
@@ -128,7 +129,8 @@
 			</div>
 		</nav>
 
-		<div class="container" style="padding-top:15px;background-color:white;">
+		<div class="container">
+			@yield('side_bar')
 			@yield('content')
 		</div>
 	</div>
