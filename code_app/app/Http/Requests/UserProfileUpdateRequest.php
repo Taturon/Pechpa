@@ -16,7 +16,7 @@ class UserProfileUpdateRequest extends FormRequest {
 			'name' => [
 				'nullable',
 				'string',
-				'max:255',
+				'max:15',
 				Rule::unique('users')->ignore($this->user),
 			],
 			'icon' => 'file|image|max:5000|dimensions:'
