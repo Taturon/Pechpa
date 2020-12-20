@@ -1,13 +1,13 @@
 @extends('layouts.app')
 @section('title', __('words.titles.task_create'))
 @section('header')
-<script src="{{ asset('/js/tab.js') }}"></script>
+	<script src="{{ asset('/js/tab.js') }}"></script>
 @endsection
 @section('content')
 @component('components.alert')
 @endcomponent
 <div class="row">
-	<div class="col-md-12">
+	<div id="content" class="col-md-12 form-panel">
 		<div class="panel panel-default">
 			<div class="panel-heading text-center"><h1>@lang('words.titles.task_create')</h1></div>
 			<div class="panel-body">
@@ -17,7 +17,7 @@
 						<h2>@lang('words.tasks.basic_configuration')</h2>
 					</div>
 					<div class="col-md-10 col-md-offset-1">
-						<hr style="border-width: 5px;">
+						<hr id="bold-bar">
 					</div>
 					<div class="form-group{{ $errors->has('title') ? ' has-error' : '' }}">
 						<label for="title" type="text" class="col-md-10 col-md-offset-1">
@@ -156,7 +156,7 @@
 							</small>
 						</label>
 						<div class="col-md-10 col-md-offset-1">
-							<span style="text-align:center;"><output id="output1">{{ old('difficulty', 4) }}</output></span>
+							<span class="text-center"><output id="output1">{{ old('difficulty', 4) }}</output></span>
 							<input id="difficulty" type="range" name="difficulty" value="{{ old('difficulty', 4) }}" min="1" max="{{ config('tasks.max_difficulty') }}" step="1" oninput="document.getElementById('output1').value=this.value">
 							@if ($errors->has('difficulty'))
 								<span class="help-block">
@@ -172,7 +172,7 @@
 						<h2>@lang('words.tasks.samples')</h2>
 					</div>
 					<div class="col-md-10 col-md-offset-1">
-						<hr style="border-width: 5px;">
+						<hr id="bold-bar">
 					</div>
 					<div class="form-group{{ $errors->has('sample_input_1') ? ' has-error' : '' }}">
 						<label for="sample_input_1" class="col-md-10 col-md-offset-1">
@@ -295,7 +295,7 @@
 						<h2>@lang('words.tasks.tests')</h2>
 					</div>
 					<div class="col-md-10 col-md-offset-1">
-						<hr style="border-width: 5px;">
+						<hr id="bold-bar">
 					</div>
 					<div class="form-group{{ $errors->has('test_input_1') ? ' has-error' : '' }}">
 						<label for="test_input_1" class="col-md-10 col-md-offset-1">
