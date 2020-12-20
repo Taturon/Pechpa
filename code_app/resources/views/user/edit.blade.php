@@ -39,7 +39,7 @@
 							<small>
 								<span class="label label-info">@lang('words.notices.optional')</span>
 								&emsp;
-								<span class="label label-warning">@lang('words.notices.max_characters', ['count' => '255'])</span>
+								<span class="label label-warning">@lang('words.notices.max_characters', ['count' => '15'])</span>
 							</small>
 						</label>
 						<div class="col-md-10 col-md-offset-1">
