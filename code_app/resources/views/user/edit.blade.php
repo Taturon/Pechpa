@@ -68,7 +68,7 @@
 			</div>
 		</div>
 		<ol class="breadcrumb">
-			<li><a href="{{ route('users.show', ['user_id' => Auth::user()->id]) }}"><i class="fas fa-address-card"></i>&thinsp;@lang('words.titles.profile')</a></li>
+			<li><a href="{{ route('users.show', ['user_id' => Auth::user()->id]) }}"><i class="fas fa-address-card"></i>&thinsp;@lang('words.titles.your_profile')</a></li>
 			<li class="active"><i class="fas fa-user-edit"></i>&thinsp;@lang('words.titles.profile_edit')</li>
 		</ol>
 	</div>
