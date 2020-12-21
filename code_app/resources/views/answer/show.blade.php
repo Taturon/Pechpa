@@ -105,7 +105,7 @@
 							</td>
 							<td>
 								<div class="text-center">
-									<span class="label label-{{ $answer->judge === 'AC' ? 'success' : 'warning' }}">{{ $testing->judge }}</span>
+									<span class="label label-{{ $testing->judge === 'AC' ? 'success' : 'warning' }}">{{ $testing->judge }}</span>
 								</div>
 							</td>
 						</tr>
