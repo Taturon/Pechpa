@@ -10,8 +10,8 @@ class CreateTestsTable extends Migration {
 		Schema::create('tests', function (Blueprint $table) {
 			$table->increments('id');
 			$table->unsignedInteger('task_id');
-			$table->string('input', 500);
-			$table->string('output', 500);
+			$table->string('input', 1000);
+			$table->string('output', 1000);
 			$table->timestamps();
 		});
 	}
