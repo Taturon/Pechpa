@@ -37,14 +37,14 @@ class StoreTask extends FormRequest {
 			'sample_output_3' => 'required_with:sample_input_3,sample_output_3|max:500',
 
 			// Tests
-			'test_input_1' => 'required|max:500',
-			'test_output_1' => 'required|max:500',
-			'test_input_2' => 'required|max:500',
-			'test_output_2' => 'required|max:500',
-			'test_input_3' => 'required|max:500',
-			'test_output_3' => 'required|max:500',
-			'test_input_4' => 'required|max:500',
-			'test_output_4' => 'required|max:500',
+			'test_input_1' => 'required|max:1000',
+			'test_output_1' => 'required|max:1000',
+			'test_input_2' => 'required|max:1000',
+			'test_output_2' => 'required|max:1000',
+			'test_input_3' => 'required|max:1000',
+			'test_output_3' => 'required|max:1000',
+			'test_input_4' => 'required|max:1000',
+			'test_output_4' => 'required|max:1000',
 
 		];
 	}
