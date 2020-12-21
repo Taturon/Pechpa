@@ -40,7 +40,7 @@ interface TaskRepositoryInterface {
 
 	public function inincrementSolved($task_id);
 
-	public function storeTask($request);
+	public function storeTask($request, $user_id);
 
 	public function updateTaskWithApproval($task_id, $request);
 
