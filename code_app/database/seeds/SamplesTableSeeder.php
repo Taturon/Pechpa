@@ -56,7 +56,7 @@ class SamplesTableSeeder extends Seeder {
 			'updated_at' => '2020-11-01 00:00:04',
 		], [
 			'task_id' => '6',
-			'input_code' => "H\ne\nl\nl\no\n",
+			'input_code' => "5\nH\ne\nl\nl\no\n",
 			'output_code' => 'Hello',
 			'created_at' => '2020-11-01 00:00:05',
 			'updated_at' => '2020-11-01 00:00:05',
