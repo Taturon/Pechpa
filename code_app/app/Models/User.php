@@ -27,11 +27,11 @@ class User extends Authenticatable {
 		'password', 'remember_token',
 	];
 
-	public function task() {
-		return $this->hasOne('App\Models\Task');
+	public function tasks() {
+		return $this->hasMany('App\Models\Task');
 	}
 
-	public function answer() {
-		return $this->hasOne('App\Models\Answer');
+	public function answers() {
+		return $this->hasMany('App\Models\Answer');
 	}
 }
