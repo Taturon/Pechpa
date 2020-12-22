@@ -108,6 +108,18 @@ class SamplesTableSeeder extends Seeder {
 			'output_code' => "Foo bar buz\nQux quux corge\nGrault garply waldo\n",
 			'created_at' => '2020-11-01 00:00:10',
 			'updated_at' => '2020-11-01 00:00:10',
+		], [
+			'task_id' => '12',
+			'input_code' => "3\nfoo\nbar\nbuz\n",
+			'output_code' => "irr\nedu\nexc\n",
+			'created_at' => '2020-11-01 00:00:11',
+			'updated_at' => '2020-11-01 00:00:11',
+		], [
+			'task_id' => '12',
+			'input_code' => "-1\nfoo\nbar\nbuz\n",
+			'output_code' => "enn\nazq\naty",
+			'created_at' => '2020-11-01 00:00:11',
+			'updated_at' => '2020-11-01 00:00:11',
 		]]);
 	}
 }

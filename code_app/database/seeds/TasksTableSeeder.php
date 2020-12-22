@@ -138,6 +138,18 @@ class TasksTableSeeder extends Seeder {
 			'reviewed_at' => '2020-11-01 00:00:10',
 			'created_at' => '2020-11-01 00:00:10',
 			'updated_at' => '2020-11-01 00:00:10',
+		], [
+			'title' => 'シーザー暗号',
+			'statement' => "シフト数S及び変換前の単語W_iがN個改行区切りで与えられるので変換した単語C_iを出力して下さい。",
+			'constraints' => "シフト数Sは整数かつ\( -10 \leqq S \leqq 10 \)\nシフト数が正の場合は右シフト・負の場合は左シフトとする\n単語数Nは\( 1 \leqq N \leqq 10 \)\n単語W_iは全て小文字英字",
+			'input' => '入力は以下の形式で標準入力から与えられます。',
+			'input_code' => "S\nW_1\nW_i\nW_N\n",
+			'output' => 'シフト数だけ変換した単語C_iを改行区切りで出力して下さい。',
+			'output_code' => "C_1\nC_i\nC_N\n",
+			'difficulty' => 3,
+			'reviewed_at' => '2020-11-01 00:00:11',
+			'created_at' => '2020-11-01 00:00:11',
+			'updated_at' => '2020-11-01 00:00:11',
 		]]);
 	}
 }

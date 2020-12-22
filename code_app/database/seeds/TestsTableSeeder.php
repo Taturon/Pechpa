@@ -269,6 +269,30 @@ class TestsTableSeeder extends Seeder {
 			'output' => "Foo\nFoo bar baz qux quux corge grault garply waldo fred plugh xyzzy thud foo bar baz qux quux corge grault garply waldo fred plugh xyzzy thud foo bar baz qux quux corge grault garply waldo fred plugh xyzzy thud foo bar baz qux quux corge grault garply waldo fred plugh\nFoo\n",
 			'created_at' => '2020-11-01 00:00:10',
 			'updated_at' => '2020-11-01 00:00:10',
+		], [
+			'task_id' => 12,
+			'input' => "3\nfoo\nbar\nbuz\n",
+			'output' => "irr\nedu\nexc\n",
+			'created_at' => '2020-11-01 00:00:11',
+			'updated_at' => '2020-11-01 00:00:11',
+		], [
+			'task_id' => 12,
+			'input' => "-1\nfoo\nbar\nbuz\n",
+			'output' => "enn\nazq\naty",
+			'created_at' => '2020-11-01 00:00:11',
+			'updated_at' => '2020-11-01 00:00:11',
+		], [
+			'task_id' => 12,
+			'input' => "10\nfoo\nbar\nbaz\nqux\nquux\ncorge\ngrault\ngarply\nwaldo\nfred\n",
+			'output' => "vee\nrqh\nrqp\ngkn\ngkkn\nsehwu\nwhqkbj\nwhqfbo\nmqbte\nvhut\n",
+			'created_at' => '2020-11-01 00:00:11',
+			'updated_at' => '2020-11-01 00:00:11',
+		], [
+			'task_id' => 12,
+			'input' => "-10\nfoo",
+			'output' => "vee\n",
+			'created_at' => '2020-11-01 00:00:11',
+			'updated_at' => '2020-11-01 00:00:11',
 		]]);
     }
 }
