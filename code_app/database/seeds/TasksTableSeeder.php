@@ -91,6 +91,18 @@ class TasksTableSeeder extends Seeder {
 			'created_at' => '2020-11-01 00:00:06',
 			'updated_at' => '2020-11-01 00:00:06',
 		], [
+			'title' => '月数計算',
+			'statement' => '日数dが与えられるので月数M及び残りの日数Dを出力して下さい。',
+			'constraints' => "dは整数かつ\( 1 \leqq N \leqq 1000 \)\n1ヶ月は31日とする",
+			'input' => '入力は以下の形式で標準入力から与えられます。',
+			'input_code' => 'd',
+			'output' => '月数M及び日数Dを半角スペース区切りで出力して下さい。',
+			'output_code' => 'M D',
+			'difficulty' => 1,
+			'reviewed_at' => '2020-11-01 00:00:07',
+			'created_at' => '2020-11-01 00:00:07',
+			'updated_at' => '2020-11-01 00:00:07',
+		], [
 			'title' => 'FizzBuzz',
 			'statement' => "入力Nが与えられるので、1からNの範囲でNが\n3の倍数の時は「Fizz」\n5の倍数の時は「Buzz」\n15の倍数の時は「FizzBuzz」\nこれら以外の場合は数字\nをそれぞれ改行区切りで出力して下さい。",
 			'constraints' => 'Nは整数かつ\( 1 \leqq N \leqq 100 \)',
@@ -99,9 +111,9 @@ class TasksTableSeeder extends Seeder {
 			'output' => '「Fizz」、「Buzz」、「FizzBuzz」、「数値」のいずれかを改行区切りで出力してください。',
 			'output_code' => NULL,
 			'difficulty' => 2,
-			'reviewed_at' => '2020-11-01 00:00:07',
-			'created_at' => '2020-11-01 00:00:07',
-			'updated_at' => '2020-11-01 00:00:07',
+			'reviewed_at' => '2020-11-01 00:00:08',
+			'created_at' => '2020-11-01 00:00:08',
+			'updated_at' => '2020-11-01 00:00:08',
 		], [
 			'title' => 'フィボナッチ数列',
 			'statement' => 'フィボナッチ数列を入力Nまで出力して下さい。',
@@ -111,9 +123,9 @@ class TasksTableSeeder extends Seeder {
 			'output' => '指定された個数のフィボナッチ数列を改行区切りで出力してください。',
 			'output_code' => NULL,
 			'difficulty' => 2,
-			'reviewed_at' => '2020-11-01 00:00:08',
-			'created_at' => '2020-11-01 00:00:08',
-			'updated_at' => '2020-11-01 00:00:08',
+			'reviewed_at' => '2020-11-01 00:00:09',
+			'created_at' => '2020-11-01 00:00:09',
+			'updated_at' => '2020-11-01 00:00:09',
 		], [
 			'title' => '文章校正',
 			'statement' => "N列の文が与えられるので先頭の単語の頭文字のみ大文字にして全ての文を改行区切りで出力して下さい。\n既に文の先頭の単語の頭文字が大文字になっている場合はそのまま出力して下さい。",
@@ -123,9 +135,9 @@ class TasksTableSeeder extends Seeder {
 			'output' => '校正した文章を改行区切りで出力して下さい。',
 			'output_code' => NULL,
 			'difficulty' => 2,
-			'reviewed_at' => '2020-11-01 00:00:09',
-			'created_at' => '2020-11-01 00:00:09',
-			'updated_at' => '2020-11-01 00:00:09',
+			'reviewed_at' => '2020-11-01 00:00:10',
+			'created_at' => '2020-11-01 00:00:10',
+			'updated_at' => '2020-11-01 00:00:10',
 		]]);
 	}
 }

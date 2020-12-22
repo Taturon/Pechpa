@@ -74,28 +74,40 @@ class SamplesTableSeeder extends Seeder {
 			'updated_at' => '2020-11-01 00:00:06',
 		], [
 			'task_id' => '8',
-			'input_code' => '1',
-			'output_code' => "1\n",
+			'input_code' => '25',
+			'output_code' => '0 25',
 			'created_at' => '2020-11-01 00:00:07',
 			'updated_at' => '2020-11-01 00:00:07',
 		], [
 			'task_id' => '8',
-			'input_code' => '10',
-			'output_code' => "1\n2\nFizz\n4\nBuzz\nFizz\n7\n8\nFizz\nBuzz\n",
+			'input_code' => '100',
+			'output_code' => '3 7',
 			'created_at' => '2020-11-01 00:00:07',
 			'updated_at' => '2020-11-01 00:00:07',
 		], [
 			'task_id' => '9',
+			'input_code' => '1',
+			'output_code' => "1\n",
+			'created_at' => '2020-11-01 00:00:08',
+			'updated_at' => '2020-11-01 00:00:08',
+		], [
+			'task_id' => '9',
 			'input_code' => '10',
-			'output_code' => "1\n1\n2\n3\n5\n8\n13\n21\n34\n55\n",
+			'output_code' => "1\n2\nFizz\n4\nBuzz\nFizz\n7\n8\nFizz\nBuzz\n",
 			'created_at' => '2020-11-01 00:00:08',
 			'updated_at' => '2020-11-01 00:00:08',
 		], [
 			'task_id' => '10',
+			'input_code' => '10',
+			'output_code' => "1\n1\n2\n3\n5\n8\n13\n21\n34\n55\n",
+			'created_at' => '2020-11-01 00:00:09',
+			'updated_at' => '2020-11-01 00:00:09',
+		], [
+			'task_id' => '11',
 			'input_code' => "3\nfoo bar buz\nQux quux corge\ngrault garply waldo\n",
 			'output_code' => "Foo bar buz\nQux quux corge\nGrault garply waldo\n",
-			'created_at' => '2020-11-01 00:00:08',
-			'updated_at' => '2020-11-01 00:00:08',
+			'created_at' => '2020-11-01 00:00:10',
+			'updated_at' => '2020-11-01 00:00:10',
 		]]);
 	}
 }
