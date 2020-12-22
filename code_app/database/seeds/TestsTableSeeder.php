@@ -221,6 +221,30 @@ class TestsTableSeeder extends Seeder {
 			'output' => "1\n1\n2\n3\n5\n8\n13\n21\n34\n55\n89\n144\n233\n377\n610\n987\n1597\n2584\n4181\n6765\n10946\n17711\n28657\n46368\n75025\n121393\n196418\n317811\n514229\n832040\n1346269\n2178309\n3524578\n5702887\n9227465\n14930352\n24157817\n39088169\n63245986\n102334155\n165580141\n267914296\n433494437\n701408733\n1134903170\n1836311903\n2971215073\n4807526976\n7778742049\n12586269025\n",
 			'created_at' => '2020-11-01 00:00:08',
 			'updated_at' => '2020-11-01 00:00:08',
+		], [
+			'task_id' => 10,
+			'input' => "3\nfoo bar buz\nqux quux corge\ngrault garply waldo\n",
+			'output' => "Foo bar buz\nQux quux corge\nGrault garply waldo\n",
+			'created_at' => '2020-11-01 00:00:09',
+			'updated_at' => '2020-11-01 00:00:09',
+		], [
+			'task_id' => 10,
+			'input' => "1\nfoo\n",
+			'output' => "Foo\n",
+			'created_at' => '2020-11-01 00:00:09',
+			'updated_at' => '2020-11-01 00:00:09',
+		], [
+			'task_id' => 10,
+			'input' => "100\nfoo\nbar\nbaz\nqux\nquux\ncorge\ngrault\ngarply\nwaldo\nfred\nplugh\nxyzzy\nthud\nfoo\nbar\nbaz\nqux\nquux\ncorge\ngrault\ngarply\nwaldo\nfred\nplugh\nxyzzy\nthud\nfoo\nbar\nbaz\nqux\nquux\ncorge\ngrault\ngarply\nwaldo\nfred\nplugh\nxyzzy\nthud\nfoo\nbar\nbaz\nqux\nquux\ncorge\ngrault\ngarply\nwaldo\nfred\nplugh\nxyzzy\nthud\nfoo\nbar\nbaz\nqux\nquux\ncorge\ngrault\ngarply\nwaldo\nfred\nplugh\nxyzzy\nthud\nfoo\nbar\nbaz\nqux\nquux\ncorge\ngrault\ngarply\nwaldo\nfred\nplugh\nxyzzy\nthud\nfoo\nbar\nbaz\nqux\nquux\ncorge\ngrault\ngarply\nwaldo\nfred\nplugh\nxyzzy\nthud\nfoo\nbar\nbaz\nqux\nquux\ncorge\ngrault\ngarply\nwaldo\nfred\nplugh\nxyzzy\nthud\nfoo\nbar\nbaz\nqux\nquux\ncorge\ngrault\ngarply\nwaldo",
+			'output' => "Foo\nBar\nBaz\nQux\nQuux\nCorge\nGrault\nGarply\nWaldo\nFred\nPlugh\nXyzzy\nThud\nFoo\nBar\nBaz\nQux\nQuux\nCorge\nGrault\nGarply\nWaldo\nFred\nPlugh\nXyzzy\nThud\nFoo\nBar\nBaz\nQux\nQuux\nCorge\nGrault\nGarply\nWaldo\nFred\nPlugh\nXyzzy\nThud\nFoo\nBar\nBaz\nQux\nQuux\nCorge\nGrault\nGarply\nWaldo\nFred\nPlugh\nXyzzy\nThud\nFoo\nBar\nBaz\nQux\nQuux\nCorge\nGrault\nGarply\nWaldo\nFred\nPlugh\nXyzzy\nThud\nFoo\nBar\nBaz\nQux\nQuux\nCorge\nGrault\nGarply\nWaldo\nFred\nPlugh\nXyzzy\nThud\nFoo\nBar\nBaz\nQux\nQuux\nCorge\nGrault\nGarply\nWaldo\nFred\nPlugh\nXyzzy\nThud\nFoo\nBar\nBaz\nQux\nQuux\nCorge\nGrault\nGarply\nWaldo\nFred\nPlugh\nXyzzy\nThud\nFoo\nBar\nBaz\nQux\nQuux\nCorge\nGrault\nGarply\nWaldo",
+			'created_at' => '2020-11-01 00:00:09',
+			'updated_at' => '2020-11-01 00:00:09',
+		], [
+			'task_id' => 10,
+			'input' => "3\nfoo\nfoo bar baz qux quux corge grault garply waldo fred plugh xyzzy thud foo bar baz qux quux corge grault garply waldo fred plugh xyzzy thud foo bar baz qux quux corge grault garply waldo fred plugh xyzzy thud foo bar baz qux quux corge grault garply waldo fred plugh\nFoo\n",
+			'output' => "Foo\nFoo bar baz qux quux corge grault garply waldo fred plugh xyzzy thud foo bar baz qux quux corge grault garply waldo fred plugh xyzzy thud foo bar baz qux quux corge grault garply waldo fred plugh xyzzy thud foo bar baz qux quux corge grault garply waldo fred plugh\nFoo\n",
+			'created_at' => '2020-11-01 00:00:09',
+			'updated_at' => '2020-11-01 00:00:09',
 		]]);
     }
 }

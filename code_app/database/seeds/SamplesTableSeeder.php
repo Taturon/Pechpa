@@ -90,6 +90,12 @@ class SamplesTableSeeder extends Seeder {
 			'output_code' => "1\n1\n2\n3\n5\n8\n13\n21\n34\n55\n",
 			'created_at' => '2020-11-01 00:00:08',
 			'updated_at' => '2020-11-01 00:00:08',
+		], [
+			'task_id' => '10',
+			'input_code' => "3\nfoo bar buz\nQux quux corge\ngrault garply waldo\n",
+			'output_code' => "Foo bar buz\nQux quux corge\nGrault garply waldo\n",
+			'created_at' => '2020-11-01 00:00:08',
+			'updated_at' => '2020-11-01 00:00:08',
 		]]);
 	}
 }

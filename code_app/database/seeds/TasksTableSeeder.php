@@ -114,6 +114,18 @@ class TasksTableSeeder extends Seeder {
 			'reviewed_at' => '2020-11-01 00:00:08',
 			'created_at' => '2020-11-01 00:00:08',
 			'updated_at' => '2020-11-01 00:00:08',
+		], [
+			'title' => '文章校正',
+			'statement' => "N列の文が与えられるので先頭の単語の頭文字のみ大文字にして全ての文を改行区切りで出力して下さい。\n既に文の先頭の単語の頭文字が大文字になっている場合はそのまま出力して下さい。",
+			'constraints' => "文の列数Nは\( 1 \leqq N \leqq 100 \)\nN列の単語W_n_iの数iは\( 1 \leqq i \leqq 50 \)",
+			'input' => '入力は以下の形式で標準入力から与えられます。',
+			'input_code' => "N\nW_1_1 ... W_1_i\nW_n_1 ... W_n_i",
+			'output' => '校正した文章を改行区切りで出力して下さい。',
+			'output_code' => NULL,
+			'difficulty' => 2,
+			'reviewed_at' => '2020-11-01 00:00:09',
+			'created_at' => '2020-11-01 00:00:09',
+			'updated_at' => '2020-11-01 00:00:09',
 		]]);
 	}
 }
