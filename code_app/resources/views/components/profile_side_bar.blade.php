@@ -11,27 +11,27 @@
 					@lang('words.users.all_answers_count')
 				</div>
 				<div class="col-md-6 text-left">
-					{{ isset(Auth::user()->answer) ? Auth::user()->answer->count() : 0 }}
+					{{ isset(Auth::user()->answers) ? Auth::user()->answers()->count() : 0 }}
 				</div>
 				<div class="col-md-6 text-right">
 					@lang('words.users.correct_answers_count')
 				</div>
 				<div class="col-md-6 text-left">
-					{{ isset(Auth::user()->answer) ? Auth::user()->answer->where('judge', 'AC')->count() : 0 }}
+					{{ isset(Auth::user()->answers) ? Auth::user()->answers()->where('judge', 'AC')->count() : 0 }}
 				</div>
 				<div class="col-md-6 text-right">
 					@lang('words.users.approved_tasks_count')
 				</div>
 				<div class="col-md-6 text-left">
-					{{ isset(Auth::user()->task) ? Auth::user()->task->whereNotNull('reviewed_at')->count() : 0 }}
+					{{ isset(Auth::user()->tasks) ? Auth::user()->tasks()->whereNotNull('reviewed_at')->count() : 0 }}
 				</div>
 			</div>
 		</div>
 		<div id="side-bar-block">
 			<big>@lang('words.users.recent_answers')</big>
 			<hr id="inner-bar">
-			@if (Auth::user()->answer)
-				@foreach (Auth::user()->answer->orderBy('created_at', 'desc')->take(3)->get() as $answer)
+			@if (Auth::user()->answers()->count() > 0)
+				@foreach (Auth::user()->answers()->orderBy('created_at', 'desc')->take(3)->get() as $answer)
 					<div id="side-bar-inner-block" class="row">
 						<div class="col-md-12">
 							<span style="color:{{ config('tasks.colors')[$answer->task->difficulty] }};">
@@ -54,8 +54,8 @@
 		<div id="side-bar-block">
 			<big>@lang('words.users.recent_tasks')</big>
 			<hr id="inner-bar">
-			@if (Auth::user()->task)
-				@foreach (Auth::user()->task->orderBy('created_at', 'desc')->take(3)->get() as $task)
+			@if (Auth::user()->tasks()->count() > 0)
+				@foreach (Auth::user()->tasks()->orderBy('created_at', 'desc')->take(3)->get() as $task)
 					<div id="side-bar-inner-block" class="row">
 						<div class="col-md-12">
 							<span style="color:{{ config('tasks.colors')[$task->difficulty] }};">
