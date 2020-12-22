@@ -7,7 +7,7 @@
 	@endsection
 @endif
 @section('content')
-<div id="content" class="col-md-{{ Auth::guard('user')->check() ? 9 : 12 }}">
+<div id="content" class="col-lg-{{ Auth::guard('user')->check() ? 9 : 12 }}">
 	<div id="page-header" class="page-header">
 		<h1 class="text-center">@lang('words.titles.tasks_list')</h1>
 	</div>
