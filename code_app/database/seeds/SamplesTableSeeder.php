@@ -110,16 +110,28 @@ class SamplesTableSeeder extends Seeder {
 			'updated_at' => '2020-11-01 00:00:10',
 		], [
 			'task_id' => '12',
-			'input_code' => "3\nfoo\nbar\nbuz\n",
-			'output_code' => "irr\nedu\nexc\n",
+			'input_code' => '60 48 24',
+			'output_code' => '12',
 			'created_at' => '2020-11-01 00:00:11',
 			'updated_at' => '2020-11-01 00:00:11',
 		], [
 			'task_id' => '12',
-			'input_code' => "-1\nfoo\nbar\nbuz\n",
-			'output_code' => "enn\nazq\naty",
+			'input_code' => '25 100 50',
+			'output_code' => '25',
 			'created_at' => '2020-11-01 00:00:11',
 			'updated_at' => '2020-11-01 00:00:11',
+		], [
+			'task_id' => '13',
+			'input_code' => "3\nfoo\nbar\nbuz\n",
+			'output_code' => "irr\nedu\nexc\n",
+			'created_at' => '2020-11-01 00:00:12',
+			'updated_at' => '2020-11-01 00:00:12',
+		], [
+			'task_id' => '13',
+			'input_code' => "-1\nfoo\nbar\nbuz\n",
+			'output_code' => "enn\nazq\naty",
+			'created_at' => '2020-11-01 00:00:12',
+			'updated_at' => '2020-11-01 00:00:12',
 		]]);
 	}
 }
