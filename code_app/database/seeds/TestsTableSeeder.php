@@ -295,28 +295,52 @@ class TestsTableSeeder extends Seeder {
 			'updated_at' => '2020-11-01 00:00:11',
 		], [
 			'task_id' => 13,
+			'input' => '0',
+			'output' => '0',
+			'created_at' => '2020-11-01 00:00:12',
+			'updated_at' => '2020-11-01 00:00:12',
+		], [
+			'task_id' => 13,
+			'input' => '1001',
+			'output' => '9',
+			'created_at' => '2020-11-01 00:00:12',
+			'updated_at' => '2020-11-01 00:00:12',
+		], [
+			'task_id' => 13,
+			'input' => '11100001',
+			'output' => '225',
+			'created_at' => '2020-11-01 00:00:12',
+			'updated_at' => '2020-11-01 00:00:12',
+		], [
+			'task_id' => 13,
+			'input' => '1111111111',
+			'output' => '1023',
+			'created_at' => '2020-11-01 00:00:12',
+			'updated_at' => '2020-11-01 00:00:12',
+		], [
+			'task_id' => 14,
 			'input' => "3\nfoo\nbar\nbuz\n",
 			'output' => "irr\nedu\nexc\n",
-			'created_at' => '2020-11-01 00:00:12',
-			'updated_at' => '2020-11-01 00:00:12',
+			'created_at' => '2020-11-01 00:00:13',
+			'updated_at' => '2020-11-01 00:00:13',
 		], [
-			'task_id' => 13,
+			'task_id' => 14,
 			'input' => "-1\nfoo\nbar\nbuz\n",
 			'output' => "enn\nazq\naty",
-			'created_at' => '2020-11-01 00:00:12',
-			'updated_at' => '2020-11-01 00:00:12',
+			'created_at' => '2020-11-01 00:00:13',
+			'updated_at' => '2020-11-01 00:00:13',
 		], [
-			'task_id' => 13,
+			'task_id' => 14,
 			'input' => "10\nfoo\nbar\nbaz\nqux\nquux\ncorge\ngrault\ngarply\nwaldo\nfred\n",
 			'output' => "vee\nrqh\nrqp\ngkn\ngkkn\nsehwu\nwhqkbj\nwhqfbo\nmqbte\nvhut\n",
-			'created_at' => '2020-11-01 00:00:12',
-			'updated_at' => '2020-11-01 00:00:12',
+			'created_at' => '2020-11-01 00:00:13',
+			'updated_at' => '2020-11-01 00:00:13',
 		], [
-			'task_id' => 13,
+			'task_id' => 14,
 			'input' => "-10\nfoo",
 			'output' => "vee\n",
-			'created_at' => '2020-11-01 00:00:12',
-			'updated_at' => '2020-11-01 00:00:12',
+			'created_at' => '2020-11-01 00:00:13',
+			'updated_at' => '2020-11-01 00:00:13',
 		]]);
     }
 }
