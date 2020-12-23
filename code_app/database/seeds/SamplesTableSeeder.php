@@ -122,13 +122,13 @@ class SamplesTableSeeder extends Seeder {
 			'updated_at' => '2020-11-01 00:00:11',
 		], [
 			'task_id' => '13',
-			'input_code' => '1001',
+			'input_code' => "4\n1001",
 			'output_code' => '9',
 			'created_at' => '2020-11-01 00:00:12',
 			'updated_at' => '2020-11-01 00:00:12',
 		], [
 			'task_id' => '13',
-			'input_code' => '11100001',
+			'input_code' => "8\n11100001",
 			'output_code' => '225',
 			'created_at' => '2020-11-01 00:00:12',
 			'updated_at' => '2020-11-01 00:00:12',

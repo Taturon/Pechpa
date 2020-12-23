@@ -153,9 +153,9 @@ class TasksTableSeeder extends Seeder {
 		], [
 			'title' => '二進数から十進数への変換',
 			'statement' => "N桁の二進数Bが与えられるので十進数Dに変換して出力して下さい。",
-			'constraints' => "Nは\( 1 \leqq A, B, C \leqq 10 \)",
+			'constraints' => "桁数Nは\( 1 \leqq A, B, C \leqq 10 \)",
 			'input' => '入力は以下の形式で標準入力から与えられます。',
-			'input_code' => 'B',
+			'input_code' => "N\nB",
 			'output' => '変換した十進数Dを出力して下さい。',
 			'output_code' => 'D',
 			'difficulty' => 2,
