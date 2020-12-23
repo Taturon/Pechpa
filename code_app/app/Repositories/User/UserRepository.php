@@ -18,15 +18,15 @@ class UserRepository implements UserRepositoryInterface {
 	}
 
 	public function countApprovedTasks($user_id) {
-		return isset($this->user->find($user_id)->task) ? $this->user->find($user_id)->task->count() : 0;
+		return $this->user->find($user_id)->tasks()->count() > 0 ? $this->user->find($user_id)->tasks()->count() : 0;
 	}
 
 	public function countAllAnswers($user_id) {
-		return isset($this->user->find($user_id)->answer) ? $this->user->find($user_id)->answer->count() : 0;
+		return $this->user->find($user_id)->answers()->count() > 0 ? $this->user->find($user_id)->answers()->count() : 0;
 	}
 
 	public function countCorrectAnswers($user_id) {
-		return isset($this->user->find($user_id)->answer) ? $this->user->find($user_id)->answer->where('judge', 'AC')->count() : 0;
+		return $this->user->find($user_id)->answers()->count() > 0 ? $this->user->find($user_id)->answers()->where('judge', 'AC')->count() : 0;
 	}
 
 	public function destroyIcon($file) {

@@ -23,7 +23,7 @@
 		<h2><b>@lang('words.tasks.statement')</b></h2>
 		<p>{!! nl2br(e($task->statement)) !!}</p>
 		<h2><b>@lang('words.tasks.constraints')</b></h2>
-		<p>{{ $task->constraints }}</p>
+		<p>{!! nl2br(e($task->constraints)) !!}</p>
 		<h2><b>@lang('words.tasks.input')</b></h2>
 		<p>{{ $task->input }}</p>
 		<pre><code>{{ $task->input_code }}</code></pre>

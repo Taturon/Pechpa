@@ -303,7 +303,7 @@
 							<small>
 								<span class="label label-danger">@lang('words.notices.required')</span>
 								&emsp;
-								<span class="label label-warning">@lang('words.notices.max_characters', ['count' => '500'])</span>
+								<span class="label label-warning">@lang('words.notices.max_characters', ['count' => '1000'])</span>
 							</small>
 						</label>
 						<div class="col-md-10 col-md-offset-1">
@@ -321,7 +321,7 @@
 							<small>
 								<span class="label label-danger">@lang('words.notices.required')</span>
 								&emsp;
-								<span class="label label-warning">@lang('words.notices.max_characters', ['count' => '500'])</span>
+								<span class="label label-warning">@lang('words.notices.max_characters', ['count' => '1000'])</span>
 							</small>
 						</label>
 						<div class="col-md-10 col-md-offset-1">
@@ -342,7 +342,7 @@
 							<small>
 								<span class="label label-danger">@lang('words.notices.required')</span>
 								&emsp;
-								<span class="label label-warning">@lang('words.notices.max_characters', ['count' => '500'])</span>
+								<span class="label label-warning">@lang('words.notices.max_characters', ['count' => '1000'])</span>
 							</small>
 						</label>
 						<div class="col-md-10 col-md-offset-1">
@@ -360,7 +360,7 @@
 							<small>
 								<span class="label label-danger">@lang('words.notices.required')</span>
 								&emsp;
-								<span class="label label-warning">@lang('words.notices.max_characters', ['count' => '500'])</span>
+								<span class="label label-warning">@lang('words.notices.max_characters', ['count' => '1000'])</span>
 							</small>
 						</label>
 						<div class="col-md-10 col-md-offset-1">
@@ -381,7 +381,7 @@
 							<small>
 								<span class="label label-danger">@lang('words.notices.required')</span>
 								&emsp;
-								<span class="label label-warning">@lang('words.notices.max_characters', ['count' => '500'])</span>
+								<span class="label label-warning">@lang('words.notices.max_characters', ['count' => '1000'])</span>
 							</small>
 						</label>
 						<div class="col-md-10 col-md-offset-1">
@@ -399,7 +399,7 @@
 							<small>
 								<span class="label label-danger">@lang('words.notices.required')</span>
 								&emsp;
-								<span class="label label-warning">@lang('words.notices.max_characters', ['count' => '500'])</span>
+								<span class="label label-warning">@lang('words.notices.max_characters', ['count' => '1000'])</span>
 							</small>
 						</label>
 						<div class="col-md-10 col-md-offset-1">
@@ -420,7 +420,7 @@
 							<small>
 								<span class="label label-danger">@lang('words.notices.required')</span>
 								&emsp;
-								<span class="label label-warning">@lang('words.notices.max_characters', ['count' => '500'])</span>
+								<span class="label label-warning">@lang('words.notices.max_characters', ['count' => '1000'])</span>
 							</small>
 						</label>
 						<div class="col-md-10 col-md-offset-1">
@@ -438,7 +438,7 @@
 							<small>
 								<span class="label label-danger">@lang('words.notices.required')</span>
 								&emsp;
-								<span class="label label-warning">@lang('words.notices.max_characters', ['count' => '500'])</span>
+								<span class="label label-warning">@lang('words.notices.max_characters', ['count' => '1000'])</span>
 							</small>
 						</label>
 						<div class="col-md-10 col-md-offset-1">

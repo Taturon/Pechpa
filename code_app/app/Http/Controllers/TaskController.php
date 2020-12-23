@@ -59,7 +59,7 @@ class TaskController extends Controller {
 	}
 
 	public function store(StoreTask $request) {
-		$task = $this->task->storeTask($request);
+		$task = $this->task->storeTask($request, Auth::user()->id);
 		$task_id = $task->id;
 		$this->task->storeSampleCases($task_id, $request);
 		$this->task->storeTestCases($task_id, $request);

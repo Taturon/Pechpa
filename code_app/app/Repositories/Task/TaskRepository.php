@@ -90,8 +90,9 @@ class TaskRepository implements TaskRepositoryInterface {
 		$this->task->find($task_id)->increment('solved');
 	}
 
-	public function storeTask($request) {
+	public function storeTask($request, $user_id) {
 		return $this->task->create([
+			'user_id' => $user_id,
 			'title' => $request->title,
 			'statement' => $request->statement,
 			'constraints' => $request->constraints,
