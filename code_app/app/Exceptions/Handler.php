@@ -52,6 +52,9 @@ class Handler extends ExceptionHandler {
 				return redirect()->route('tasks.index');
 			}
 		}
+		if ($exception instanceof TokenMismatchException) {
+			return redirect()->route('login')->with('error', __('words.flashes.session_expired'));
+		}
 		return parent::render($request, $exception);
 	}
 
