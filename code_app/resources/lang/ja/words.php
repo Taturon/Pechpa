@@ -36,6 +36,7 @@ return [
 
 	'flashes' => [
 		'guest_logged_in' => 'お試しログインしました！',
+		'session_expired' => 'ログインセッションが切れました 再度ログインして下さい',
 		'invalid_access' => '不正なアクセスです',
 		'no_user' => '存在しないユーザーです',
 		'no_task' => '存在しない問題です',

@@ -36,6 +36,7 @@ return [
 
 	'flashes' => [
 		'guest_logged_in' => 'Guest Logged In !',
+		'session_expired' => 'Login session has expired. Please login again.',
 		'invalid_access' => 'Invalid access',
 		'no_user' => 'Invalid User ID',
 		'no_task' => 'Invalid Task No.',
