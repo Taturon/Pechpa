@@ -50,7 +50,7 @@
 				<div class="text-center">
 					{{ Form::label('include_no_examinees', __('words.tasks.include_no_examinees')) }}
 					<br>
-					{{ Form::checkbox('include_no_examinees', old('include_no_examinees'), '', ['style' => 'margin-top:0.6em;transform:scale(2.0);']) }}
+					{{ Form::checkbox('include_no_examinees', old('include_no_examinees'), !$serached, ['style' => 'margin-top:0.6em;transform:scale(2.0);']) }}
 				</div>
 			</div>
 		</div>
