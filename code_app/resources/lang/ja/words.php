@@ -35,7 +35,7 @@ return [
 	],
 
 	'flashes' => [
-		'guest_logged_in' => '簡単ログインしました！',
+		'guest_logged_in' => 'お試しログインしました！',
 		'invalid_access' => '不正なアクセスです',
 		'no_user' => '存在しないユーザーです',
 		'no_task' => '存在しない問題です',
@@ -116,7 +116,7 @@ return [
 		'register' => '新規登録',
 		'login' => 'ログイン',
 		'logout' => 'ログアウト',
-		'guest_login' => '簡単ログイン',
+		'guest_login' => 'お試しログイン',
 		'or' => 'または',
 		'forgot' => 'パスワードを忘れた方はこちら',
 		'search' => '検索',
