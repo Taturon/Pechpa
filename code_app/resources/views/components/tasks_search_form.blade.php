@@ -1,6 +1,5 @@
 <div class="row">
-	{{ Form::open(['route' => 'tasks.search', 'method' => 'post']) }}
-		{{ csrf_field() }}
+	{{ Form::open(['route' => 'tasks.index', 'method' => 'get']) }}
 		<div class="col-md-4">
 			<div class="form-group{{ $errors->has('title') ? ' has-error' : '' }}">
 				<div class="text-center">
@@ -55,7 +54,7 @@
 			</div>
 		</div>
 		<div class="col-md-12">
-			<button class="btn btn-primary btn-block" type="submit" name="type" value="search" style="margin-bottom:10px;">
+			<button class="btn btn-primary btn-block" type="submit" name="search" value="search" style="margin-bottom:10px;">
 				@lang('words.buttons.search')
 			</button>
 		</div>
