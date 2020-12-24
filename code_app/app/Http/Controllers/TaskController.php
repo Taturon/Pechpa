@@ -22,6 +22,7 @@ class TaskController extends Controller {
 
 	public function index() {
 		$tasks = $this->task->allReviewedTasks(config('pagings.user_tasks'));
+		$tasks->serached = false;
 		return view('task.index', compact('tasks'));
 	}
 
@@ -51,6 +52,7 @@ class TaskController extends Controller {
 			}
 		}
 		$tasks = $query->paginate(config('pagings.user_tasks'));
+		$tasks->serached = true;
 		return view('task.index', compact('tasks'));
 	}
 
