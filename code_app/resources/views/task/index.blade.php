@@ -15,7 +15,7 @@
 	@endcomponent
 	@component('components.errors_alert')
 	@endcomponent
-	@component('components.tasks_search_form')
+	@component('components.tasks_search_form', ['serached' => $tasks->serached])
 	@endcomponent
 	<hr>
 	@if (count($tasks) > 0)
@@ -60,7 +60,7 @@
 				</tbody>
 			</table>
 			<div class="text-center">
-				{{ $tasks->links() }}
+				{{ $tasks->appends(request()->input())->links() }}
 			</div>
 		</div>
 	@else

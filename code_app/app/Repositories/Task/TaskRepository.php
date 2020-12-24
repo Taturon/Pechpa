@@ -43,7 +43,7 @@ class TaskRepository implements TaskRepositoryInterface {
 	}
 
 	public function makeQuery() {
-		return $this->task->query();
+		return $this->task->query()->whereNotNull('reviewed_at');
 	}
 
 	public function narrowDownWithTitle($query, $request) {

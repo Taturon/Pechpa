@@ -1,6 +1,5 @@
 <div class="row">
-	{{ Form::open(['route' => 'tasks.search', 'method' => 'post']) }}
-		{{ csrf_field() }}
+	{{ Form::open(['route' => 'tasks.index', 'method' => 'get']) }}
 		<div class="col-md-4">
 			<div class="form-group{{ $errors->has('title') ? ' has-error' : '' }}">
 				<div class="text-center">
@@ -50,12 +49,12 @@
 				<div class="text-center">
 					{{ Form::label('include_no_examinees', __('words.tasks.include_no_examinees')) }}
 					<br>
-					{{ Form::checkbox('include_no_examinees', old('include_no_examinees'), '', ['style' => 'margin-top:0.6em;transform:scale(2.0);']) }}
+					{{ Form::checkbox('include_no_examinees', old('include_no_examinees'), !$serached, ['style' => 'margin-top:0.6em;transform:scale(2.0);']) }}
 				</div>
 			</div>
 		</div>
 		<div class="col-md-12">
-			<button class="btn btn-primary btn-block" type="submit" name="type" value="search" style="margin-bottom:10px;">
+			<button class="btn btn-primary btn-block" type="submit" name="search" value="search" style="margin-bottom:10px;">
 				@lang('words.buttons.search')
 			</button>
 		</div>
