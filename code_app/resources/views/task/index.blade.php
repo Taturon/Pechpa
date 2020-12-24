@@ -60,7 +60,7 @@
 				</tbody>
 			</table>
 			<div class="text-center">
-				{{ $tasks->links() }}
+				{{ $tasks->appends(request()->input())->links() }}
 			</div>
 		</div>
 	@else
