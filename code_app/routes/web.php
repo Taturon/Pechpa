@@ -15,7 +15,6 @@
  * いかなる状態でもアクセス可
  */
 Route::get('/', 'TaskController@index')->name('tasks.index');
-Route::post('/', 'TaskController@search')->name('tasks.search');
 
 /**
  * ユーザー非認証状態でアクセス可
