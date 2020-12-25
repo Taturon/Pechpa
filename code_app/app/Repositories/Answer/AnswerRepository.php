@@ -5,6 +5,7 @@ namespace App\Repositories\Answer;
 use App\Models\Answer;
 use App\Models\Testing;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 
 class AnswerRepository implements AnswerRepositoryInterface {
 
@@ -16,7 +17,7 @@ class AnswerRepository implements AnswerRepositoryInterface {
 	}
 
 	public function all($paging) {
-		return $this->answer->paginate($paging);
+		return Auth::user()->answers()->paginate($paging);
 	}
 
 	public function findById($id) {
