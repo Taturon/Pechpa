@@ -50,6 +50,8 @@
 				</div>
 			</div>
 		</div>
+		@component('components.alert')
+		@endcomponent
 		<h2><b>@lang('words.tasks.statement')</b></h2>
 		<p>{!! nl2br(e($task->statement)) !!}</p>
 		<h2><b>@lang('words.tasks.constraints')</b></h2>
