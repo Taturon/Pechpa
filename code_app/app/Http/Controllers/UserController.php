@@ -34,8 +34,8 @@ class UserController extends Controller {
 
 	public function showCreatedTasks($user_id) {
 		$user = $this->repository->findById($user_id);
-		$approved_tasks = $this->repository->approvedTasks($user_id, config('pagings.user_tasks'));
-		$unapproved_tasks = $this->repository->unapprovedTasks($user_id, config('pagings.user_tasks'));
+		$approved_tasks = $this->repository->approvedTasks($user_id)->paginate(config('pagings.user_created_tasks'), ['*'], 'approved');
+		$unapproved_tasks = $this->repository->unapprovedTasks($user_id)->paginate(config('pagings.user_created_tasks'), ['*'], 'unapproved');
 		return view('user.task.index', compact(['user', 'approved_tasks', 'unapproved_tasks']));
 	}
 
