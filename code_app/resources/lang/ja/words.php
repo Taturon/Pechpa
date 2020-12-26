@@ -64,9 +64,10 @@ return [
 		'recent_tasks' => '最近作成した問題',
 		'unapproved' => '未承認',
 		'approved' => '承認済',
-		'approved_tasks_count' => '承認問題数',
+		'unapproved_tasks_count' => '承認待ち問題数',
+		'approved_tasks_count' => '承認済み問題数',
 		'all_answers_count' => '回答数',
-		'correct_answers_count' => '正解数',
+		'correct_answers_count' => '正答数',
 		'correct_answer_rate' => '正答率',
 	],
 

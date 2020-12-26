@@ -62,6 +62,7 @@ return [
 		'icon' => 'Icon',
 		'recent_answers' => 'Recent Answers',
 		'recent_tasks' => 'Recent Approved Tasks',
+		'unapproved_tasks_count' => 'Unapproved Tasks',
 		'approved_tasks_count' => 'Approved Tasks',
 		'unapproved' => 'Unapproved',
 		'approved' => 'Approved',
