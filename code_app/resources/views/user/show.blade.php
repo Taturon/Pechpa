@@ -11,7 +11,9 @@
 		<div class="row">
 			<div class="text-center">
 				<div class="col-md-12 text-center">
-					<img src="{{ asset('storage/icons/' . $user->icon) }}" width="150px" height="150px">
+					<p>
+						<img src="{{ asset('storage/icons/' . $user->icon) }}" width="150px" height="150px">
+					</p>
 					@if ($user->id === Auth::user()->id)
 						<p id="edit-link">
 							<a href="{{ route('users.edit', ['user_id' => Auth::user()->id]) }}">
