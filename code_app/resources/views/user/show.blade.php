@@ -62,6 +62,30 @@
 							@endif
 							<tr>
 								<th class="text-right">
+									<h2>@lang('words.users.all_answers_count')</h2>
+								</th>
+								<td>
+									<h2>{{ $statics['all_answers'] }}</h2>
+								</td>
+							</tr>
+							<tr>
+								<th class="text-right">
+									<h2>@lang('words.users.correct_answers_count')</h2>
+								</th>
+								<td>
+									<h2>{{ $statics['correct_answers'] }}</h2>
+								</td>
+							</tr>
+							<tr>
+								<th class="text-right">
+									<h2>@lang('words.users.correct_answer_rate')</h2>
+								</th>
+								<td>
+									<h2>{{ $statics['correct_rate'] }}</h2>
+								</td>
+							</tr>
+							<tr>
+								<th class="text-right">
 									<h2>@lang('words.users.unapproved_tasks_count')</h2>
 								</th>
 								<td>
@@ -77,20 +101,13 @@
 								</td>
 							</tr>
 							<tr>
-								<th class="text-right">
-									<h2>@lang('words.users.correct_answers_count')&thinsp;/&thinsp;@lang('words.users.all_answers_count')</h2>
+								<th class="text-center" colspan="2">
+									<h3>
+										<a href="{{ route('users.created_tasks', ['user_id' => $user->id]) }}">
+											@lang('words.users.created_tasks')
+										</a>
+									</h3>
 								</th>
-								<td>
-									<h2>{{ $statics['correct_answers'] }}&thinsp;/&thinsp;{{ $statics['all_answers'] }}</h2>
-								</td>
-							</tr>
-							<tr>
-								<th class="text-right">
-									<h2>@lang('words.users.correct_answer_rate')</h2>
-								</th>
-								<td>
-									<h2>{{ $statics['correct_rate'] }}</h2>
-								</td>
 							</tr>
 						</table>
 					</div>
