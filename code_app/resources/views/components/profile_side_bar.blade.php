@@ -20,6 +20,12 @@
 					{{ Auth::user()->answers()->where('judge', 'AC')->count() }}
 				</div>
 				<div class="col-md-7 text-right">
+					@lang('words.users.unapproved_tasks_count')
+				</div>
+				<div class="col-md-5 text-left">
+					{{ Auth::user()->tasks()->whereNull('reviewed_at')->count() }}
+				</div>
+				<div class="col-md-7 text-right">
 					@lang('words.users.approved_tasks_count')
 				</div>
 				<div class="col-md-5 text-left">
