@@ -17,6 +17,10 @@ class UserRepository implements UserRepositoryInterface {
 		return $this->user->find($user_id);
 	}
 
+	public function countUnapprovedTasks($user_id) {
+		return $this->user->find($user_id)->tasks()->whereNull('reviewed_at')->count();
+	}
+
 	public function countApprovedTasks($user_id) {
 		return $this->user->find($user_id)->tasks()->whereNotNull('reviewed_at')->count();
 	}
