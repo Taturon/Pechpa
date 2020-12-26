@@ -11,19 +11,19 @@
 					@lang('words.users.all_answers_count')
 				</div>
 				<div class="col-md-5 text-left">
-					{{ isset(Auth::user()->answers) ? Auth::user()->answers()->count() : 0 }}
+					{{ Auth::user()->answers()->count() }}
 				</div>
 				<div class="col-md-7 text-right">
 					@lang('words.users.correct_answers_count')
 				</div>
 				<div class="col-md-5 text-left">
-					{{ isset(Auth::user()->answers) ? Auth::user()->answers()->where('judge', 'AC')->count() : 0 }}
+					{{ Auth::user()->answers()->where('judge', 'AC')->count() }}
 				</div>
 				<div class="col-md-7 text-right">
 					@lang('words.users.approved_tasks_count')
 				</div>
 				<div class="col-md-5 text-left">
-					{{ isset(Auth::user()->tasks) ? Auth::user()->tasks()->whereNotNull('reviewed_at')->count() : 0 }}
+					{{ Auth::user()->tasks()->whereNotNull('reviewed_at')->count() }}
 				</div>
 			</div>
 		</div>
