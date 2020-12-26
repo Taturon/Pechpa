@@ -21,16 +21,16 @@ class UserRepository implements UserRepositoryInterface {
 		return $this->user->find($user_id)->tasks()->whereNull('reviewed_at')->count();
 	}
 
-	public function unapprovedTasks($user_id, $paging) {
-		return $this->user->find($user_id)->tasks()->whereNull('reviewed_at')->paginate($paging);
+	public function unapprovedTasks($user_id) {
+		return $this->user->find($user_id)->tasks()->whereNull('reviewed_at');
 	}
 
 	public function countApprovedTasks($user_id) {
 		return $this->user->find($user_id)->tasks()->whereNotNull('reviewed_at')->count();
 	}
 
-	public function approvedTasks($user_id, $paging) {
-		return $this->user->find($user_id)->tasks()->whereNotNull('reviewed_at')->paginate($paging);
+	public function approvedTasks($user_id) {
+		return $this->user->find($user_id)->tasks()->whereNotNull('reviewed_at');
 	}
 
 	public function countAllAnswers($user_id) {
