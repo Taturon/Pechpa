@@ -32,6 +32,13 @@ class UserController extends Controller {
 		return view('user.show', compact(['user', 'statics']));
 	}
 
+	public function showCreatedTasks($user_id) {
+		$user = $this->repository->findById($user_id);
+		$approved_tasks = $this->repository->approvedTasks($user_id, config('pagings.user_tasks'));
+		$unapproved_tasks = $this->repository->unapprovedTasks($user_id, config('pagings.user_tasks'));
+		return view('user.task.index', compact(['user', 'approved_tasks', 'unapproved_tasks']));
+	}
+
 	public function edit($user_id) {
 		if ($user_id != Auth::user()->id) {
 			return redirect()->route('users.show', ['user_id' => Auth::user()->id])->with('danger', __('words.flashes.invalid_access'));
