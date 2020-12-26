@@ -62,6 +62,14 @@
 							@endif
 							<tr>
 								<th class="text-right">
+									<h2>@lang('words.users.unapproved_tasks_count')</h2>
+								</th>
+								<td>
+									<h2>{{ $statics['unapproved_tasks'] }}</h2>
+								</td>
+							</tr>
+							<tr>
+								<th class="text-right">
 									<h2>@lang('words.users.approved_tasks_count')</h2>
 								</th>
 								<td>
