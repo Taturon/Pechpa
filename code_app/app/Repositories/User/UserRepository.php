@@ -22,11 +22,11 @@ class UserRepository implements UserRepositoryInterface {
 	}
 
 	public function countAllAnswers($user_id) {
-		return $this->user->find($user_id)->answers()->count() > 0 ? $this->user->find($user_id)->answers()->count() : 0;
+		return $this->user->find($user_id)->answers()->count();
 	}
 
 	public function countCorrectAnswers($user_id) {
-		return $this->user->find($user_id)->answers()->count() > 0 ? $this->user->find($user_id)->answers()->where('judge', 'AC')->count() : 0;
+		return $this->user->find($user_id)->answers()->where('judge', 'AC')->count();
 	}
 
 	public function destroyIcon($file) {
