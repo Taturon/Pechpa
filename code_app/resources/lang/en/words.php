@@ -63,6 +63,8 @@ return [
 		'recent_answers' => 'Recent Answers',
 		'recent_tasks' => 'Recent Approved Tasks',
 		'approved_tasks_count' => 'Approved Tasks',
+		'unapproved' => 'Unapproved',
+		'approved' => 'Approved',
 		'all_answers_count' => 'Answers',
 		'correct_answers_count' => 'Correct Answers',
 		'correct_answer_rate' => 'Correct Answer Rate',
