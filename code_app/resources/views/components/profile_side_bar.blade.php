@@ -63,6 +63,12 @@
 							</span>
 							<br>
 							<span>{{ $task->title }}</span>
+							<br>
+							@if (is_null($task->reviewed_at))
+								<span class="label label-default">@lang('words.users.unapproved')</span>
+							@else
+								<span class="label label-primary">@lang('words.users.approved')</span>
+							@endif
 						</div>
 					</div>
 					<hr id="inner-bar">
