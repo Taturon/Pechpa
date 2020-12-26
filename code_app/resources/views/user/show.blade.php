@@ -48,7 +48,7 @@
 									</h2>
 								</td>
 							</tr>
-							@if ($user->id === Auth::user()->id)
+							@if ($user->id === Auth::user()->id && $user->id !== 1)
 								<tr>
 									<th class="text-right">
 										<h2>@lang('words.users.email')</h2>
