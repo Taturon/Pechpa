@@ -7,7 +7,7 @@
 @component('components.alert')
 @endcomponent
 <div class="row">
-	<div class="col-md-12">
+	<div id="content" class="col-md-12 form-panel">
 		<div class="panel panel-default">
 			<div class="panel-heading text-center"><h1>@lang('words.titles.task_approval')</h1></div>
 			<div class="panel-body">
