@@ -17,7 +17,6 @@ return [
 		'answers_list' => 'Answers List',
 		'admin_dashboard' => 'Admin Dashboard',
 		'unapproved_tasks_list' => 'Unapproved Tasks',
-		'approved_task' => 'Approved Task',
 		'tasks_recent_unapproved_list' => 'Recent Unapproved Tasks',
 		'tasks_recent_approved_list' => 'Recent Approved Tasks',
 		'task_approval' => 'Task Approval',

@@ -17,7 +17,6 @@ return [
 		'answers_list' => '回答一覧',
 		'admin_dashboard' => '管理者ダッシュボード',
 		'unapproved_tasks_list' => '承認待ち問題一覧',
-		'approved_task' => '承認済み問題',
 		'tasks_recent_unapproved_list' => '直近の承認待ち問題',
 		'tasks_recent_approved_list' => '直近の承認済み問題',
 		'task_approval' => '問題の承認',
