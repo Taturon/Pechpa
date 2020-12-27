@@ -44,7 +44,9 @@
 								{{ config('tasks.stars')[$answer->task->difficulty] }}
 							</span>
 							<br>
-							<span>{{ $answer->task->title }}</span>
+							<span>
+								<a href="{{ route('answers.show', ['answer' => $answer->id]) }}">{{ $answer->task->title }}</a>
+							</span>
 							<br>
 							<span class="label label-{{ $answer->judge === 'AC' ? 'success' : 'warning' }}">{{ $answer->judge }}</span>
 						</div>
@@ -68,11 +70,17 @@
 								{{ config('tasks.stars')[$task->difficulty] }}
 							</span>
 							<br>
-							<span>{{ $task->title }}</span>
-							<br>
 							@if (is_null($task->reviewed_at))
+								<span>
+									<a href="{{ route('tasks.edit', ['task' => $task->id]) }}">{{ $task->title }}</a>
+								</span>
+								<br>
 								<span class="label label-default">@lang('words.users.unapproved')</span>
 							@else
+								<span>
+									<a href="{{ route('tasks.show', ['task' => $task->id]) }}">{{ $task->title }}</a>
+								</span>
+								<br>
 								<span class="label label-primary">@lang('words.users.approved')</span>
 							@endif
 						</div>
