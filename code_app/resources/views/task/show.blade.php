@@ -73,7 +73,15 @@
 			<hr>
 		@endforeach
 		<h2><b>@lang('words.answers.answer')</b></h2>
-		@if (Auth::user()->id !== $task->user_id)
+		@if (Auth::user()->id == $task->user_id)
+			<div class="row text-center">
+				<h1 id="notice-block">@lang('words.notices.can_not_self_answer')</h1>
+			</div>
+		@elseif (Auth::user()->answers()->where('task_id', $task->id)->where('judge', 'AC')->count() > 0)
+			<div class="row text-center">
+				<h1 id="notice-block">@lang('words.notices.can_not_duplicate_answer')</h1>
+			</div>
+		@else
 			{{ Form::open(['route' => ['answers.check', $task->id]]) }}
 				{{ Form::textarea('source', "&lt;?php\n", ['rows' => 15, 'style' => 'width:100%;', 'id' => 'tab']) }}
 				<hr>
@@ -81,14 +89,14 @@
 					@lang('words.buttons.submission')
 				</button>
 			{{ Form::close() }}
-		@else
-			<div class="row text-center">
-				<h1 id="notice-block">@lang('words.notices.can_not_answer')</h1>
-			</div>
 		@endif
 		<hr>
 		<ol class="breadcrumb">
-			<li><a href="{{ route('tasks.index') }}"><i class="fas fa-code"></i>&thinsp;@lang('words.titles.tasks_list')</a></li>
+			<li>
+				<a href="{{ route('tasks.index') }}">
+					<i class="fas fa-code"></i>&thinsp;@lang('words.titles.tasks_list')
+				</a>
+			</li>
 			<li class="active">{{ $task->title }}</li>
 		</ol>
 	</div>

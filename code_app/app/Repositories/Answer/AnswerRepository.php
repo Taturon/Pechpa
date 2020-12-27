@@ -38,6 +38,13 @@ class AnswerRepository implements AnswerRepositoryInterface {
 		return true;
 	}
 
+	public function isSolved($user_id, $task_id) {
+		if ($this->answer->where('task_id', $task_id)->where('user_id', $user_id)->where('judge', 'AC')->first()) {
+			return true;
+		}
+		return false;
+	}
+
 	public function storeSyntaxCheckResult($source, Array $result, $user_id, $task_id) {
 		return $this->answer->create([
 			'task_id' => $task_id,

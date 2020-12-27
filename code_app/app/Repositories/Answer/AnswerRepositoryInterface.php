@@ -12,6 +12,8 @@ interface AnswerRepositoryInterface {
 
 	public function isNotSolved($task_id, $user_id);
 
+	public function isSolved($user_id, $task_id);
+
 	public function storeSyntaxCheckResult($source, Array $result, $user_id, $task_id);
 
 	public function storeTestingResults($test_results);
