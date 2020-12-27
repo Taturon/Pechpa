@@ -50,6 +50,8 @@ interface TaskRepositoryInterface {
 
 	public function updateTaskWithoutApproval($task_id, $request);
 
+	public function destroyTask($task_id);
+
 	public function storeSampleCases($task_id, $request);
 
 	public function destroySampleCases($task_id);

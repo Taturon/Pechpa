@@ -139,6 +139,10 @@ class TaskRepository implements TaskRepositoryInterface {
 		]);
 	}
 
+	public function destroyTask($task_id) {
+		$this->task->find($task_id)->delete();
+	}
+
 	public function storeSampleCases($task_id, $request) {
 		$datetime = Carbon::now();
 		$samples = [
