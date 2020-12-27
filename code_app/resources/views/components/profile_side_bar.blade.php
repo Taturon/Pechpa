@@ -61,7 +61,7 @@
 			<big>@lang('words.users.recent_tasks')</big>
 			<hr id="inner-bar">
 			@if (Auth::user()->tasks()->count() > 0)
-				@foreach (Auth::user()->tasks()->orderBy('created_at', 'desc')->take(3)->get() as $task)
+				@foreach (Auth::user()->tasks()->orderBy('updated_at', 'desc')->take(3)->get() as $task)
 					<div id="side-bar-inner-block" class="row">
 						<div class="col-md-12">
 							<span style="color:{{ config('tasks.colors')[$task->difficulty] }};">
