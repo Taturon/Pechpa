@@ -13,6 +13,7 @@ return [
 		'profile_edit' => 'プロフィール編集',
 		'tasks_list' => '問題一覧',
 		'task_create' => '問題作成',
+		'task_edit' => '問題編集',
 		'answers_list' => '回答一覧',
 		'admin_dashboard' => '管理者ダッシュボード',
 		'unapproved_tasks_list' => '承認待ち問題一覧',
@@ -50,6 +51,7 @@ return [
 		'correct_answer' => '正解です！',
 		'profile_updated' => 'プロフィールを更新しました！',
 		'task_created' => '問題を提案をお受けしました！ 運営のレビューをお待ち下さい',
+		'task_updated' => '問題の内容を更新しました！',
 	],
 
 	'authentication' => [
@@ -98,6 +100,8 @@ return [
 		'solved' => '正解者数',
 		'examinees' => '回答者数',
 		'created_date' => '作成日時',
+		'created_and_updated_date' => '作成・更新日時',
+		'approved_date' => '承認日時',
 		'published_date' => '公開日時',
 		'no_select' => '選択しない',
 		'no_examinees' => '回答者無し',

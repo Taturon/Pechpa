@@ -13,6 +13,7 @@ return [
 		'profile_edit' => 'Profile Edit',
 		'tasks_list' => 'Tasks List',
 		'task_create' => 'Task Create',
+		'task_edit' => 'Task Edit',
 		'answers_list' => 'Answers List',
 		'admin_dashboard' => 'Admin Dashboard',
 		'unapproved_tasks_list' => 'Unapproved Tasks',
@@ -50,6 +51,7 @@ return [
 		'correct_answer' => 'Correct answer !',
 		'profile_updated' => 'Your profile updated !',
 		'task_created' => 'We have received a your suggestion ! Please wait for the review.',
+		'task_updated' => 'The task updated !',
 	],
 
 	'authentication' => [
@@ -98,6 +100,8 @@ return [
 		'solved' => 'Solved',
 		'examinees' => 'Examinees',
 		'created_date' => 'Created Date',
+		'created_and_updated_date' => 'Created / Updated Date',
+		'approved_date' => 'Approved Date',
 		'published_date' => 'Published Date',
 		'no_select' => 'No Select',
 		'no_examinees' => 'No Examinees',
