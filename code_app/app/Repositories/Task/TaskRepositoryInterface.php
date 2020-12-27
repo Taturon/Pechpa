@@ -22,6 +22,8 @@ interface TaskRepositoryInterface {
 
 	public function findUnreviewedTask($id);
 
+	public function isCreated($user_id, $task_id);
+
 	public function makeQuery();
 
 	public function narrowDownWithTitle($query, $request);

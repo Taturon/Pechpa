@@ -50,6 +50,13 @@ class TaskRepository implements TaskRepositoryInterface {
 		return $this->task->whereNull('reviewed_at')->find($id);
 	}
 
+	public function isCreated($user_id, $task_id) {
+		if ($this->task->find($task_id)->user_id === $user_id) {
+			return true;
+		}
+		return false;
+	}
+
 	public function makeQuery() {
 		return $this->task->query()->whereNotNull('reviewed_at');
 	}
