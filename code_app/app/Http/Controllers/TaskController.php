@@ -78,9 +78,24 @@ class TaskController extends Controller {
 	}
 
 	public function edit($id) {
+		$task = $this->task->findUnreviewedTask($id);
+		if (is_null($task) || $task->user->id !== Auth::user()->id) {
+			return redirect()->route('users.tasks', ['user' => Auth::user()->id])->with('danger', __('words.flashes.invalid_access'));
+		}
+		return view('task.edit', compact('task'));
 	}
 
-	public function update(Request $request, $id) {
+	public function update(StoreTask $request, $task_id) {
+		$task = $this->task->findUnreviewedTask($task_id);
+		if (is_null($task) || $task->user->id !== Auth::user()->id) {
+			return redirect()->route('users.tasks', ['user' => Auth::user()->id])->with('danger', __('words.flashes.invalid_access'));
+		}
+		$this->task->destroySampleCases($task_id);
+		$this->task->storeSampleCases($task_id, $request);
+		$this->task->destroyTestCases($task_id);
+		$this->task->storeTestCases($task_id, $request);
+		$this->task->updateTaskWithoutApproval($task_id, $request);
+		return redirect()->route('users.tasks', ['user' => Auth::user()->id])->with('success', __('words.flashes.task_updated'));
 	}
 
 	public function destroy($id) {
