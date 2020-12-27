@@ -52,6 +52,7 @@ return [
 		'profile_updated' => 'Your profile updated !',
 		'task_created' => 'We have received a your suggestion ! Please wait for the review.',
 		'task_updated' => 'The task updated !',
+		'task_deleted' => 'The task deleted !',
 	],
 
 	'authentication' => [
@@ -146,6 +147,8 @@ return [
 		'update_confirm' => 'Do you want to update ?',
 		'update_only' => 'Update Only',
 		'update_only_confirm' => 'Do you want to update ?',
+		'delete' => 'Delete',
+		'delete_confirm' => 'Do you want to delete \':title\' ?',
 	],
 
 	'mails' => [

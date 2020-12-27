@@ -52,6 +52,7 @@ return [
 		'profile_updated' => 'プロフィールを更新しました！',
 		'task_created' => '問題を提案をお受けしました！ 運営のレビューをお待ち下さい',
 		'task_updated' => '問題の内容を更新しました！',
+		'task_deleted' => '問題を削除しました！',
 	],
 
 	'authentication' => [
@@ -146,6 +147,8 @@ return [
 		'update_confirm' => '更新しますか？',
 		'update_only' => '更新のみ',
 		'update_only_confirm' => '更新しますか？',
+		'delete' => '削除',
+		'delete_confirm' => '問題「:title」を削除しますか？',
 	],
 
 	'mails' => [
