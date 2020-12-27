@@ -98,6 +98,14 @@ class TaskController extends Controller {
 		return redirect()->route('users.tasks', ['user' => Auth::user()->id])->with('success', __('words.flashes.task_updated'));
 	}
 
-	public function destroy($id) {
+	public function destroy($task_id) {
+		$task = $this->task->findUnreviewedTask($task_id);
+		if (is_null($task) || $task->user->id !== Auth::user()->id) {
+			return redirect()->route('users.tasks', ['user' => Auth::user()->id])->with('danger', __('words.flashes.invalid_access'));
+		}
+		$this->task->destroySampleCases($task_id);
+		$this->task->destroyTestCases($task_id);
+		$this->task->destroyTask($task_id);
+		return redirect()->route('users.tasks', ['user' => Auth::user()->id])->with('success', __('words.flashes.task_deleted'));
 	}
 }
