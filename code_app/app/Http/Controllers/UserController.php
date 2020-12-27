@@ -21,7 +21,7 @@ class UserController extends Controller {
 
 	public function show($user_id) {
 		$user = $this->repository->findById($user_id);
-		if (!$user) {
+		if (is_null($user)) {
 			return redirect()->route('users.show', ['user_id' => Auth::user()->id])->with('error', __('words.flashes.no_user'));
 		}
 		$statics['unapproved_tasks'] = $this->repository->countUnapprovedTasks($user_id);
@@ -30,13 +30,6 @@ class UserController extends Controller {
 		$statics['correct_answers'] = $this->repository->countCorrectAnswers($user_id);
 		$statics['correct_rate'] = $this->service->calculateCorrectRate($statics['all_answers'], $statics['correct_answers']);
 		return view('user.show', compact(['user', 'statics']));
-	}
-
-	public function showCreatedTasks($user_id) {
-		$user = $this->repository->findById($user_id);
-		$approved_tasks = $this->repository->approvedTasks($user_id)->paginate(config('pagings.user_created_tasks'), ['*'], 'approved');
-		$unapproved_tasks = $this->repository->unapprovedTasks($user_id)->paginate(config('pagings.user_created_tasks'), ['*'], 'unapproved');
-		return view('user.task.index', compact(['user', 'approved_tasks', 'unapproved_tasks']));
 	}
 
 	public function edit($user_id) {
