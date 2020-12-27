@@ -27,7 +27,7 @@ class TaskRepository implements TaskRepositoryInterface {
 	}
 
 	public function userCreatedUnapprovedTasks($user_id) {
-		return $this->task->where('user_id', $user_id)->whereNull('reviewed_at');
+		return $this->task->where('user_id', $user_id)->whereNull('reviewed_at')->orderBy('updated_at', 'desc');
 	}
 
 	public function allUnreviewedTasks($paging) {
@@ -39,7 +39,7 @@ class TaskRepository implements TaskRepositoryInterface {
 	}
 
 	public function userCreatedApprovedTasks($user_id) {
-		return $this->task->where('user_id', $user_id)->whereNotNull('reviewed_at');
+		return $this->task->where('user_id', $user_id)->whereNotNull('reviewed_at')->orderBy('reviewed_at', 'desc');
 	}
 
 	public function findReviewedTask($id) {
