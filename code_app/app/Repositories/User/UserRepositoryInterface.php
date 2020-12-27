@@ -8,11 +8,7 @@ interface UserRepositoryInterface {
 
 	public function countUnapprovedTasks($user_id);
 
-	public function unapprovedTasks($user_id);
-
 	public function countApprovedTasks($user_id);
-
-	public function approvedTasks($user_id);
 
 	public function countAllAnswers($user_id);
 
