@@ -21,9 +21,10 @@ class UserController extends Controller {
 
 	public function show($user_id) {
 		$user = $this->repository->findById($user_id);
-		if (!$user) {
+		if (is_null($user)) {
 			return redirect()->route('users.show', ['user_id' => Auth::user()->id])->with('error', __('words.flashes.no_user'));
 		}
+		$statics['unapproved_tasks'] = $this->repository->countUnapprovedTasks($user_id);
 		$statics['approved_tasks'] = $this->repository->countApprovedTasks($user_id);
 		$statics['all_answers'] = $this->repository->countAllAnswers($user_id);
 		$statics['correct_answers'] = $this->repository->countCorrectAnswers($user_id);

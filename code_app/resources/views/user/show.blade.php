@@ -11,7 +11,9 @@
 		<div class="row">
 			<div class="text-center">
 				<div class="col-md-12 text-center">
-					<img src="{{ asset('storage/icons/' . $user->icon) }}" width="150px" height="150px">
+					<p>
+						<img src="{{ asset('storage/icons/' . $user->icon) }}" width="150px" height="150px">
+					</p>
 					@if ($user->id === Auth::user()->id)
 						<p id="edit-link">
 							<a href="{{ route('users.edit', ['user_id' => Auth::user()->id]) }}">
@@ -48,7 +50,7 @@
 									</h2>
 								</td>
 							</tr>
-							@if ($user->id === Auth::user()->id)
+							@if ($user->id === Auth::user()->id && $user->id !== 1)
 								<tr>
 									<th class="text-right">
 										<h2>@lang('words.users.email')</h2>
@@ -60,18 +62,18 @@
 							@endif
 							<tr>
 								<th class="text-right">
-									<h2>@lang('words.users.approved_tasks_count')</h2>
+									<h2>@lang('words.users.all_answers_count')</h2>
 								</th>
 								<td>
-									<h2>{{ $statics['approved_tasks'] }}</h2>
+									<h2>{{ $statics['all_answers'] }}</h2>
 								</td>
 							</tr>
 							<tr>
 								<th class="text-right">
-									<h2>@lang('words.users.correct_answers_count')&thinsp;/&thinsp;@lang('words.users.all_answers_count')</h2>
+									<h2>@lang('words.users.correct_answers_count')</h2>
 								</th>
 								<td>
-									<h2>{{ $statics['correct_answers'] }}&thinsp;/&thinsp;{{ $statics['all_answers'] }}</h2>
+									<h2>{{ $statics['correct_answers'] }}</h2>
 								</td>
 							</tr>
 							<tr>
@@ -81,6 +83,31 @@
 								<td>
 									<h2>{{ $statics['correct_rate'] }}</h2>
 								</td>
+							</tr>
+							<tr>
+								<th class="text-right">
+									<h2>@lang('words.users.unapproved_tasks_count')</h2>
+								</th>
+								<td>
+									<h2>{{ $statics['unapproved_tasks'] }}</h2>
+								</td>
+							</tr>
+							<tr>
+								<th class="text-right">
+									<h2>@lang('words.users.approved_tasks_count')</h2>
+								</th>
+								<td>
+									<h2>{{ $statics['approved_tasks'] }}</h2>
+								</td>
+							</tr>
+							<tr>
+								<th class="text-center" colspan="2">
+									<h3>
+										<a href="{{ route('users.tasks', ['user_id' => $user->id]) }}">
+											@lang('words.users.created_tasks')
+										</a>
+									</h3>
+								</th>
 							</tr>
 						</table>
 					</div>

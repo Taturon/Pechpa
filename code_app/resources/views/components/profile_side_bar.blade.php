@@ -11,19 +11,25 @@
 					@lang('words.users.all_answers_count')
 				</div>
 				<div class="col-md-5 text-left">
-					{{ isset(Auth::user()->answers) ? Auth::user()->answers()->count() : 0 }}
+					{{ Auth::user()->answers()->count() }}
 				</div>
 				<div class="col-md-7 text-right">
 					@lang('words.users.correct_answers_count')
 				</div>
 				<div class="col-md-5 text-left">
-					{{ isset(Auth::user()->answers) ? Auth::user()->answers()->where('judge', 'AC')->count() : 0 }}
+					{{ Auth::user()->answers()->where('judge', 'AC')->count() }}
+				</div>
+				<div class="col-md-7 text-right">
+					@lang('words.users.unapproved_tasks_count')
+				</div>
+				<div class="col-md-5 text-left">
+					{{ Auth::user()->tasks()->whereNull('reviewed_at')->count() }}
 				</div>
 				<div class="col-md-7 text-right">
 					@lang('words.users.approved_tasks_count')
 				</div>
 				<div class="col-md-5 text-left">
-					{{ isset(Auth::user()->tasks) ? Auth::user()->tasks()->whereNotNull('reviewed_at')->count() : 0 }}
+					{{ Auth::user()->tasks()->whereNotNull('reviewed_at')->count() }}
 				</div>
 			</div>
 		</div>
@@ -38,7 +44,9 @@
 								{{ config('tasks.stars')[$answer->task->difficulty] }}
 							</span>
 							<br>
-							<span>{{ $answer->task->title }}</span>
+							<span>
+								<a href="{{ route('answers.show', ['answer' => $answer->id]) }}">{{ $answer->task->title }}</a>
+							</span>
 							<br>
 							<span class="label label-{{ $answer->judge === 'AC' ? 'success' : 'warning' }}">{{ $answer->judge }}</span>
 						</div>
@@ -55,14 +63,26 @@
 			<big>@lang('words.users.recent_tasks')</big>
 			<hr id="inner-bar">
 			@if (Auth::user()->tasks()->count() > 0)
-				@foreach (Auth::user()->tasks()->orderBy('created_at', 'desc')->take(3)->get() as $task)
+				@foreach (Auth::user()->tasks()->orderBy('updated_at', 'desc')->take(3)->get() as $task)
 					<div id="side-bar-inner-block" class="row">
 						<div class="col-md-12">
 							<span style="color:{{ config('tasks.colors')[$task->difficulty] }};">
 								{{ config('tasks.stars')[$task->difficulty] }}
 							</span>
 							<br>
-							<span>{{ $task->title }}</span>
+							@if (is_null($task->reviewed_at))
+								<span>
+									<a href="{{ route('tasks.edit', ['task' => $task->id]) }}">{{ $task->title }}</a>
+								</span>
+								<br>
+								<span class="label label-default">@lang('words.users.unapproved')</span>
+							@else
+								<span>
+									<a href="{{ route('tasks.show', ['task' => $task->id]) }}">{{ $task->title }}</a>
+								</span>
+								<br>
+								<span class="label label-primary">@lang('words.users.approved')</span>
+							@endif
 						</div>
 					</div>
 					<hr id="inner-bar">

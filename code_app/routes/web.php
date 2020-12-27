@@ -32,8 +32,9 @@ Route::group(['middleware' => 'guest:user'], function() {
 Route::group(['middleware' => 'auth:user'], function() {
 	Route::post('logout', 'Auth\LoginController@logout')->name('logout');
 	Route::resource('users', 'UserController', ['only' => ['show', 'edit', 'update']]);
-	Route::resource('tasks', 'TaskController', ['only' => ['show', 'create', 'store']]);
+	Route::resource('tasks', 'TaskController', ['except' => 'index']);
 	Route::resource('answers', 'AnswerController', ['only' => ['index', 'show']]);
+	Route::get('users/{user}/tasks', 'ShowUserCreatedTasksController')->name('users.tasks');
 	Route::post('tasks/{task}/answer', 'AnswerController@check')->name('answers.check');
 });
 
