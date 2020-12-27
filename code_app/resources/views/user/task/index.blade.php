@@ -16,14 +16,14 @@
 						<th style="width:15%;">
 							<div class="text-center">@lang('words.tasks.difficulty')</div>
 						</th>
-						<th style="width:55%;">
+						<th style="width:60%;">
 							<div class="text-center">@lang('words.tasks.title')</div>
 						</th>
 						<th style="width:15%;">
-							<div class="text-center">@lang('words.tasks.validity.validity')</div>
-						</th>
-						<th style="width:15%;">
 							<div class="text-center">@lang('words.tasks.approved_date')</div>
+						</th>
+						<th style="width:10%;">
+							<div class="text-center">@lang('words.tasks.validity.validity')</div>
 						</th>
 					</tr>
 				</thead>
@@ -37,10 +37,10 @@
 								<a href="{{ route('tasks.show', ['task' => $task->id]) }}">{{ $task->title }}</a>
 							</td>
 							<td class="text-center">
-								{{ $task->examinees == 0 ? __('words.tasks.no_examinees') : sprintf('%03.1f', $task->solved / $task->examinees * 100) . '%' }}
+								{{ $task->reviewed_at }}
 							</td>
 							<td class="text-center">
-								{{ $task->reviewed_at }}
+								{{ $task->examinees == 0 ? __('words.tasks.no_examinees') : sprintf('%03.1f', $task->solved / $task->examinees * 100) . '%' }}
 							</td>
 						</tr>
 					@endforeach
@@ -63,14 +63,17 @@
 				<table class="table table-striped table-hover table-bordered">
 					<thead>
 						<tr>
-							<th style="width:20%;">
+							<th style="width:15%;">
 								<div class="text-center">@lang('words.tasks.difficulty')</div>
 							</th>
 							<th style="width:60%;">
 								<div class="text-center">@lang('words.tasks.title')</div>
 							</th>
-							<th style="width:20%;">
+							<th style="width:15%;">
 								<div class="text-center">@lang('words.tasks.created_and_updated_date')</div>
+							</th>
+							<th style="width:10%;">
+								<div class="text-center">@lang('words.buttons.delete')</div>
 							</th>
 						</tr>
 					</thead>
@@ -87,6 +90,15 @@
 								</td>
 								<td class="text-center">
 									{{ $task->updated_at }}
+								</td>
+								<td class="text-center">
+									<form method="POST" action="{{ route('tasks.destroy', ['task' => $task->id]) }}">
+										{{ csrf_field() }}
+										{{ method_field('DELETE') }}
+										<button class="btn btn-danger btn-xs" type="submit" onclick="return confirm('@lang('words.buttons.delete_confirm', ['title' => $task->title])');">
+											@lang('words.buttons.delete')
+										</button>
+									</form>
 								</td>
 							</tr>
 						@endforeach
