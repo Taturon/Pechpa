@@ -10,9 +10,13 @@ interface TaskRepositoryInterface {
 
 	public function recentApprovedTasks($count);
 
+	public function userCreatedApprovedTasks($user_id);
+
 	public function allUnreviewedTasks($paging);
 
 	public function recentUnapprovedTasks($count);
+
+	public function userCreatedUnapprovedTasks($user_id);
 
 	public function findReviewedTask($id);
 

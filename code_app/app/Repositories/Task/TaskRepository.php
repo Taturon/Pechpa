@@ -26,12 +26,20 @@ class TaskRepository implements TaskRepositoryInterface {
 		return $this->task->whereNotNull('reviewed_at')->orderBy('reviewed_at', 'desc')->limit($count)->get();
 	}
 
+	public function userCreatedUnapprovedTasks($user_id) {
+		return $this->task->where('user_id', $user_id)->whereNull('reviewed_at');
+	}
+
 	public function allUnreviewedTasks($paging) {
 		return $this->task->whereNull('reviewed_at')->paginate($paging);
 	}
 
 	public function recentUnapprovedTasks($count) {
 		return $this->task->whereNull('reviewed_at')->orderBy('reviewed_at', 'desc')->limit($count)->get();
+	}
+
+	public function userCreatedApprovedTasks($user_id) {
+		return $this->task->where('user_id', $user_id)->whereNotNull('reviewed_at');
 	}
 
 	public function findReviewedTask($id) {
