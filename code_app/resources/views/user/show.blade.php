@@ -103,7 +103,7 @@
 							<tr>
 								<th class="text-center" colspan="2">
 									<h3>
-										<a href="{{ route('users.created_tasks', ['user_id' => $user->id]) }}">
+										<a href="{{ route('users.tasks', ['user_id' => $user->id]) }}">
 											@lang('words.users.created_tasks')
 										</a>
 									</h3>
