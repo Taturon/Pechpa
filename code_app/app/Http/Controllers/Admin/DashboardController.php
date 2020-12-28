@@ -14,7 +14,7 @@ class DashboardController extends Controller {
 		$this->task = $task;
 	}
 
-	public function dashboard() {
+	public function __invoke() {
 		$tasks['approved'] = $this->task->recentApprovedTasks(config('limits.admin_approved_tasks'));
 		$tasks['unapproved'] = $this->task->recentUnapprovedTasks(config('limits.admin_unapproved_tasks'));
 		return view('admin.dashboard', compact('tasks'));
