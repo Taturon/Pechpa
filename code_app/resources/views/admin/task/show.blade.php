@@ -5,8 +5,8 @@
 @section('title', $task->title)
 @section('content')
 <div class="row">
-	<div class="col-md-12">
-		<div class="page-header" style="margin-top:-20px;padding-bottom:0px;">
+	<div id="content" class="col-md-12">
+		<div id="page-header" class="page-header">
 			<h1>
 				<b>{{ $task->title }}</b>
 				<br>
@@ -98,9 +98,19 @@
 		</div>
 		<hr>
 		<ol class="breadcrumb">
-			<li><a href="{{ route('admin.dashboard') }}">@lang('words.titles.admin_dashboard')</a></li>
-			<li><a href="{{ route('admin.tasks.index') }}">@lang('words.titles.unapproved_tasks_list')</a></li>
-			<li class="active">@lang('words.titles.approved_task')&thinsp;:&thinsp;{{ $task->title }}</li>
+			<li>
+				<a href="{{ route('admin.dashboard') }}">
+					@lang('words.titles.admin_dashboard')
+				</a>
+			</li>
+			<li>
+				<a href="{{ route('admin.approved') }}">
+					@lang('words.titles.approved_tasks_list')
+				</a>
+			</li>
+			<li class="active">
+				@lang('words.titles.approved_tasks')&thinsp;:&thinsp;{{ $task->title }}
+			</li>
 		</ol>
 	</div>
 </div>

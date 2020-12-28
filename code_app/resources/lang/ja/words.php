@@ -16,11 +16,11 @@ return [
 		'task_edit' => '問題編集',
 		'answers_list' => '回答一覧',
 		'admin_dashboard' => '管理者ダッシュボード',
+		'approved_tasks_list' => '承認済み問題一覧',
 		'unapproved_tasks_list' => '承認待ち問題一覧',
-		'approved_task' => '承認済み問題',
 		'tasks_recent_unapproved_list' => '直近の承認待ち問題',
 		'tasks_recent_approved_list' => '直近の承認済み問題',
-		'task_approval' => '問題の承認',
+		'task_edit_or_approve' => '問題の編集・承認',
 	],
 
 	'notices' => [
@@ -54,6 +54,7 @@ return [
 		'task_created' => '問題を提案をお受けしました！ 運営のレビューをお待ち下さい',
 		'task_updated' => '問題の内容を更新しました！',
 		'task_deleted' => '問題を削除しました！',
+		'task_approved' => '問題を承認しました！',
 	],
 
 	'authentication' => [

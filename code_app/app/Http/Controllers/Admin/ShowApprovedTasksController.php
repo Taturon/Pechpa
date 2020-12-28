@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Repositories\Task\TaskRepositoryInterface AS Task;
 
-class DashboardController extends Controller {
+class ShowApprovedTasksController extends Controller {
 
 	protected $task;
 
@@ -15,8 +15,7 @@ class DashboardController extends Controller {
 	}
 
 	public function __invoke() {
-		$tasks['approved'] = $this->task->recentApprovedTasks(config('limits.admin_approved_tasks'));
-		$tasks['unapproved'] = $this->task->recentUnapprovedTasks(config('limits.admin_unapproved_tasks'));
-		return view('admin.dashboard', compact('tasks'));
+		$tasks = $this->task->allReviewedTasks(config('pagings.admin_approved_tasks'));
+		return view('admin.task.approved', compact('tasks'));
 	}
 }

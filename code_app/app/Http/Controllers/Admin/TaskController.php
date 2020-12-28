@@ -15,11 +15,6 @@ class TaskController extends Controller {
 		$this->task = $task;
 	}
 
-	public function index() {
-		$tasks = $this->task->allUnreviewedTasks(config('pagings.admin_unapproved_tasks'));
-		return view('admin.task.index', compact('tasks'));
-	}
-
 	public function show($id) {
 		$task = $this->task->findReviewedTask($id);
 		return view('admin.task.show', compact('task'));
@@ -37,10 +32,10 @@ class TaskController extends Controller {
 		$this->task->storeTestCases($task_id, $request);
 		if ($request->has('approval')) {
 			$this->task->updateTaskWithApproval($task_id, $request);
-			return redirect()->route('admin.tasks.index')->with('success', __('flash.task_approved'));
+			return redirect()->route('admin.tasks.index')->with('success', __('words.flashes.task_approved'));
 		} elseif ($request->has('update')) {
 			$this->task->updateTaskWithoutApproval($task_id, $request);
-			return redirect()->route('admin.tasks.index')->with('success', __('flash.task_updated'));
+			return redirect()->route('admin.tasks.index')->with('success', __('words.flashes.task_updated'));
 		}
 	}
 }

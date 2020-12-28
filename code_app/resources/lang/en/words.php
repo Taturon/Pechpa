@@ -16,11 +16,11 @@ return [
 		'task_edit' => 'Task Edit',
 		'answers_list' => 'Answers List',
 		'admin_dashboard' => 'Admin Dashboard',
+		'approved_tasks_list' => 'Approved Tasks',
 		'unapproved_tasks_list' => 'Unapproved Tasks',
-		'approved_task' => 'Approved Task',
 		'tasks_recent_unapproved_list' => 'Recent Unapproved Tasks',
 		'tasks_recent_approved_list' => 'Recent Approved Tasks',
-		'task_approval' => 'Task Approval',
+		'task_edit_or_approve' => 'Task Edit or Approve',
 	],
 
 	'notices' => [
@@ -52,8 +52,9 @@ return [
 		'correct_answer' => 'Correct answer !',
 		'profile_updated' => 'Your profile updated !',
 		'task_created' => 'We have received a your suggestion ! Please wait for the review.',
-		'task_updated' => 'The task updated !',
-		'task_deleted' => 'The task deleted !',
+		'task_updated' => 'The task was updated !',
+		'task_deleted' => 'The task was deleted !',
+		'task_approved' => 'The task was approved !',
 	],
 
 	'authentication' => [
