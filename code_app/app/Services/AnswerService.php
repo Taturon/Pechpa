@@ -27,7 +27,7 @@ class AnswerService {
 		return $check_result;
 	}
 
-	public function tryTestCases($path, $tests, $answer_id, $user_id) {
+	public function tryTestCases($path, $tests, $answer_id) {
 		$datetime = Carbon::now();
 		foreach ($tests as $k => $test) {
 			$process = new Process(['php', $path]);
@@ -39,8 +39,6 @@ class AnswerService {
 				$test_judge = 'AC';
 			}
 			$test_results[$k] = [
-				'test_id' => $test->id,
-				'user_id' => $user_id,
 				'answer_id' => $answer_id,
 				'output' => str_replace($path, 'your_answer.php', $process->getOutput()),
 				'judge' => $test_judge,
