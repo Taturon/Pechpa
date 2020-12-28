@@ -38,7 +38,9 @@ class AnswerController extends Controller {
 
 	public function check(Request $request, $task_id) {
 		$user_id = $request->user()->id;
-		if ($this->task->isCreated($user_id, $task_id)) {
+		if (is_null($this->task->findReviewedTask($task_id))) {
+			return redirect()->route('tasks.show', ['task' => $task_id])->with('danger', __('words.notices.no_task'));
+		} elseif ($this->task->isCreated($user_id, $task_id)) {
 			return redirect()->route('tasks.show', ['task' => $task_id])->with('danger', __('words.notices.can_not_self_answer'));
 		} elseif ($this->answer->isSolved($user_id, $task_id)) {
 			return redirect()->route('tasks.show', ['task' => $task_id])->with('danger', __('words.notices.can_not_duplicate_answer'));
