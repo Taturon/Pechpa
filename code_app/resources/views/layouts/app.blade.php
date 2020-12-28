@@ -89,11 +89,9 @@
 									<i class="fas fa-tasks"></i>&thinsp;@lang('words.titles.answers_list')
 								</a>
 							</li>
-						@endif
-						@if (Auth::guard('admin')->check() || Auth::guard('user')->check())
 							<li class="dropdown">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" v-pre>
-									{{ Auth::guard('admin')->check() ? Auth::guard('admin')->user()->name : Auth::user()->name }} <span class="caret"></span>
+									{{ Auth::user()->name }} <span class="caret"></span>
 								</a>
 
 								<ul class="dropdown-menu">
@@ -109,18 +107,53 @@
 											{{ csrf_field() }}
 										</form>
 									</li>
-									@if (!Auth::guard('admin')->check())
-										<li>
-											<a href="{{ route('users.show', ['user_id' => Auth::user()->id]) }}">
-												<i class="fas fa-address-card"></i>&thinsp;@lang('words.titles.your_profile')
-											</a>
-										</li>
-										<li>
-											<a href="{{ route('users.edit', ['user_id' => Auth::user()->id]) }}">
-												<i class="fas fa-user-edit"></i>&thinsp;@lang('words.titles.profile_edit')
-											</a>
-										</li>
-									@endif
+									<li>
+										<a href="{{ route('users.show', ['user_id' => Auth::user()->id]) }}">
+											<i class="fas fa-address-card"></i>&thinsp;@lang('words.titles.your_profile')
+										</a>
+									</li>
+									<li>
+										<a href="{{ route('users.edit', ['user_id' => Auth::user()->id]) }}">
+											<i class="fas fa-user-edit"></i>&thinsp;@lang('words.titles.profile_edit')
+										</a>
+									</li>
+								</ul>
+							</li>
+						@endif
+						@if (Auth::guard('admin')->check())
+							<li>
+								<a href="{{ route('admin.approved') }}">
+									<i class="fas fa-code"></i>&thinsp;@lang('words.titles.approved_tasks_list')
+								</a>
+							</li>
+							<li>
+								<a href="{{ route('admin.unapproved') }}">
+									<i class="fas fa-code"></i>&thinsp;@lang('words.titles.unapproved_tasks_list')
+								</a>
+							</li>
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" v-pre>
+									{{ Auth::guard('admin')->user()->name }} <span class="caret"></span>
+								</a>
+
+								<ul class="dropdown-menu">
+									<li>
+										<a href="{{ Auth::guard('admin')->check() ? route('admin.logout') : route('logout') }}"
+											onclick="event.preventDefault();
+											document.getElementById('logout-form').submit();"
+										>
+											<i class="fas fa-sign-out-alt"></i>&thinsp;@lang('words.buttons.logout')
+										</a>
+
+										<form id="logout-form" action="{{ Auth::guard('admin')->check() ? route('admin.logout') : route('logout') }}" method="POST" style="display: none;">
+											{{ csrf_field() }}
+										</form>
+									</li>
+									<li>
+										<a href="{{ route('admin.dashboard') }}">
+											<i class="fas fa-list"></i>&thinsp;@lang('words.titles.admin_dashboard')
+										</a>
+									</li>
 								</ul>
 							</li>
 						@endif
