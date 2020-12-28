@@ -11,8 +11,4 @@ class Test extends Model {
 	public function task() {
 		return $this->belongsTo('App\Models\Task');
 	}
-
-	public function testings() {
-		return $this->hasMany('App\Models\Testing');
-	}
 }

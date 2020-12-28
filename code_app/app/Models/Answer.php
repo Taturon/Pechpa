@@ -16,7 +16,7 @@ class Answer extends Model {
 		return $this->belongsTo('App\Models\Task');
 	}
 
-	public function testing() {
+	public function testings() {
 		return $this->hasMany('App\Models\Testing');
 	}
 }
