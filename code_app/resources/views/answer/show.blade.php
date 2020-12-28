@@ -98,7 +98,7 @@
 					</tr>
 				</thead>
 				<tbody>
-					@foreach ($testings as $k => $testing)
+					@foreach ($answer->testings as $k => $testing)
 						<tr>
 							<td>
 								<div class="text-center">{{ ++$k }}</div>
