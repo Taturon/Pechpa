@@ -7,6 +7,7 @@ class TasksTableSeeder extends Seeder {
 
 	public function run() {
 		DB::table('tasks')->insert([[
+			'user_id' => 2,
 			'title' => '標準入力の受け取り',
 			'statement' => '入力Nが与えられるのでそのままNを出力して下さい。',
 			'constraints' => 'Nは整数かつ\( 1 \leqq N \leqq 100 \)',
@@ -19,6 +20,7 @@ class TasksTableSeeder extends Seeder {
 			'created_at' => '2020-11-01 00:00:00',
 			'updated_at' => '2020-11-01 00:00:00',
 		], [
+			'user_id' => 1,
 			'title' => '半角スペース区切りの標準入力の受け取り',
 			'statement' => '個数Nの文字\( C_i \)が半角スペース区切りで与えられるので改行区切りで出力して下さい。',
 			'constraints' => 'Nは\( 1 \leqq N \leqq 100 \)かつ\( C_i \)は全て小文字英字',
@@ -31,6 +33,7 @@ class TasksTableSeeder extends Seeder {
 			'created_at' => '2020-11-01 00:00:01',
 			'updated_at' => '2020-11-01 00:00:01',
 		], [
+			'user_id' => 2,
 			'title' => '繰り返し処理',
 			'statement' => '入力Nが与えられるので1からNまでを改行区切りで出力して下さい。',
 			'constraints' => 'Nは整数かつ\( 1 \leqq N \leqq 100 \)',
@@ -43,6 +46,7 @@ class TasksTableSeeder extends Seeder {
 			'created_at' => '2020-11-01 00:00:02',
 			'updated_at' => '2020-11-01 00:00:02',
 		], [
+			'user_id' => 2,
 			'title' => '場合分け',
 			'statement' => '入力Nが与えられるのでNが10以上の場合は「Yes」、10未満の場合は「No」を出力して下さい。',
 			'constraints' => 'Nは整数かつ\( 1 \leqq N \leqq 100 \)',
@@ -55,6 +59,7 @@ class TasksTableSeeder extends Seeder {
 			'created_at' => '2020-11-01 00:00:03',
 			'updated_at' => '2020-11-01 00:00:03',
 		], [
+			'user_id' => 2,
 			'title' => '三角形の面積',
 			'statement' => '底辺の長さBと高さHが与えられるので三角形の面積Sを文字列で出力して下さい。',
 			'constraints' => 'BとHは共に整数かつ\( 1 \leqq B, H \leqq 100 \)',
@@ -67,6 +72,7 @@ class TasksTableSeeder extends Seeder {
 			'created_at' => '2020-11-01 00:00:04',
 			'updated_at' => '2020-11-01 00:00:04',
 		], [
+			'user_id' => 2,
 			'title' => '文字の結合',
 			'statement' => '個数Nの文字\( C_i \)が改行区切りで与えられるので全て結合した文字列Sを出力して下さい。',
 			'constraints' => 'Nは\( 1 \leqq N \leqq 100 \)かつ\( C_i \)は全て英字',
@@ -79,6 +85,7 @@ class TasksTableSeeder extends Seeder {
 			'created_at' => '2020-11-01 00:00:05',
 			'updated_at' => '2020-11-01 00:00:05',
 		], [
+			'user_id' => 2,
 			'title' => '倍数',
 			'statement' => '入力Nが与えられるので倍数Dを出力して下さい。',
 			'constraints' => 'Nは整数かつ\( 1 \leqq N \leqq 100 \)',
@@ -91,6 +98,7 @@ class TasksTableSeeder extends Seeder {
 			'created_at' => '2020-11-01 00:00:06',
 			'updated_at' => '2020-11-01 00:00:06',
 		], [
+			'user_id' => 2,
 			'title' => '月数計算',
 			'statement' => '日数dが与えられるので月数M及び残りの日数Dを出力して下さい。',
 			'constraints' => "dは整数かつ\( 1 \leqq N \leqq 1000 \)\n1ヶ月は31日とする",
@@ -103,6 +111,7 @@ class TasksTableSeeder extends Seeder {
 			'created_at' => '2020-11-01 00:00:07',
 			'updated_at' => '2020-11-01 00:00:07',
 		], [
+			'user_id' => 2,
 			'title' => '最小律',
 			'statement' => "ドイツの化学者リービッヒによる最小養分律とは「植物には窒素・りん酸・カリウムの 3 要素が必須であり、生長の度合いは3要素の中で最も与えられる量の少ない養分によってのみ影響される」というものです。\nあなたは植物学者で研究対象の植物の成長度合いを10段階で評価してレポートを書いています。\n窒素・りん酸・カリウムの量N・P・Kが10段階で与えられるので、植物の成長度合いGを出力してください。",
 			'constraints' => "N, P, Kはいずれも整数かつ\( 1 \leqq N, P, K \leqq 10 \)\n植物の成長度合いGは3要素の内最も少ないものと同じとなる",
@@ -115,6 +124,20 @@ class TasksTableSeeder extends Seeder {
 			'created_at' => '2020-11-01 00:00:08',
 			'updated_at' => '2020-11-01 00:00:08',
 		], [
+			'user_id' => 1,
+			'title' => '等比数列',
+			'statement' => '初項Aと公比Rが与えられるのでN項目の値I_Nを出力して下さい。',
+			'constraints' => 'A, R, Nはいずれも整数かつ\( 1 \leqq A, R, N \leqq 10 \)',
+			'input' => '入力は以下の形式で標準入力から与えられます。',
+			'input_code' => 'A R N',
+			'output' => 'N項目の値A_Nを出力して下さい。',
+			'output_code' => 'A_N',
+			'difficulty' => 1,
+			'reviewed_at' => NULL,
+			'created_at' => '2020-11-01 00:00:09',
+			'updated_at' => '2020-11-01 00:00:09',
+		], [
+			'user_id' => 2,
 			'title' => 'FizzBuzz',
 			'statement' => "入力Nが与えられるので、1からNの範囲でNが\n3の倍数の時は「Fizz」\n5の倍数の時は「Buzz」\n15の倍数の時は「FizzBuzz」\nこれら以外の場合は数字\nをそれぞれ改行区切りで出力して下さい。",
 			'constraints' => 'Nは整数かつ\( 1 \leqq N \leqq 100 \)',
@@ -123,10 +146,11 @@ class TasksTableSeeder extends Seeder {
 			'output' => '「Fizz」、「Buzz」、「FizzBuzz」、「数値」のいずれかを改行区切りで出力してください。',
 			'output_code' => NULL,
 			'difficulty' => 2,
-			'reviewed_at' => '2020-11-01 00:00:09',
-			'created_at' => '2020-11-01 00:00:09',
-			'updated_at' => '2020-11-01 00:00:09',
+			'reviewed_at' => '2020-11-01 00:00:10',
+			'created_at' => '2020-11-01 00:00:10',
+			'updated_at' => '2020-11-01 00:00:10',
 		], [
+			'user_id' => 2,
 			'title' => 'フィボナッチ数列',
 			'statement' => 'フィボナッチ数列を入力Nまで出力して下さい。',
 			'constraints' => 'Nは整数かつ\( 1 \leqq N \leqq 50 \)',
@@ -135,10 +159,11 @@ class TasksTableSeeder extends Seeder {
 			'output' => '指定された個数のフィボナッチ数列を改行区切りで出力してください。',
 			'output_code' => NULL,
 			'difficulty' => 2,
-			'reviewed_at' => '2020-11-01 00:00:10',
-			'created_at' => '2020-11-01 00:00:10',
-			'updated_at' => '2020-11-01 00:00:10',
+			'reviewed_at' => '2020-11-01 00:00:11',
+			'created_at' => '2020-11-01 00:00:11',
+			'updated_at' => '2020-11-01 00:00:11',
 		], [
+			'user_id' => 2,
 			'title' => '文章校正',
 			'statement' => "N列の文が与えられるので先頭の単語の頭文字のみ大文字にして全ての文を改行区切りで出力して下さい。\n既に文の先頭の単語の頭文字が大文字になっている場合はそのまま出力して下さい。",
 			'constraints' => "文の列数Nは\( 1 \leqq N \leqq 100 \)\nN列の単語W_n_iの数iは\( 1 \leqq i \leqq 50 \)",
@@ -147,10 +172,11 @@ class TasksTableSeeder extends Seeder {
 			'output' => '校正した文章を改行区切りで出力して下さい。',
 			'output_code' => NULL,
 			'difficulty' => 2,
-			'reviewed_at' => '2020-11-01 00:00:11',
-			'created_at' => '2020-11-01 00:00:11',
-			'updated_at' => '2020-11-01 00:00:11',
+			'reviewed_at' => '2020-11-01 00:00:12',
+			'created_at' => '2020-11-01 00:00:12',
+			'updated_at' => '2020-11-01 00:00:12',
 		], [
+			'user_id' => 2,
 			'title' => '最大公約数',
 			'statement' => "整数A, B, Cが与えられるのでこれらの最大公約数Gを出力して下さい。",
 			'constraints' => "A, B, Cはいずれも整数かつ\( 1 \leqq A, B, C \leqq 100 \)",
@@ -159,10 +185,11 @@ class TasksTableSeeder extends Seeder {
 			'output' => '入力A, B, Cの最大公約数Gを出力して下さい。',
 			'output_code' => 'G',
 			'difficulty' => 2,
-			'reviewed_at' => '2020-11-01 00:00:12',
-			'created_at' => '2020-11-01 00:00:12',
-			'updated_at' => '2020-11-01 00:00:12',
+			'reviewed_at' => '2020-11-01 00:00:13',
+			'created_at' => '2020-11-01 00:00:13',
+			'updated_at' => '2020-11-01 00:00:13',
 		], [
+			'user_id' => 2,
 			'title' => '二進数から十進数への変換',
 			'statement' => "N桁の二進数Bが与えられるので十進数Dに変換して出力して下さい。",
 			'constraints' => "桁数Nは\( 1 \leqq A, B, C \leqq 10 \)",
@@ -171,10 +198,11 @@ class TasksTableSeeder extends Seeder {
 			'output' => '変換した十進数Dを出力して下さい。',
 			'output_code' => 'D',
 			'difficulty' => 2,
-			'reviewed_at' => '2020-11-01 00:00:13',
-			'created_at' => '2020-11-01 00:00:13',
-			'updated_at' => '2020-11-01 00:00:13',
+			'reviewed_at' => '2020-11-01 00:00:14',
+			'created_at' => '2020-11-01 00:00:14',
+			'updated_at' => '2020-11-01 00:00:14',
 		], [
+			'user_id' => 2,
 			'title' => 'シーザー暗号',
 			'statement' => "平文の各文字を辞書順にシフトさせて暗号文とする暗号をシーザー暗号といいます。\nシフト数S及び変換前の単語W_iがN個改行区切りで与えられるので変換した単語C_iを出力して下さい。",
 			'constraints' => "シフト数Sは整数かつ\( -10 \leqq S \leqq 10 \)\nシフト数が正の場合は右シフト・負の場合は左シフトとする\n単語数Nは\( 1 \leqq N \leqq 10 \)\n単語W_iは全て小文字英字",
@@ -183,9 +211,9 @@ class TasksTableSeeder extends Seeder {
 			'output' => 'シフト数だけ変換した単語C_iを改行区切りで出力して下さい。',
 			'output_code' => "C_1\nC_i\nC_N\n",
 			'difficulty' => 3,
-			'reviewed_at' => '2020-11-01 00:00:14',
-			'created_at' => '2020-11-01 00:00:14',
-			'updated_at' => '2020-11-01 00:00:14',
+			'reviewed_at' => '2020-11-01 00:00:15',
+			'created_at' => '2020-11-01 00:00:15',
+			'updated_at' => '2020-11-01 00:00:15',
 		]]);
 	}
 }
