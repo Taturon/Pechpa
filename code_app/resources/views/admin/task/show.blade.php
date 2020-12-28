@@ -98,9 +98,19 @@
 		</div>
 		<hr>
 		<ol class="breadcrumb">
-			<li><a href="{{ route('admin.dashboard') }}">@lang('words.titles.admin_dashboard')</a></li>
-			<li><a href="{{ route('admin.tasks.index') }}">@lang('words.titles.unapproved_tasks_list')</a></li>
-			<li class="active">@lang('words.titles.approved_tasks')&thinsp;:&thinsp;{{ $task->title }}</li>
+			<li>
+				<a href="{{ route('admin.dashboard') }}">
+					@lang('words.titles.admin_dashboard')
+				</a>
+			</li>
+			<li>
+				<a href="{{ route('admin.approved') }}">
+					@lang('words.titles.approved_tasks_list')
+				</a>
+			</li>
+			<li class="active">
+				@lang('words.titles.approved_tasks')&thinsp;:&thinsp;{{ $task->title }}
+			</li>
 		</ol>
 	</div>
 </div>

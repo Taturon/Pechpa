@@ -1,7 +1,7 @@
 @extends('layouts.app')
-@section('title', __('words.titles.task_approval'))
+@section('title', __('words.titles.task_edit_or_approve'))
 @section('header')
-<script src="{{ asset('/js/tab.js') }}"></script>
+	<script src="{{ asset('/js/tab.js') }}"></script>
 @endsection
 @section('content')
 @component('components.alert')
@@ -9,7 +9,7 @@
 <div class="row">
 	<div id="content" class="col-md-12 form-panel">
 		<div class="panel panel-default">
-			<div class="panel-heading text-center"><h1>@lang('words.titles.task_approval')</h1></div>
+			<div class="panel-heading text-center"><h1>@lang('words.titles.task_edit_or_approve')</h1></div>
 			<div class="panel-body">
 				<form class="form-horizontal" method="POST" action="{{ route('admin.tasks.update', ['task_id' => $task->id]) }}">
 					{{ csrf_field() }}
@@ -34,6 +34,22 @@
 				</form>
 			</div>
 		</div>
+		<hr>
+		<ol class="breadcrumb">
+			<li>
+				<a href="{{ route('admin.dashboard') }}">
+					@lang('words.titles.admin_dashboard')
+				</a>
+			</li>
+			<li>
+				<a href="{{ route('admin.unapproved') }}">
+					@lang('words.titles.unapproved_tasks_list')
+				</a>
+			</li>
+			<li class="active">
+				@lang('words.titles.task_edit_or_approve')&thinsp;:&thinsp;{{ $task->title }}
+			</li>
+		</ol>
 	</div>
 </div>
 @endsection
