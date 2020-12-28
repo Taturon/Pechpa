@@ -1,0 +1,51 @@
+#content {
+	background-color:white;
+}
+
+.form-panel {
+	padding-top:15px;
+}
+
+#page-header {
+	margin-top:5px;
+	padding-top:5px;
+}
+
+#page-header-h2 {
+	margin-top:-25px;
+	padding-bottom:0px;
+}
+
+#side-bar-wrapper {
+	background-color:oldlace;
+	padding:5px;
+}
+
+#side-bar-block {
+	margin:11px;
+	padding:20px 5px 10px;
+	border:2px solid #CCC;
+	background-color:white;
+	word-break:break-all;
+}
+
+#side-bar-inner-block {
+	padding:0 10px
+}
+
+#inner-bar {
+	margin:5px 0;
+}
+
+#bold-bar {
+	border-width:5px;
+}
+
+#notice-block {
+	color:lightgray;
+	padding:0 10px;
+}
+
+#edit-link {
+	font-size:15px;
+}

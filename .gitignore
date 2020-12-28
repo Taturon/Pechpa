@@ -1,0 +1,3 @@
+/test/*
+code_app/database/seeds/UsersTableSeeder.php
+code_app/database/seeds/AdminsTableSeeder.php
