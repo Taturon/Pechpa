@@ -55,6 +55,8 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth:admin'], function() {
 	Route::name('admin.')->group( function() {
 		Route::post('logout', 'Admin\LoginController@logout')->name('logout');
 		Route::get('dashboard', 'Admin\DashboardController')->name('dashboard');
+		Route::get('approved_tasks', 'Admin\ShowApprovedTasksController')->name('approved');
+		Route::get('unapproved_tasks', 'Admin\ShowUnapprovedTasksController')->name('unapproved');
 		Route::resource('tasks', 'Admin\TaskController', ['except' => ['create', 'destroy']]);
 	});
 });
