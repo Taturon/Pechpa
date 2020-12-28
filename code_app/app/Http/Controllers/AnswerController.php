@@ -29,8 +29,7 @@ class AnswerController extends Controller {
 	public function show($id) {
 		$answer = $this->answer->findById($id);
 		if ($answer) {
-			$testings = $answer->testing;
-			return view('answer.show', compact('answer', 'testings'));
+			return view('answer.show', compact('answer'));
 		} else {
 			return redirect()->route('answers.index')->with('error', __('words.flashes.no_answer'));
 		}
@@ -52,7 +51,7 @@ class AnswerController extends Controller {
 		$syntax_check_result = $this->answer_service->syntaxCheck($path);
 		$answer = $this->answer->storeSyntaxCheckResult($request->source, $syntax_check_result, $user_id, $task_id);
 		$tests = $this->task->findReviewedTask($task_id)->tests;
-		$test_results = $this->answer_service->tryTestCases($path, $tests, $answer->id, $user_id);
+		$test_results = $this->answer_service->tryTestCases($path, $tests, $answer->id);
 		$this->answer->storeTestingResults($test_results);
 		$mismatches = $this->answer_service->countMismatches($test_results);
 		if ($mismatches === 0) {
