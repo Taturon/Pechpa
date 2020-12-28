@@ -2,6 +2,7 @@
 
 namespace App\Services;
 
+use Carbon\Carbon;
 use Illuminate\Support\Facades\File;
 use Symfony\Component\Process\Process;
 use Symfony\Component\Process\Exception\ProcessFailedException;
@@ -27,6 +28,7 @@ class AnswerService {
 	}
 
 	public function tryTestCases($path, $tests, $answer_id, $user_id) {
+		$datetime = Carbon::now();
 		foreach ($tests as $k => $test) {
 			$process = new Process(['php', $path]);
 			$process->setInput($test->input);
@@ -41,7 +43,9 @@ class AnswerService {
 				'user_id' => $user_id,
 				'answer_id' => $answer_id,
 				'output' => str_replace($path, 'your_answer.php', $process->getOutput()),
-				'judge' => $test_judge
+				'judge' => $test_judge,
+				'created_at' => $datetime,
+				'updated_at' => $datetime,
 			];
 		}
 		return $test_results;
