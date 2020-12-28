@@ -11,6 +11,8 @@ class DatabaseSeeder extends Seeder {
 			TasksTableSeeder::class,
 			TestsTableSeeder::class,
 			SamplesTableSeeder::class,
+			AnswersTableSeeder::class,
+			TestingsTableSeeder::class,
 		]);
 	}
 }
