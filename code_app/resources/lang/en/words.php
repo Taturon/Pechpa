@@ -21,6 +21,7 @@ return [
 		'tasks_recent_unapproved_list' => 'Recent Unapproved Tasks',
 		'tasks_recent_approved_list' => 'Recent Approved Tasks',
 		'task_edit_or_approve' => 'Task Edit or Approve',
+		'inquiry_create' => 'Create Inquiry',
 	],
 
 	'notices' => [
@@ -80,6 +81,17 @@ return [
 		'all_answers_count' => 'Answers',
 		'correct_answers_count' => 'Correct Answers',
 		'correct_answer_rate' => 'Correct Answer Rate',
+	],
+
+	'inquiries' => [
+		'title' => 'Title',
+		'categories' => 'Category',
+		'contents' => 'Contents',
+		'other' => 'Other',
+		'about_tasks' => 'About Tasks',
+		'about_judges' => 'About Judges',
+		'defect_report' => 'Defect Report',
+		'new_features_request' => 'New Features Request',
 	],
 
 	'tasks' => [
