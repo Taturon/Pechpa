@@ -15,6 +15,7 @@
  * いかなる状態でもアクセス可
  */
 Route::get('/', 'TaskController@index')->name('tasks.index');
+Route::resource('inquiries', 'InquiryController', ['only' => ['create', 'store']]);
 
 /**
  * ユーザー非認証状態でアクセス可
