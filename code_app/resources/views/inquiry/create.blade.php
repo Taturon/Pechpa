@@ -10,20 +10,20 @@
 			<div class="panel-body">
 				<form class="form-horizontal" method="POST" action="{{ route('inquiries.store') }}">
 					{{ csrf_field() }}
-					<div class="form-group{{ $errors->has('title') ? ' has-error' : '' }}">
-						<label for="title" class="col-md-10 col-md-offset-1">
+					<div class="form-group{{ $errors->has('inquiry_title') ? ' has-error' : '' }}">
+						<label for="inquiry_title" class="col-md-10 col-md-offset-1">
 							@lang('words.inquiries.title')
 							<small>
 								<span class="label label-danger">@lang('words.notices.required')</span>
 								&emsp;
-								<span class="label label-warning">@lang('words.notices.max_characters', ['count' => '500'])</span>
+								<span class="label label-warning">@lang('words.notices.max_characters', ['count' => '50'])</span>
 							</small>
 						</label>
 						<div class="col-md-10 col-md-offset-1">
-							<input id="title" type="text" class="form-control" name="title" value="{{ old('title') }}" required autofocus>
-							@if ($errors->has('title'))
+							<input id="inquiry_title" type="text" class="form-control" name="inquiry_title" value="{{ old('inquiry_title') }}" required autofocus>
+							@if ($errors->has('inquiry_title'))
 								<span class="help-block">
-									<strong>{{ $errors->first('title') }}</strong>
+									<strong>{{ $errors->first('inquiry_title') }}</strong>
 								</span>
 							@endif
 						</div>
