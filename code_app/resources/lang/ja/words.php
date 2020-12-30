@@ -56,6 +56,7 @@ return [
 		'task_updated' => '問題の内容を更新しました！',
 		'task_deleted' => '問題を削除しました！',
 		'task_approved' => '問題を承認しました！',
+		'inquiry_recived' => 'お問い合わせを送信しました！',
 	],
 
 	'authentication' => [

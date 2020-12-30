@@ -56,6 +56,7 @@ return [
 		'task_updated' => 'The task was updated !',
 		'task_deleted' => 'The task was deleted !',
 		'task_approved' => 'The task was approved !',
+		'inquiry_recived' => 'The Inquiry Recived !',
 	],
 
 	'authentication' => [
