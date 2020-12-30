@@ -21,6 +21,7 @@ return [
 		'tasks_recent_unapproved_list' => '直近の承認待ち問題',
 		'tasks_recent_approved_list' => '直近の承認済み問題',
 		'task_edit_or_approve' => '問題の編集・承認',
+		'inquiry_create' => 'お問い合わせ',
 	],
 
 	'notices' => [
@@ -55,6 +56,7 @@ return [
 		'task_updated' => '問題の内容を更新しました！',
 		'task_deleted' => '問題を削除しました！',
 		'task_approved' => '問題を承認しました！',
+		'inquiry_recived' => 'お問い合わせを送信しました！',
 	],
 
 	'authentication' => [
@@ -80,6 +82,17 @@ return [
 		'all_answers_count' => '回答数',
 		'correct_answers_count' => '正答数',
 		'correct_answer_rate' => '正答率',
+	],
+
+	'inquiries' => [
+		'title' => 'タイトル',
+		'categories' => 'カテゴリー',
+		'contents' => '内容',
+		'other' => 'その他',
+		'about_tasks' => '問題について',
+		'about_judges' => '解答の合否判定について',
+		'defect_report' => '不具合報告',
+		'new_features_request' => '新機能の要望',
 	],
 
 	'tasks' => [

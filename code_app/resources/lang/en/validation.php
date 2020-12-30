@@ -145,6 +145,10 @@ return [
 		'test_input_4' => 'Test Input4',
 		'test_output_4' => 'Test Output4',
 
+		'inquiry_title' => 'Title',
+		'category' => 'Category',
+		'contents' => 'Contents',
+
 	],
 
 ];
