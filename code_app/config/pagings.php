@@ -6,4 +6,5 @@ return [
 	'user_created_tasks' => 5,
 	'admin_approved_tasks' => 15,
 	'admin_unapproved_tasks' => 15,
+	'admin_inquiries' => 15,
 ];

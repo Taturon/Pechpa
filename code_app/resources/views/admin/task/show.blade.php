@@ -4,7 +4,6 @@
 @endsection
 @section('title', $task->title)
 @section('content')
-<div class="row">
 	<div id="content" class="col-md-12">
 		<div id="page-header" class="page-header">
 			<h1>
@@ -113,5 +112,4 @@
 			</li>
 		</ol>
 	</div>
-</div>
 @endsection

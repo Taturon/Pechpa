@@ -4,9 +4,8 @@
 	<script src="{{ asset('/js/tab.js') }}"></script>
 @endsection
 @section('content')
-@component('components.alert')
-@endcomponent
-<div class="row">
+	@component('components.alert')
+	@endcomponent
 	<div id="content" class="col-md-12 form-panel">
 		<div class="panel panel-default">
 			<div class="panel-heading text-center"><h1>@lang('words.titles.task_edit_or_approve')</h1></div>
@@ -51,5 +50,4 @@
 			</li>
 		</ol>
 	</div>
-</div>
 @endsection

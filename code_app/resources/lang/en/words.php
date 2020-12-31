@@ -21,6 +21,8 @@ return [
 		'tasks_recent_unapproved_list' => 'Recent Unapproved Tasks',
 		'tasks_recent_approved_list' => 'Recent Approved Tasks',
 		'task_edit_or_approve' => 'Task Edit or Approve',
+		'inquiries_list' => 'Inquiries List',
+		'recent_inquiries_list' => 'Recent Inquiries',
 		'inquiry_create' => 'Create Inquiry',
 	],
 
@@ -36,6 +38,7 @@ return [
 		'no_approved_tasks' => "There are no approved tasks by :name.",
 		'no_unapproved_tasks' => "There are no unapproved tasks by :name.",
 		'no_answers' => "There are no answers. <br>Let's solve !",
+		'no_inquiries' => 'There are no inquiries.',
 		'can_not_self_answer' => 'You can not answer the your created tasks.',
 		'can_not_duplicate_answer' => 'You can not answer the correctly answered tasks.',
 		'tasks_no_unapproved_list' => 'There is no unapproved tasks.',
@@ -49,6 +52,7 @@ return [
 		'no_user' => 'Invalid User ID',
 		'no_task' => 'Invalid Task No.',
 		'no_answer' => 'Invalid Answer No.',
+		'no_inquiry' => 'Invalid Inquiry No.',
 		'wrong_answer' => 'Incorrect answer...',
 		'correct_answer' => 'Correct answer !',
 		'profile_updated' => 'Your profile updated !',
@@ -85,9 +89,11 @@ return [
 	],
 
 	'inquiries' => [
+		'user_name' => 'User Name',
 		'title' => 'Title',
 		'categories' => 'Category',
 		'contents' => 'Contents',
+		'inquired_date' => 'Inquired Date',
 		'other' => 'Other',
 		'about_tasks' => 'About Tasks',
 		'about_judges' => 'About Judges',
