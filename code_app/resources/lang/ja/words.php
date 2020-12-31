@@ -21,6 +21,7 @@ return [
 		'tasks_recent_unapproved_list' => '直近の承認待ち問題',
 		'tasks_recent_approved_list' => '直近の承認済み問題',
 		'task_edit_or_approve' => '問題の編集・承認',
+		'inquiries_list' => 'お問い合わせ一覧',
 		'inquiry_create' => 'お問い合わせ',
 	],
 
@@ -36,6 +37,7 @@ return [
 		'no_approved_tasks' => ":nameさんの承認済み問題はありません",
 		'no_unapproved_tasks' => ":nameさんの承認待ち問題はありません",
 		'no_answers' => "まだ回答がありません<br>問題一覧ページから回答してみましょう！",
+		'no_inquiries' => 'お問い合わせはありません',
 		'can_not_self_answer' => '作成した問題には回答できません',
 		'can_not_duplicate_answer' => '正解した問題には回答できません',
 		'tasks_no_unapproved_list' => '承認待ち問題はありません',
@@ -85,9 +87,11 @@ return [
 	],
 
 	'inquiries' => [
+		'user_name' => 'ユーザー名',
 		'title' => 'タイトル',
 		'categories' => 'カテゴリー',
 		'contents' => '内容',
+		'created_at' => 'お問合せ日時',
 		'other' => 'その他',
 		'about_tasks' => '問題について',
 		'about_judges' => '解答の合否判定について',
