@@ -59,5 +59,6 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth:admin'], function() {
 		Route::get('approved_tasks', 'Admin\ShowApprovedTasksController')->name('approved');
 		Route::get('unapproved_tasks', 'Admin\ShowUnapprovedTasksController')->name('unapproved');
 		Route::resource('tasks', 'Admin\TaskController', ['except' => ['create', 'destroy']]);
+		Route::resource('inquiries', 'Admin\InquiryController', ['only' => ['index', 'show']]);
 	});
 });
