@@ -22,6 +22,7 @@ return [
 		'tasks_recent_approved_list' => '直近の承認済み問題',
 		'task_edit_or_approve' => '問題の編集・承認',
 		'inquiries_list' => 'お問い合わせ一覧',
+		'recent_inquiries_list' => '直近のお問い合わせ',
 		'inquiry_create' => 'お問い合わせ',
 	],
 

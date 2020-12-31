@@ -22,6 +22,7 @@ return [
 		'tasks_recent_approved_list' => 'Recent Approved Tasks',
 		'task_edit_or_approve' => 'Task Edit or Approve',
 		'inquiries_list' => 'Inquiries List',
+		'recent_inquiries_list' => 'Recent Inquiries',
 		'inquiry_create' => 'Create Inquiry',
 	],
 
