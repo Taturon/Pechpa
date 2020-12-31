@@ -13,7 +13,7 @@
 				<thead>
 					<tr>
 						<th style="width:15%;">
-							<div class="text-center">@lang('words.inquiries.created_at')</div>
+							<div class="text-center">@lang('words.inquiries.inquired_date')</div>
 						</th>
 						<th style="width:15%;">
 							<div class="text-center">@lang('words.inquiries.categories')</div>
@@ -36,7 +36,9 @@
 								@lang(config('configs.inquiries.categories')[$inquiry->category])
 							</td>
 							<td>
-								{{ $inquiry->title }}
+								<a href="{{ route('admin.inquiries.show', ['inquiry' => $inquiry->id]) }}">
+									{{ $inquiry->title }}
+								</a>
 							</td>
 							<td class="text-center">
 								<img src="{{ asset('storage/icons/' . $inquiry->user->icon) }}" width="20px" height="20px">
