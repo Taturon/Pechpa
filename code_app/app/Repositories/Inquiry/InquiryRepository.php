@@ -16,6 +16,10 @@ class InquiryRepository implements InquiryRepositoryInterface {
 		return $this->inquiry;
 	}
 
+	public function findById($id) {
+		return $this->inquiry->find($id);
+	}
+
 	public function storeInquiry($request, $user_id) {
 		return $this->inquiry->create([
 			'user_id' => $user_id,
