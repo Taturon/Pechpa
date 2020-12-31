@@ -8,5 +8,7 @@ interface InquiryRepositoryInterface {
 
 	public function findById($id);
 
+	public function recentInquiries($count);
+
 	public function storeInquiry($request, $user_id);
 }

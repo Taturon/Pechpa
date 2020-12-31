@@ -13,11 +13,15 @@ class InquiryRepository implements InquiryRepositoryInterface {
 	}
 
 	public function all() {
-		return $this->inquiry;
+		return $this->inquiry->orderBy('created_at', 'desc');
 	}
 
 	public function findById($id) {
 		return $this->inquiry->find($id);
+	}
+
+	public function recentInquiries($count) {
+		return $this->inquiry->orderBy('created_at', 'desc')->limit($count)->get();
 	}
 
 	public function storeInquiry($request, $user_id) {
