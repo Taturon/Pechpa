@@ -131,6 +131,11 @@
 									<i class="fas fa-code"></i>&thinsp;@lang('words.titles.unapproved_tasks_list')
 								</a>
 							</li>
+							<li>
+								<a href="{{ route('admin.inquiries.index') }}">
+									<i class="fas fa-question-circle"></i>&thinsp;@lang('words.titles.inquiries_list')
+								</a>
+							</li>
 							<li class="dropdown">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" v-pre>
 									{{ Auth::guard('admin')->user()->name }} <span class="caret"></span>
