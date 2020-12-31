@@ -34,13 +34,16 @@
 				</div>
 			</div>
 		</div>
-		@component('components.alert')
-		@endcomponent
-		<h3>
-			<b>{{ $inquiry->contents }}</b>
-		</h3>
+		<p id="word-wrap">
+			{{ $inquiry->contents }}
+		</p>
 		<hr>
 		<ol class="breadcrumb">
+			<li>
+				<a href="{{ route('admin.dashboard') }}">
+					@lang('words.titles.admin_dashboard')
+				</a>
+			</li>
 			<li>
 				<a href="{{ route('admin.inquiries.index') }}">
 					<i class="fas fa-code"></i>&thinsp;@lang('words.titles.inquiries_list')
