@@ -18,4 +18,13 @@ class InquiryController extends Controller {
 		$inquiries = $this->inquiry->all()->paginate(config('pageings.admin_inquiries'));
 		return view('admin.inquiry.index', compact('inquiries'));
 	}
+
+	public function show($id) {
+		$inquiry = $this->inquiry->findById($id);
+		if (!$inquiry) {
+			return redirect()->route('admin.inquiries.index')->with('error', __('words.flashes.no_inquiry'));
+		} else {
+			return view('admin.inquiry.show', compact('inquiry'));
+		}
+	}
 }
