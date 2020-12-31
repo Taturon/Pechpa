@@ -8,50 +8,8 @@
 	@component('components.alert')
 	@endcomponent
 	@if (count($inquiries) > 0)
-		<div class="table-responsive">
-			<table class="table table-striped table-hover table-bordered">
-				<thead>
-					<tr>
-						<th style="width:15%;">
-							<div class="text-center">@lang('words.inquiries.inquired_date')</div>
-						</th>
-						<th style="width:15%;">
-							<div class="text-center">@lang('words.inquiries.categories')</div>
-						</th>
-						<th style="width:55%;">
-							<div class="text-center">@lang('words.inquiries.title')</div>
-						</th>
-						<th style="width:15%;">
-							<div class="text-center">@lang('words.inquiries.user_name')</div>
-						</th>
-					</tr>
-				</thead>
-				<tbody>
-					@foreach ($inquiries as $inquiry)
-						<tr>
-							<td class="text-center">
-								{{ $inquiry->created_at }}
-							</td>
-							<td class="text-center">
-								@lang(config('configs.inquiries.categories')[$inquiry->category])
-							</td>
-							<td>
-								<a href="{{ route('admin.inquiries.show', ['inquiry' => $inquiry->id]) }}">
-									{{ $inquiry->title }}
-								</a>
-							</td>
-							<td class="text-center">
-								<img src="{{ asset('storage/icons/' . $inquiry->user->icon) }}" width="20px" height="20px">
-								{{ $inquiry->user->name }}
-							</td>
-						</tr>
-					@endforeach
-				</tbody>
-			</table>
-			<div class="text-center">
-				{{ $inquiries->links() }}
-			</div>
-		</div>
+		@component('components.inquiries_index', ['inquiries' => $inquiries])
+		@endcomponent
 	@else
 		<div class="row text-center">
 			<h1 style="color:lightgray;">@lang('words.notices.no_inquiries')</h1>
