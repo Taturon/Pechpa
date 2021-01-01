@@ -33,6 +33,6 @@ class UserController extends Controller {
 		$statics['all_answers'] = $this->user->countAllAnswers($user_id);
 		$statics['correct_answers'] = $this->user->countCorrectAnswers($user_id);
 		$statics['correct_rate'] = $this->user_service->calculateCorrectRate($statics['all_answers'], $statics['correct_answers']);
-		return view('user.show', compact(['user', 'statics']));
+		return view('admin.user.show', compact(['user', 'statics']));
 	}
 }
