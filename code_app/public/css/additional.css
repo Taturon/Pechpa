@@ -2,8 +2,14 @@ body {
 	padding-top:70px;
 }
 
+.navbar-static-bottom {
+	margin-bottom:0;
+	margin-top:22px;
+}
+
 #content {
 	background-color:white;
+	padding-bottom:5px;
 }
 
 #word-wrap {
