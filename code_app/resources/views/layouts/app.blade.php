@@ -182,6 +182,15 @@
 							</a>
 						</li>
 					@endif
+					<p class="navbar-text text-center">
+						&copy; 2020 - {{ date('Y') }} Taturon
+						<a href="https://github.com/Taturon" target="_blank">
+							<i class="fab fa-github"></i>
+						</a>
+						<a href="https://twitter.com/_Taturon_" target="_blank">
+							<i class="fab fa-twitter-square"></i>
+						</a>
+					</p>
 				</ul>
 			</div>
 		</nav>
