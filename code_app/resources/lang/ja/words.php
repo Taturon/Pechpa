@@ -24,6 +24,8 @@ return [
 		'inquiries_list' => 'お問い合わせ一覧',
 		'recent_inquiries_list' => '直近のお問い合わせ',
 		'inquiry_create' => 'お問い合わせ',
+		'users_list' => 'ユーザー一覧',
+		'recent_users_list' => '直近の登録ユーザー',
 	],
 
 	'notices' => [
@@ -33,6 +35,7 @@ return [
 		'max_mega_bytes' => '最大5MB',
 		'icon_size' => ':min &times; :min ~ :max &times; :max px',
 		'valid_extensions' => 'jpg/png/bmp/gif/svgのみ',
+		'no_users' => 'ユーザーが登録されていません',
 		'no_tasks' => '検索条件に該当する問題がありません',
 		'no_created_tasks' => "まだ問題がありません<br>問題作成ページから作成してみましょう！",
 		'no_approved_tasks' => ":nameさんの承認済み問題はありません",
@@ -78,6 +81,7 @@ return [
 		'icon' => 'アイコン',
 		'recent_answers' => '最近の回答',
 		'recent_tasks' => '最近作成した問題',
+		'created_tasks_count' => '作成問題数',
 		'created_tasks' => '作成した問題一覧',
 		'unapproved' => '未承認',
 		'approved' => '承認済',
@@ -89,6 +93,7 @@ return [
 	],
 
 	'inquiries' => [
+		'inquiry' => 'お問い合わせ',
 		'user_name' => 'ユーザー名',
 		'title' => 'タイトル',
 		'categories' => 'カテゴリー',

@@ -24,6 +24,8 @@ return [
 		'inquiries_list' => 'Inquiries List',
 		'recent_inquiries_list' => 'Recent Inquiries',
 		'inquiry_create' => 'Create Inquiry',
+		'users_list' => 'Users List',
+		'recent_users_list' => 'Recent Registered Users',
 	],
 
 	'notices' => [
@@ -33,6 +35,7 @@ return [
 		'max_mega_bytes' => 'Up to 5MB',
 		'icon_size' => ':min &times; :min ~ :max &times; :max px',
 		'valid_extensions' => 'Only jpg/png/bmp/gif/svg',
+		'no_users' => 'No users are registered.',
 		'no_tasks' => 'There are no tasks that match the search conditions.',
 		'no_created_tasks' => "There are no tasks.<br>Let's create !",
 		'no_approved_tasks' => "There are no approved tasks by :name.",
@@ -78,6 +81,7 @@ return [
 		'icon' => 'Icon',
 		'recent_answers' => 'Recent Answers',
 		'recent_tasks' => 'Recent Approved Tasks',
+		'created_tasks_count' => 'Created Tasks',
 		'created_tasks' => 'Created Tasks List',
 		'unapproved_tasks_count' => 'Unapproved Tasks',
 		'approved_tasks_count' => 'Approved Tasks',
@@ -89,6 +93,7 @@ return [
 	],
 
 	'inquiries' => [
+		'inquiry' => 'Inquiry',
 		'user_name' => 'User Name',
 		'title' => 'Title',
 		'categories' => 'Category',
