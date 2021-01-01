@@ -1,7 +1,6 @@
 @extends('layouts.app')
 @section('title', $answer->task->title)
 @section('content')
-<div class="row">
 	<div id="content" class="col-md-12">
 		<div id="page-header" class="page-header">
 			<h1>
@@ -126,5 +125,4 @@
 			<li class="active">{{ $answer->created_at }}</li>
 		</ol>
 	</div>
-</div>
 @endsection
