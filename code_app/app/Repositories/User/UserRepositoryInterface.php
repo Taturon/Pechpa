@@ -4,6 +4,8 @@ namespace App\Repositories\User;
 
 interface UserRepositoryInterface {
 
+	public function all();
+
 	public function findById($user_id);
 
 	public function countUnapprovedTasks($user_id);

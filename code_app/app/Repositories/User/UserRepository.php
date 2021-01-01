@@ -13,6 +13,10 @@ class UserRepository implements UserRepositoryInterface {
 		$this->user = $user;
 	}
 
+	public function all() {
+		return $this->user->orderBy('created_at', 'desc');
+	}
+
 	public function findById($user_id) {
 		return $this->user->find($user_id);
 	}
