@@ -136,6 +136,11 @@
 									<i class="fas fa-question-circle"></i>&thinsp;@lang('words.titles.inquiries_list')
 								</a>
 							</li>
+							<li>
+								<a href="{{ route('admin.users.index') }}">
+									<i class="fas fa-users"></i>&thinsp;@lang('words.titles.users_list')
+								</a>
+							</li>
 							<li class="dropdown">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" v-pre>
 									{{ Auth::guard('admin')->user()->name }} <span class="caret"></span>
