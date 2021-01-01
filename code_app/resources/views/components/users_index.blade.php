@@ -26,8 +26,10 @@
 						{{ $user->created_at }}
 					</td>
 					<td>
-						<img src="{{ asset('storage/icons/' . $user->icon) }}" width="20px" height="20px">
-						{{ $user->name }}
+						<a href="{{ route('admin.users.show', ['user' => $user->id]) }}">
+							<img src="{{ asset('storage/icons/' . $user->icon) }}" width="20px" height="20px">
+							{{ $user->name }}
+						</a>
 					</td>
 					<td>
 						{{ $user->email }}
