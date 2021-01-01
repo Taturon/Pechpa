@@ -37,6 +37,17 @@
 			<h1 style="color:lightgray;">@lang('words.notices.no_inquiries')</h1>
 		</div>
 	@endif
+	<div id="page-header" class="page-header">
+		<h1>@lang('words.titles.recent_users_list')</h1>
+	</div>
+	@if (count($users) > 0)
+		@component('components.users_index', ['users' => $users])
+		@endcomponent
+	@else
+		<div class="row text-center">
+			<h1 style="color:lightgray;">@lang('words.notices.no_users')</h1>
+		</div>
+	@endif
 	<hr>
 </div>
 @endsection

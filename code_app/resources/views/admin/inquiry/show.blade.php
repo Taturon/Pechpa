@@ -41,15 +41,17 @@
 		<ol class="breadcrumb">
 			<li>
 				<a href="{{ route('admin.dashboard') }}">
-					@lang('words.titles.admin_dashboard')
+					<i class="fas fa-list"></i>&thinsp;@lang('words.titles.admin_dashboard')
 				</a>
 			</li>
 			<li>
 				<a href="{{ route('admin.inquiries.index') }}">
-					<i class="fas fa-code"></i>&thinsp;@lang('words.titles.inquiries_list')
+					<i class="fas fa-question-circle"></i>&thinsp;@lang('words.titles.inquiries_list')
 				</a>
 			</li>
-			<li class="active">{{ $inquiry->title }}</li>
+			<li class="active">
+				<i class="fas fa-question-circle"></i>&thinsp;@lang('words.inquiries.inquiry')&thinsp;:&thinsp;{{ $inquiry->title }}
+			</li>
 		</ol>
 	</div>
 @endsection
