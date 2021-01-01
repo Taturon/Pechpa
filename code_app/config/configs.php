@@ -22,4 +22,19 @@ return [
 		'admin_users' => 15,
 	],
 
+	'limits' => [
+		'admin_approved_tasks' => 5,
+		'admin_unapproved_tasks' => 5,
+		'admin_inquiries' => 5,
+		'admin_users' => 5,
+		'user_icon_size' => [
+			'min' => 100,
+			'max' => 600,
+		],
+	],
+
+	'default' => [
+		'default_icon_filename' => 'default.png',
+	],
+
 ];
