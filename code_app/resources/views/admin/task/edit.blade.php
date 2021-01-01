@@ -37,16 +37,16 @@
 		<ol class="breadcrumb">
 			<li>
 				<a href="{{ route('admin.dashboard') }}">
-					@lang('words.titles.admin_dashboard')
+					<i class="fas fa-list"></i>&thinsp;@lang('words.titles.admin_dashboard')
 				</a>
 			</li>
 			<li>
 				<a href="{{ route('admin.unapproved') }}">
-					@lang('words.titles.unapproved_tasks_list')
+					<i class="fas fa-code"></i>&thinsp;@lang('words.titles.unapproved_tasks_list')
 				</a>
 			</li>
 			<li class="active">
-				@lang('words.titles.task_edit_or_approve')&thinsp;:&thinsp;{{ $task->title }}
+				<i class="fas fa-edit"></i>&thinsp;@lang('words.titles.task_edit_or_approve')&thinsp;:&thinsp;{{ $task->title }}
 			</li>
 		</ol>
 	</div>
