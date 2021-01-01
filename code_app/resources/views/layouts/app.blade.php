@@ -172,6 +172,20 @@
 			@yield('content')
 		</div>
 
+		<nav class="navbar navbar-default navbar-static-bottom">
+			<div class="container">
+				<ul class="nav navbar-nav navbar-right">
+					@if (Auth::guard('user')->check())
+						<li class="text-center">
+							<a href="{{ route('inquiries.create') }}">
+								<i class="fas fa-question-circle"></i>&thinsp;@lang('words.titles.inquiry_create')
+							</a>
+						</li>
+					@endif
+				</ul>
+			</div>
+		</nav>
+
 	</div>
 
 	<!-- Scripts -->
