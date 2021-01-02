@@ -90,7 +90,7 @@ PHPでアルゴリズム問題を解く基礎を学べるサービスです。
 - プロフィール画像アップロード及びユーザー名編集を行えます。
 
 ## ER図
-![ER図](images/Pechpa_ER_Diagram_r0.png)
+![ER図](images/Pechpa_ER_Diagram_r1.png)
 
 ## 開発環境
 - サーバー : Linux(CentOS) 8.2.2004
