@@ -27,7 +27,7 @@
 </head>
 <body>
 	<div id="app">
-		<nav class="navbar navbar-default navbar-static-top">
+		<nav class="navbar navbar-default navbar-fixed-top">
 			<div class="container">
 				<div class="navbar-header">
 
@@ -131,6 +131,16 @@
 									<i class="fas fa-code"></i>&thinsp;@lang('words.titles.unapproved_tasks_list')
 								</a>
 							</li>
+							<li>
+								<a href="{{ route('admin.inquiries.index') }}">
+									<i class="fas fa-question-circle"></i>&thinsp;@lang('words.titles.inquiries_list')
+								</a>
+							</li>
+							<li>
+								<a href="{{ route('admin.users.index') }}">
+									<i class="fas fa-users"></i>&thinsp;@lang('words.titles.users_list')
+								</a>
+							</li>
 							<li class="dropdown">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" v-pre>
 									{{ Auth::guard('admin')->user()->name }} <span class="caret"></span>
@@ -166,6 +176,30 @@
 			@yield('side_bar')
 			@yield('content')
 		</div>
+
+		<nav class="navbar navbar-default navbar-static-bottom">
+			<div class="container">
+				<ul class="nav navbar-nav navbar-right">
+					@if (Auth::guard('user')->check())
+						<li class="text-center">
+							<a href="{{ route('inquiries.create') }}">
+								<i class="fas fa-question-circle"></i>&thinsp;@lang('words.titles.inquiry_create')
+							</a>
+						</li>
+					@endif
+					<p class="navbar-text text-center">
+						&copy; 2020 - {{ date('Y') }} Taturon
+						<a href="https://github.com/Taturon" target="_blank">
+							<i class="fab fa-github"></i>
+						</a>
+						<a href="https://twitter.com/_Taturon_" target="_blank">
+							<i class="fab fa-twitter-square"></i>
+						</a>
+					</p>
+				</ul>
+			</div>
+		</nav>
+
 	</div>
 
 	<!-- Scripts -->

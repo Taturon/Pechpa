@@ -4,7 +4,6 @@
 @endsection
 @section('title', $task->title)
 @section('content')
-<div class="row">
 	<div id="content" class="col-md-12">
 		<div id="page-header" class="page-header">
 			<h1>
@@ -100,18 +99,17 @@
 		<ol class="breadcrumb">
 			<li>
 				<a href="{{ route('admin.dashboard') }}">
-					@lang('words.titles.admin_dashboard')
+					<i class="fas fa-list"></i>&thinsp;@lang('words.titles.admin_dashboard')
 				</a>
 			</li>
 			<li>
 				<a href="{{ route('admin.approved') }}">
-					@lang('words.titles.approved_tasks_list')
+					<i class="fas fa-code"></i>&thinsp;@lang('words.titles.approved_tasks_list')
 				</a>
 			</li>
 			<li class="active">
-				@lang('words.titles.approved_tasks')&thinsp;:&thinsp;{{ $task->title }}
+				<i class="fas fa-code"></i>&thinsp;@lang('words.titles.approved_tasks')&thinsp;:&thinsp;{{ $task->title }}
 			</li>
 		</ol>
 	</div>
-</div>
 @endsection

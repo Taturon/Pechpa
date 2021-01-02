@@ -41,5 +41,9 @@ class AppServiceProvider extends ServiceProvider {
 			\App\Repositories\Task\TaskRepositoryInterface::class,
 			\App\Repositories\Task\TaskRepository::class
 		);
+		$this->app->bind(
+			\App\Repositories\Inquiry\InquiryRepositoryInterface::class,
+			\App\Repositories\Inquiry\InquiryRepository::class
+		);
 	}
 }

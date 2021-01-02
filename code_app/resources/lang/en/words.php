@@ -21,6 +21,11 @@ return [
 		'tasks_recent_unapproved_list' => 'Recent Unapproved Tasks',
 		'tasks_recent_approved_list' => 'Recent Approved Tasks',
 		'task_edit_or_approve' => 'Task Edit or Approve',
+		'inquiries_list' => 'Inquiries List',
+		'recent_inquiries_list' => 'Recent Inquiries',
+		'inquiry_create' => 'Create Inquiry',
+		'users_list' => 'Users List',
+		'recent_users_list' => 'Recent Registered Users',
 	],
 
 	'notices' => [
@@ -30,11 +35,13 @@ return [
 		'max_mega_bytes' => 'Up to 5MB',
 		'icon_size' => ':min &times; :min ~ :max &times; :max px',
 		'valid_extensions' => 'Only jpg/png/bmp/gif/svg',
+		'no_users' => 'No users are registered.',
 		'no_tasks' => 'There are no tasks that match the search conditions.',
 		'no_created_tasks' => "There are no tasks.<br>Let's create !",
 		'no_approved_tasks' => "There are no approved tasks by :name.",
 		'no_unapproved_tasks' => "There are no unapproved tasks by :name.",
 		'no_answers' => "There are no answers. <br>Let's solve !",
+		'no_inquiries' => 'There are no inquiries.',
 		'can_not_self_answer' => 'You can not answer the your created tasks.',
 		'can_not_duplicate_answer' => 'You can not answer the correctly answered tasks.',
 		'tasks_no_unapproved_list' => 'There is no unapproved tasks.',
@@ -48,6 +55,7 @@ return [
 		'no_user' => 'Invalid User ID',
 		'no_task' => 'Invalid Task No.',
 		'no_answer' => 'Invalid Answer No.',
+		'no_inquiry' => 'Invalid Inquiry No.',
 		'wrong_answer' => 'Incorrect answer...',
 		'correct_answer' => 'Correct answer !',
 		'profile_updated' => 'Your profile updated !',
@@ -55,6 +63,7 @@ return [
 		'task_updated' => 'The task was updated !',
 		'task_deleted' => 'The task was deleted !',
 		'task_approved' => 'The task was approved !',
+		'inquiry_recived' => 'The Inquiry Recived !',
 	],
 
 	'authentication' => [
@@ -72,6 +81,7 @@ return [
 		'icon' => 'Icon',
 		'recent_answers' => 'Recent Answers',
 		'recent_tasks' => 'Recent Approved Tasks',
+		'created_tasks_count' => 'Created Tasks',
 		'created_tasks' => 'Created Tasks List',
 		'unapproved_tasks_count' => 'Unapproved Tasks',
 		'approved_tasks_count' => 'Approved Tasks',
@@ -80,6 +90,20 @@ return [
 		'all_answers_count' => 'Answers',
 		'correct_answers_count' => 'Correct Answers',
 		'correct_answer_rate' => 'Correct Answer Rate',
+	],
+
+	'inquiries' => [
+		'inquiry' => 'Inquiry',
+		'user_name' => 'User Name',
+		'title' => 'Title',
+		'categories' => 'Category',
+		'contents' => 'Contents',
+		'inquired_date' => 'Inquired Date',
+		'other' => 'Other',
+		'about_tasks' => 'About Tasks',
+		'about_judges' => 'About Judges',
+		'defect_report' => 'Defect Report',
+		'new_features_request' => 'New Features Request',
 	],
 
 	'tasks' => [

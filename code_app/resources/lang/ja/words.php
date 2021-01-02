@@ -21,6 +21,11 @@ return [
 		'tasks_recent_unapproved_list' => '直近の承認待ち問題',
 		'tasks_recent_approved_list' => '直近の承認済み問題',
 		'task_edit_or_approve' => '問題の編集・承認',
+		'inquiries_list' => 'お問い合わせ一覧',
+		'recent_inquiries_list' => '直近のお問い合わせ',
+		'inquiry_create' => 'お問い合わせ',
+		'users_list' => 'ユーザー一覧',
+		'recent_users_list' => '直近の登録ユーザー',
 	],
 
 	'notices' => [
@@ -30,11 +35,13 @@ return [
 		'max_mega_bytes' => '最大5MB',
 		'icon_size' => ':min &times; :min ~ :max &times; :max px',
 		'valid_extensions' => 'jpg/png/bmp/gif/svgのみ',
+		'no_users' => 'ユーザーが登録されていません',
 		'no_tasks' => '検索条件に該当する問題がありません',
 		'no_created_tasks' => "まだ問題がありません<br>問題作成ページから作成してみましょう！",
 		'no_approved_tasks' => ":nameさんの承認済み問題はありません",
 		'no_unapproved_tasks' => ":nameさんの承認待ち問題はありません",
 		'no_answers' => "まだ回答がありません<br>問題一覧ページから回答してみましょう！",
+		'no_inquiries' => 'お問い合わせはありません',
 		'can_not_self_answer' => '作成した問題には回答できません',
 		'can_not_duplicate_answer' => '正解した問題には回答できません',
 		'tasks_no_unapproved_list' => '承認待ち問題はありません',
@@ -48,6 +55,7 @@ return [
 		'no_user' => '存在しないユーザーです',
 		'no_task' => '存在しない問題です',
 		'no_answer' => '存在しない回答です',
+		'no_inquiry' => '存在しないお問い合わせです',
 		'wrong_answer' => '不正解です...',
 		'correct_answer' => '正解です！',
 		'profile_updated' => 'プロフィールを更新しました！',
@@ -55,6 +63,7 @@ return [
 		'task_updated' => '問題の内容を更新しました！',
 		'task_deleted' => '問題を削除しました！',
 		'task_approved' => '問題を承認しました！',
+		'inquiry_recived' => 'お問い合わせを送信しました！',
 	],
 
 	'authentication' => [
@@ -72,6 +81,7 @@ return [
 		'icon' => 'アイコン',
 		'recent_answers' => '最近の回答',
 		'recent_tasks' => '最近作成した問題',
+		'created_tasks_count' => '作成問題数',
 		'created_tasks' => '作成した問題一覧',
 		'unapproved' => '未承認',
 		'approved' => '承認済',
@@ -80,6 +90,20 @@ return [
 		'all_answers_count' => '回答数',
 		'correct_answers_count' => '正答数',
 		'correct_answer_rate' => '正答率',
+	],
+
+	'inquiries' => [
+		'inquiry' => 'お問い合わせ',
+		'user_name' => 'ユーザー名',
+		'title' => 'タイトル',
+		'categories' => 'カテゴリー',
+		'contents' => '内容',
+		'inquired_date' => 'お問合せ日時',
+		'other' => 'その他',
+		'about_tasks' => '問題について',
+		'about_judges' => '解答の合否判定について',
+		'defect_report' => '不具合報告',
+		'new_features_request' => '新機能の要望',
 	],
 
 	'tasks' => [

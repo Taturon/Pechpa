@@ -145,6 +145,10 @@ return [
 		'test_input_4' => 'テスト入力 4',
 		'test_output_4' => 'テスト出力 4',
 
+		'inquiry_title' => 'タイトル',
+		'category' => 'カテゴリー',
+		'contents' => '内容',
+
 	],
 
 ];

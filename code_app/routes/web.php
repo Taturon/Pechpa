@@ -34,6 +34,7 @@ Route::group(['middleware' => 'auth:user'], function() {
 	Route::resource('users', 'UserController', ['only' => ['show', 'edit', 'update']]);
 	Route::resource('tasks', 'TaskController', ['except' => 'index']);
 	Route::resource('answers', 'AnswerController', ['only' => ['index', 'show']]);
+	Route::resource('inquiries', 'InquiryController', ['only' => ['create', 'store']]);
 	Route::get('users/{user}/tasks', 'ShowUserCreatedTasksController')->name('users.tasks');
 	Route::post('tasks/{task}/answer', 'AnswerController@check')->name('answers.check');
 });
@@ -58,5 +59,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth:admin'], function() {
 		Route::get('approved_tasks', 'Admin\ShowApprovedTasksController')->name('approved');
 		Route::get('unapproved_tasks', 'Admin\ShowUnapprovedTasksController')->name('unapproved');
 		Route::resource('tasks', 'Admin\TaskController', ['except' => ['create', 'destroy']]);
+		Route::resource('inquiries', 'Admin\InquiryController', ['only' => ['index', 'show']]);
+		Route::resource('users', 'Admin\UserController', ['only' => ['index', 'show']]);
 	});
 });

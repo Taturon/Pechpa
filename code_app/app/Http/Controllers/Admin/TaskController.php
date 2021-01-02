@@ -32,10 +32,10 @@ class TaskController extends Controller {
 		$this->task->storeTestCases($task_id, $request);
 		if ($request->has('approval')) {
 			$this->task->updateTaskWithApproval($task_id, $request);
-			return redirect()->route('admin.tasks.index')->with('success', __('words.flashes.task_approved'));
+			return redirect()->route('admin.approved')->with('success', __('words.flashes.task_approved'));
 		} elseif ($request->has('update')) {
 			$this->task->updateTaskWithoutApproval($task_id, $request);
-			return redirect()->route('admin.tasks.index')->with('success', __('words.flashes.task_updated'));
+			return redirect()->route('admin.unapproved')->with('success', __('words.flashes.task_updated'));
 		}
 	}
 }

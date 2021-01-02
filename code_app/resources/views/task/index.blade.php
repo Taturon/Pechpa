@@ -59,9 +59,9 @@
 					@endforeach
 				</tbody>
 			</table>
-			<div class="text-center">
-				{{ $tasks->appends(request()->input())->links() }}
-			</div>
+		</div>
+		<div class="text-center">
+			{{ $tasks->appends(request()->input())->links() }}
 		</div>
 	@else
 		<div class="row text-center">
