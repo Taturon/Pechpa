@@ -8,6 +8,6 @@ use Illuminate\Support\Facades\Mail;
 class SendMail {
 
 	public function sendTaskCreationNotification($user, $request) {
-		Mail::send(new TaskCreated($request, $user));
+		Mail::queue(new TaskCreated($request->all(), $user));
 	}
 }
