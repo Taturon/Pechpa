@@ -84,7 +84,7 @@
 			{{ Form::open(['route' => ['answers.check', $task->id]]) }}
 				{{ Form::textarea('source', "&lt;?php\n", ['rows' => 15, 'style' => 'width:100%;', 'id' => 'tab']) }}
 				<hr>
-				<button class="btn btn-block btn-primary" name="submission" type="submit" onclick="return confirm('@lang('words.buttons.submission_confirm')');">
+				<button class="btn btn-block btn-primary btn-lg" name="submission" type="submit" onclick="return confirm('@lang('words.buttons.submission_confirm')');">
 					@lang('words.buttons.submission')
 				</button>
 			{{ Form::close() }}

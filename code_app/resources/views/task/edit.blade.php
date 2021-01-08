@@ -22,7 +22,7 @@
 					@endcomponent
 					<div class="form-group">
 						<div class="col-md-10 col-md-offset-1">
-							<button name="update" type="submit" class="btn btn-block btn-primary" onclick="return confirm('@lang('words.buttons.update_confirm')');">
+							<button name="update" type="submit" class="btn btn-block btn-primary btn-lg" onclick="return confirm('@lang('words.buttons.update_confirm')');">
 								@lang('words.buttons.update')
 							</button>
 						</div>
