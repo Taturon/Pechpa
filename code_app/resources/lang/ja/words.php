@@ -7,6 +7,7 @@ return [
 		'login' => 'ログイン',
 		'profile' => ':nameさんのプロフィール',
 		'created_tasks' => ':nameさんが作成した問題一覧',
+		'created_tasks_list' => '作成した問題一覧',
 		'approved_tasks' => '承認済み問題',
 		'unapproved_tasks' => '承認待ち問題',
 		'your_profile' => 'プロフィール',

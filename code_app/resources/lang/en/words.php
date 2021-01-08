@@ -7,6 +7,7 @@ return [
 		'login' => 'Login',
 		'profile' => ':name\'s Profile',
 		'created_tasks' => ':name\'s Created Tasks',
+		'created_tasks_list' => 'Created Tasks',
 		'approved_tasks' => 'Approved Tasks',
 		'unapproved_tasks' => 'Unapproved Tasks',
 		'your_profile' => 'Profile',
