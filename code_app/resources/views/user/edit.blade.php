@@ -56,7 +56,7 @@
 					</div>
 					<div class="form-group">
 						<div class="col-md-10 col-md-offset-1">
-							<button name="approval" type="submit" class="btn btn-block btn-primary"
+							<button name="approval" type="submit" class="btn btn-block btn-primary btn-lg"
 								onclick="return confirm('@lang('words.buttons.update_confirm')');"
 								@if (Auth::user()->id === 1) disabled @endif
 							>
