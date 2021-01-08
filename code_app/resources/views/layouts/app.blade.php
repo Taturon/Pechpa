@@ -81,7 +81,7 @@
 							</li>
 							<li>
 								<a href="{{ route('tasks.create') }}">
-									<i class="fas fa-code"></i>&thinsp;@lang('words.titles.task_create')
+									<i class="fas fa-pencil-alt"></i>&thinsp;@lang('words.titles.task_create')
 								</a>
 							</li>
 							<li>
