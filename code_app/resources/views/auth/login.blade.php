@@ -68,7 +68,7 @@
 					<span>@lang('words.buttons.or')</span>
 				</p>
 				<div class="col-md-12">
-					<button class="btn btn-block btn-primary" type="button" onclick="location.href='{{ route('guest_login') }}'">
+					<button class="btn btn-block btn-primary btn-lg" type="button" onclick="location.href='{{ route('guest_login') }}'">
 						@lang('words.buttons.guest_login')
 					</button>
 				</div>
