@@ -81,7 +81,7 @@
 							</li>
 							<li>
 								<a href="{{ route('tasks.create') }}">
-									<i class="fas fa-code"></i>&thinsp;@lang('words.titles.task_create')
+									<i class="fas fa-pencil-alt"></i>&thinsp;@lang('words.titles.task_create')
 								</a>
 							</li>
 							<li>
@@ -115,6 +115,11 @@
 									<li>
 										<a href="{{ route('users.edit', ['user_id' => Auth::user()->id]) }}">
 											<i class="fas fa-user-edit"></i>&thinsp;@lang('words.titles.profile_edit')
+										</a>
+									</li>
+									<li>
+										<a href="{{ route('users.tasks', ['user' => Auth::user()->id]) }}">
+											<i class="fas fa-code"></i>&thinsp;@lang('words.titles.created_tasks_list')
 										</a>
 									</li>
 								</ul>

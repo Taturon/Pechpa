@@ -54,7 +54,7 @@
 			</div>
 		</div>
 		<div class="col-md-12">
-			<button class="btn btn-primary btn-block" type="submit" name="search" value="search" style="margin-bottom:10px;">
+			<button class="btn btn-primary btn-block btn-lg" type="submit" name="search" value="search" style="margin-bottom:10px;">
 				@lang('words.buttons.search')
 			</button>
 		</div>
