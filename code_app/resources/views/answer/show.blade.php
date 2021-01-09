@@ -81,7 +81,11 @@
 		<pre><code>{{ $answer->answer_code }}</code></pre>
 		<hr>
 		<h2><b>@lang('words.answers.compile')</b></h2>
-		<pre><code>{{ $answer->compile_message }}</code></pre>
+		@if (strpos($answer->compile_message, 'No syntax errors') !== false)
+			<pre style="color:green"><code>{{ $answer->compile_message }}</code></pre>
+		@else
+			<pre style="color:red;"><code>{{ $answer->compile_message }}</code></pre>
+		@endif
 		<hr>
 		<h2><b>@lang('words.answers.testings')</b></h2>
 		<div class="table-responsive">
