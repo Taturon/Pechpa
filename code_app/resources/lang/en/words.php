@@ -42,7 +42,9 @@ return [
 		'no_approved_tasks' => "There are no approved tasks by :name.",
 		'no_unapproved_tasks' => "There are no unapproved tasks by :name.",
 		'no_answers' => "There are no answers. <br>Let's solve !",
+		'no_your_answer' => 'Unanswered',
 		'no_inquiries' => 'There are no inquiries.',
+		'can_not_answer' => 'Can\'t Answer',
 		'can_not_self_answer' => 'You can not answer the your created tasks.',
 		'can_not_duplicate_answer' => 'You can not answer the correctly answered tasks.',
 		'tasks_no_unapproved_list' => 'There is no unapproved tasks.',
@@ -134,6 +136,7 @@ return [
 		'no_select' => 'No Select',
 		'no_examinees' => 'No Examinees',
 		'include_no_examinees' => 'Include "No Examinees"',
+		'your_answer' => 'Your Answer',
 		'lower_validity' => 'Validity Lower Limit',
 		'upper_validity' => 'Validity Upper Limit',
 		'validity' => [
