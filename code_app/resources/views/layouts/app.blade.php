@@ -177,6 +177,12 @@
 			</div>
 		</nav>
 
+		@if (!Auth::guard('admin')->check() && !Auth::guard('user')->check() && strpos(url()->current(), '/admin') === false)
+			<div class="row">
+				<div id="top-image"></div>
+			</div>
+		@endif
+
 		<div class="container">
 			@yield('side_bar')
 			@yield('content')
