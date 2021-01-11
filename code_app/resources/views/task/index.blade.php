@@ -1,5 +1,12 @@
 @extends('layouts.app')
 @section('title', __('words.titles.tasks_list'))
+@section('top-image')
+	@if (!Auth::guard('admin')->check() && !Auth::guard('user')->check() && strpos(url()->current(), '/admin') === false)
+		<div class="row">
+			<div id="top-image"></div>
+		</div>
+	@endif
+@endsection
 @if (Auth::guard('user')->check())
 	@section('side_bar')
 		@component('components.profile_side_bar')
