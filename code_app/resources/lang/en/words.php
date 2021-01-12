@@ -3,6 +3,7 @@
 return [
 
 	'titles' => [
+		'top_page' => 'Top Page',
 		'register' => 'Register',
 		'login' => 'Login',
 		'profile' => ':name\'s Profile',

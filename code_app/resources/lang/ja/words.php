@@ -3,6 +3,7 @@
 return [
 
 	'titles' => [
+		'top_page' => 'トップページ',
 		'register' => '新規登録',
 		'login' => 'ログイン',
 		'profile' => ':nameさんのプロフィール',
