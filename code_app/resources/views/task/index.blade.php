@@ -1,5 +1,9 @@
 @extends('layouts.app')
-@section('title', __('words.titles.tasks_list'))
+@if (!Auth::guard('admin')->check() && !Auth::guard('user')->check() && strpos(url()->current(), '/admin') === false)
+	@section('title', __('words.titles.top_page'))
+@else
+	@section('title', __('words.titles.tasks_list'))
+@endif
 @section('top-image')
 	@if (!Auth::guard('admin')->check() && !Auth::guard('user')->check() && strpos(url()->current(), '/admin') === false)
 		<div class="row">
