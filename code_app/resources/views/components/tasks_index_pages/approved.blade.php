@@ -12,10 +12,10 @@
 					<div class="text-center">@lang('words.tasks.published_date')</div>
 				</th>
 				<th style="width:10%;">
-					<div class="text-center">@lang('words.tasks.validity.validity')</div>
+					<div class="text-center">@lang('words.tasks.creator')</div>
 				</th>
 				<th style="width:10%;">
-					<div class="text-center">@lang('words.tasks.creator')</div>
+					<div class="text-center">@lang('words.tasks.validity.validity')</div>
 				</th>
 			</tr>
 		</thead>
@@ -34,11 +34,11 @@
 						{{ $task->reviewed_at }}
 					</td>
 					<td class="text-center">
-						{{ $task->examinees == 0 ? __('words.tasks.no_examinees') : sprintf('%03.1f', $task->solved / $task->examinees * 100) . '%' }}
-					</td>
-					<td class="text-center">
 						<img src="{{ asset('storage/icons/' . $task->user->icon) }}" width="20px" height="20px">
 						{{ $task->user->name }}
+					</td>
+					<td class="text-center">
+						{{ $task->examinees == 0 ? __('words.tasks.no_examinees') : sprintf('%03.1f', $task->solved / $task->examinees * 100) . '%' }}
 					</td>
 				</tr>
 			@endforeach
