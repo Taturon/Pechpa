@@ -17,11 +17,17 @@ class TaskController extends Controller {
 
 	public function show($id) {
 		$task = $this->task->findReviewedTask($id);
+		if (is_null($task)) {
+			return redirect()->route('admin.approved')->with('error', __('words.flashes.no_task'));
+		}
 		return view('admin.task.show', compact('task'));
 	}
 
 	public function edit($id) {
 		$task = $this->task->findUnreviewedTask($id);
+		if (is_null($task)) {
+			return redirect()->route('admin.unapproved')->with('error', __('words.flashes.no_task'));
+		}
 		return view('admin.task.edit', compact('task'));
 	}
 
