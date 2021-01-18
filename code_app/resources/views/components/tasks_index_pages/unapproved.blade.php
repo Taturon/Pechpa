@@ -5,14 +5,17 @@
 				<th style="width:15%;">
 					<div class="text-center">@lang('words.tasks.difficulty')</div>
 				</th>
-				<th style="width:55%;">
+				<th style="width:50%;">
 					<div class="text-center">@lang('words.tasks.title')</div>
 				</th>
 				<th style="width:15%;">
 					<div class="text-center">@lang('words.tasks.created_and_updated_date')</div>
 				</th>
-				<th style="width:15%;">
+				<th style="width:10%;">
 					<div class="text-center">@lang('words.tasks.creator')</div>
+				</th>
+				<th style="width:10%;">
+					<div class="text-center">@lang('words.buttons.delete')</div>
 				</th>
 			</tr>
 		</thead>
@@ -33,6 +36,15 @@
 					<td class="text-center">
 						<img src="{{ asset('storage/icons/' . $task->user->icon) }}" width="20px" height="20px">
 						{{ $task->user->name }}
+					</td>
+					<td class="text-center">
+						<form method="POST" action="{{ route('admin.tasks.destroy', ['task' => $task->id]) }}">
+							{{ csrf_field() }}
+							{{ method_field('DELETE') }}
+							<button class="btn btn-danger btn-xs" type="submit" onclick="return confirm('@lang('words.buttons.delete_confirm', ['title' => $task->title])');">
+								@lang('words.buttons.delete')
+							</button>
+						</form>
 					</td>
 				</tr>
 			@endforeach
