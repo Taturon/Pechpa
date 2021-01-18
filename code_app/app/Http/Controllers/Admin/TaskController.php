@@ -38,4 +38,15 @@ class TaskController extends Controller {
 			return redirect()->route('admin.unapproved')->with('success', __('words.flashes.task_updated'));
 		}
 	}
+
+	public function destroy($task_id) {
+		$task = $this->task->findUnreviewedTask($task_id);
+		if (is_null($task)) {
+			return redirect()->route('admin.unapproved')->with('error', __('words.flashes.no_task'));
+		}
+		$this->task->destroySampleCases($task_id);
+		$this->task->destroyTestCases($task_id);
+		$this->task->destroyTask($task_id);
+		return redirect()->back()->with('success', __('words.flashes.task_deleted'));
+	}
 }
