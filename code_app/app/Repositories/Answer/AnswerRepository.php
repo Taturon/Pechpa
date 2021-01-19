@@ -17,7 +17,7 @@ class AnswerRepository implements AnswerRepositoryInterface {
 	}
 
 	public function all($paging) {
-		return Auth::user()->answers()->paginate($paging);
+		return Auth::user()->answers()->orderBy('created_at', 'desc')->paginate($paging);
 	}
 
 	public function findById($id) {
