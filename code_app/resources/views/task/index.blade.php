@@ -6,9 +6,7 @@
 @endif
 @section('top-image')
 	@if (!Auth::guard('admin')->check() && !Auth::guard('user')->check() && strpos(url()->current(), '/admin') === false)
-		<div class="row">
-			<div id="top-image"></div>
-		</div>
+		<div id="top-image"></div>
 	@endif
 @endsection
 @if (Auth::guard('user')->check())
