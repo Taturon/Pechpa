@@ -28,6 +28,8 @@ return [
 		'inquiry_create' => 'お問い合わせ',
 		'users_list' => 'ユーザー一覧',
 		'recent_users_list' => '直近の登録ユーザー',
+		'answers_list' => '回答一覧',
+		'recent_answers_list' => '直近の回答',
 	],
 
 	'notices' => [
@@ -42,6 +44,7 @@ return [
 		'no_created_tasks' => "まだ問題がありません<br>問題作成ページから作成してみましょう！",
 		'no_approved_tasks' => ":nameさんの承認済み問題はありません",
 		'no_unapproved_tasks' => ":nameさんの承認待ち問題はありません",
+		'no_users_answers' => '回答はありません',
 		'no_answers' => "まだ回答がありません<br>問題一覧ページから回答してみましょう！",
 		'no_your_answer' => '未回答',
 		'no_inquiries' => 'お問い合わせはありません',
@@ -149,6 +152,7 @@ return [
 
 	'answers' => [
 		'answer' => '回答',
+		'answerer' => '回答者',
 		'answer_date' => '回答日時',
 		'judge' => '判定',
 		'byte' => 'バイト数',
