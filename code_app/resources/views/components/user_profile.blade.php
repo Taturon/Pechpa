@@ -30,7 +30,7 @@
 						<td>
 							<h2>
 								{{ $user->name }}
-								@if ($user->id === Auth::user()->id)
+								@if ($user->id === Auth::user()->id && Auth::guard('user')->check() && !Auth::guard('admin')->check())
 									<span id="edit-link">
 										<a href="{{ route('users.edit', ['user_id' => Auth::user()->id]) }}">
 											@lang('words.buttons.edit')
