@@ -61,5 +61,6 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth:admin'], function() {
 		Route::resource('tasks', 'Admin\TaskController', ['except' => ['create']]);
 		Route::resource('inquiries', 'Admin\InquiryController', ['only' => ['index', 'show']]);
 		Route::resource('users', 'Admin\UserController', ['only' => ['index', 'show']]);
+		Route::resource('answers', 'Admin\AnswerController', ['only' => ['index', 'show']]);
 	});
 });

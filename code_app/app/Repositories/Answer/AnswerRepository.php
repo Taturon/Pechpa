@@ -16,8 +16,16 @@ class AnswerRepository implements AnswerRepositoryInterface {
 		$this->testing = $testing;
 	}
 
+	public function allUsersAnswers($paging) {
+		return $this->answer->orderBy('created_at', 'desc')->paginate($paging);
+	}
+
 	public function all($paging) {
 		return Auth::user()->answers()->orderBy('created_at', 'desc')->paginate($paging);
+	}
+
+	public function recentAnswers($count) {
+		return $this->answer->orderBy('created_at', 'desc')->limit($count)->get();
 	}
 
 	public function findById($id) {

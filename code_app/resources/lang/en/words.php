@@ -28,6 +28,8 @@ return [
 		'inquiry_create' => 'Create Inquiry',
 		'users_list' => 'Users List',
 		'recent_users_list' => 'Recent Registered Users',
+		'answers_list' => 'Answers List',
+		'recent_answers_list' => 'Recent Answers List',
 	],
 
 	'notices' => [
@@ -149,6 +151,7 @@ return [
 
 	'answers' => [
 		'answer' => 'Answer',
+		'answerer' => 'Answerer',
 		'answer_date' => 'Answer Date',
 		'judge' => 'Judge',
 		'byte' => 'Code Size',

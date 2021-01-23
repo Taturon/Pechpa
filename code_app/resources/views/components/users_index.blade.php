@@ -5,16 +5,16 @@
 				<th style="width:15%;">
 					<div class="text-center">@lang('words.users.registered_date')</div>
 				</th>
-				<th style="width:25%;">
+				<th style="width:30%;">
 					<div class="text-center">@lang('words.users.name')</div>
 				</th>
-				<th style="width:30%;">
+				<th style="width:35%;">
 					<div class="text-center">@lang('words.users.email')</div>
 				</th>
-				<th style="width:15%;">
+				<th style="width:10%;">
 					<div class="text-center">@lang('words.users.all_answers_count')</div>
 				</th>
-				<th style="width:15%;">
+				<th style="width:10%;">
 					<div class="text-center">@lang('words.users.created_tasks_count')</div>
 				</th>
 			</tr>
