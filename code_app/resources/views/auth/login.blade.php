@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', __('title.login'))
+@section('title', __('words.titles.login'))
 @section('content')
 @component('components.alert')
 @endcomponent
