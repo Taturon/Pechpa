@@ -5,32 +5,8 @@
 @section('title', $task->title)
 @section('content')
 	<div id="content" class="col-md-12">
-		<div id="page-header" class="page-header">
-			<h1>
-				<b>{{ $task->title }}</b>
-				<br>
-				<small>
-					<b>
-						@lang('words.tasks.difficulty')
-						<span style="color:{{ config('tasks.colors')[$task->difficulty] }};">
-							{{ config('tasks.stars')[$task->difficulty] }}
-						</span>
-					</b>
-				</small>
-			</h1>
-		</div>
-		<h2><b>@lang('words.tasks.statement')</b></h2>
-		<p>{!! nl2br(e($task->statement)) !!}</p>
-		<h2><b>@lang('words.tasks.constraints')</b></h2>
-		<p>{!! nl2br(e($task->constraints)) !!}</p>
-		<h2><b>@lang('words.tasks.input')</b></h2>
-		<p>{{ $task->input }}</p>
-		<pre><code>{{ $task->input_code }}</code></pre>
-		<h2><b>@lang('words.tasks.output')</b></h2>
-		<p>{{ $task->output }}</p>
-		@isset($task->output_code)
-			<pre><code>{{ $task->output_code }}</code></pre>
-		@endisset
+		@component('components.tasks_show', ['task' => $task])
+		@endcomponent
 		<hr>
 		<h2 class="text-center">@lang('words.tasks.samples')</h2>
 		<div class="table-responsive">
