@@ -17,11 +17,17 @@ class TaskController extends Controller {
 
 	public function show($id) {
 		$task = $this->task->findReviewedTask($id);
+		if (is_null($task)) {
+			return redirect()->route('admin.approved')->with('error', __('words.flashes.no_task'));
+		}
 		return view('admin.task.show', compact('task'));
 	}
 
 	public function edit($id) {
 		$task = $this->task->findUnreviewedTask($id);
+		if (is_null($task)) {
+			return redirect()->route('admin.unapproved')->with('error', __('words.flashes.no_task'));
+		}
 		return view('admin.task.edit', compact('task'));
 	}
 
@@ -37,5 +43,16 @@ class TaskController extends Controller {
 			$this->task->updateTaskWithoutApproval($task_id, $request);
 			return redirect()->route('admin.unapproved')->with('success', __('words.flashes.task_updated'));
 		}
+	}
+
+	public function destroy($task_id) {
+		$task = $this->task->findUnreviewedTask($task_id);
+		if (is_null($task)) {
+			return redirect()->route('admin.unapproved')->with('error', __('words.flashes.no_task'));
+		}
+		$this->task->destroySampleCases($task_id);
+		$this->task->destroyTestCases($task_id);
+		$this->task->destroyTask($task_id);
+		return redirect()->back()->with('success', __('words.flashes.task_deleted'));
 	}
 }

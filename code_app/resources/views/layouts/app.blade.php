@@ -81,7 +81,7 @@
 							</li>
 							<li>
 								<a href="{{ route('tasks.create') }}">
-									<i class="fas fa-code"></i>&thinsp;@lang('words.titles.task_create')
+									<i class="fas fa-pencil-alt"></i>&thinsp;@lang('words.titles.task_create')
 								</a>
 							</li>
 							<li>
@@ -117,20 +117,15 @@
 											<i class="fas fa-user-edit"></i>&thinsp;@lang('words.titles.profile_edit')
 										</a>
 									</li>
+									<li>
+										<a href="{{ route('users.tasks', ['user' => Auth::user()->id]) }}">
+											<i class="fas fa-code"></i>&thinsp;@lang('words.titles.created_tasks_list')
+										</a>
+									</li>
 								</ul>
 							</li>
 						@endif
 						@if (Auth::guard('admin')->check())
-							<li>
-								<a href="{{ route('admin.approved') }}">
-									<i class="fas fa-code"></i>&thinsp;@lang('words.titles.approved_tasks_list')
-								</a>
-							</li>
-							<li>
-								<a href="{{ route('admin.unapproved') }}">
-									<i class="fas fa-code"></i>&thinsp;@lang('words.titles.unapproved_tasks_list')
-								</a>
-							</li>
 							<li>
 								<a href="{{ route('admin.inquiries.index') }}">
 									<i class="fas fa-question-circle"></i>&thinsp;@lang('words.titles.inquiries_list')
@@ -139,6 +134,29 @@
 							<li>
 								<a href="{{ route('admin.users.index') }}">
 									<i class="fas fa-users"></i>&thinsp;@lang('words.titles.users_list')
+								</a>
+							</li>
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" v-pre>
+									<i class="fas fa-code"></i>&thinsp;@lang('words.titles.tasks_list') <span class="caret"></span>
+								</a>
+
+								<ul class="dropdown-menu">
+									<li>
+										<a href="{{ route('admin.approved') }}">
+											<i class="fas fa-code"></i>&thinsp;@lang('words.titles.approved_tasks_list')
+										</a>
+									</li>
+									<li>
+										<a href="{{ route('admin.unapproved') }}">
+											<i class="fas fa-code"></i>&thinsp;@lang('words.titles.unapproved_tasks_list')
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="{{ route('admin.answers.index') }}">
+									<i class="fas fa-tasks"></i>&thinsp;@lang('words.titles.answers_list')
 								</a>
 							</li>
 							<li class="dropdown">
@@ -171,6 +189,8 @@
 				</div>
 			</div>
 		</nav>
+
+		@yield('top-image')
 
 		<div class="container">
 			@yield('side_bar')

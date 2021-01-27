@@ -19,7 +19,7 @@ class TaskRepository implements TaskRepositoryInterface {
 	}
 
 	public function allReviewedTasks($paging) {
-		return $this->task->whereNotNull('reviewed_at')->paginate($paging);
+		return $this->task->whereNotNull('reviewed_at')->orderBy('difficulty')->paginate($paging);
 	}
 
 	public function recentApprovedTasks($count) {
@@ -31,11 +31,11 @@ class TaskRepository implements TaskRepositoryInterface {
 	}
 
 	public function allUnreviewedTasks($paging) {
-		return $this->task->whereNull('reviewed_at')->paginate($paging);
+		return $this->task->whereNull('reviewed_at')->orderBy('updated_at', 'desc')->paginate($paging);
 	}
 
 	public function recentUnapprovedTasks($count) {
-		return $this->task->whereNull('reviewed_at')->orderBy('reviewed_at', 'desc')->limit($count)->get();
+		return $this->task->whereNull('reviewed_at')->orderBy('updated_at', 'desc')->limit($count)->get();
 	}
 
 	public function userCreatedApprovedTasks($user_id) {

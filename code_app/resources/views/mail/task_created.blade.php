@@ -13,23 +13,23 @@
 <p>
 	<b>@lang('words.tasks.title')</b>
 	<br>
-	{{ $request->title }}
+	{{ $request['title'] }}
 </p>
 <p>
 	<b>@lang('words.tasks.statement')</b>
 	<br>
-	{{ $request->statement }}
+	{{ $request['statement'] }}
 </p>
 <p>
 	<b>@lang('words.tasks.constraints')</b>
 	<br>
-	{{ $request->constraints }}
+	{{ $request['constraints'] }}
 </p>
 <p>
 	<b>@lang('words.tasks.difficulty')</b>
 	<br>
-	<span style="color:{{ config('tasks.colors')[$request->difficulty] }};">
-		{{ config('tasks.stars')[$request->difficulty] }}
+	<span style="color:{{ config('tasks.colors')[$request['difficulty']] }};">
+		{{ config('tasks.stars')[$request['difficulty']] }}
 	</span>
 </p>
 

@@ -3,10 +3,12 @@
 return [
 
 	'titles' => [
+		'top_page' => 'トップページ',
 		'register' => '新規登録',
 		'login' => 'ログイン',
 		'profile' => ':nameさんのプロフィール',
 		'created_tasks' => ':nameさんが作成した問題一覧',
+		'created_tasks_list' => '作成した問題一覧',
 		'approved_tasks' => '承認済み問題',
 		'unapproved_tasks' => '承認待ち問題',
 		'your_profile' => 'プロフィール',
@@ -26,6 +28,8 @@ return [
 		'inquiry_create' => 'お問い合わせ',
 		'users_list' => 'ユーザー一覧',
 		'recent_users_list' => '直近の登録ユーザー',
+		'answers_list' => '回答一覧',
+		'recent_answers_list' => '直近の回答',
 	],
 
 	'notices' => [
@@ -40,8 +44,11 @@ return [
 		'no_created_tasks' => "まだ問題がありません<br>問題作成ページから作成してみましょう！",
 		'no_approved_tasks' => ":nameさんの承認済み問題はありません",
 		'no_unapproved_tasks' => ":nameさんの承認待ち問題はありません",
+		'no_users_answers' => '回答はありません',
 		'no_answers' => "まだ回答がありません<br>問題一覧ページから回答してみましょう！",
+		'no_your_answer' => '未回答',
 		'no_inquiries' => 'お問い合わせはありません',
+		'can_not_answer' => '回答不可',
 		'can_not_self_answer' => '作成した問題には回答できません',
 		'can_not_duplicate_answer' => '正解した問題には回答できません',
 		'tasks_no_unapproved_list' => '承認待ち問題はありません',
@@ -133,6 +140,7 @@ return [
 		'no_select' => '選択しない',
 		'no_examinees' => '回答者無し',
 		'include_no_examinees' => '回答者無しを含む',
+		'your_answer' => 'あなたの回答',
 		'lower_validity' => '正答率下限',
 		'upper_validity' => '正答率上限',
 		'validity' => [
@@ -144,6 +152,7 @@ return [
 
 	'answers' => [
 		'answer' => '回答',
+		'answerer' => '回答者',
 		'answer_date' => '回答日時',
 		'judge' => '判定',
 		'byte' => 'バイト数',

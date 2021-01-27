@@ -31,8 +31,10 @@
 						</a>
 					</td>
 					<td class="text-center">
-						<img src="{{ asset('storage/icons/' . $inquiry->user->icon) }}" width="20px" height="20px">
-						{{ $inquiry->user->name }}
+						<a href="{{ route('admin.users.show', ['user' => $inquiry->user->id]) }}">
+							<img src="{{ asset('storage/icons/' . $inquiry->user->icon) }}" width="20px" height="20px">
+							{{ $inquiry->user->name }}
+						</a>
 					</td>
 				</tr>
 			@endforeach

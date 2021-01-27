@@ -27,10 +27,21 @@ return [
 		'admin_unapproved_tasks' => 5,
 		'admin_inquiries' => 5,
 		'admin_users' => 5,
+		'admin_answers' => 5,
 		'user_icon_size' => [
 			'min' => 100,
 			'max' => 600,
 		],
+	],
+
+	'pagings' => [
+		'user_tasks' => 10,
+		'user_answers' => 10,
+		'user_created_tasks' => 5,
+		'admin_approved_tasks' => 15,
+		'admin_unapproved_tasks' => 15,
+		'admin_inquiries' => 15,
+		'admin_answers' => 15,
 	],
 
 	'default' => [
